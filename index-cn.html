@@ -1,0 +1,890 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <title>黑币, 未来的货币</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+
+        <link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64" href="./img/favicon.png" />
+        <link rel='stylesheet' href='./fonts/fonts.css?v=4' type='text/css' media='all' />
+        <link rel='stylesheet' href='./css/style.css?v=4' type='text/css' media='all' />
+
+        <script type='text/javascript' src='./js/jquery_main.js'></script>
+        <script type='text/javascript' src='./js/jquery-minified.js'></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </head>
+
+    <body class="noscript">
+        <div class="pushWrapper">
+            <!-- Header (shown on mobile only) -->
+
+            <header class="pageHeader">
+                <!-- Menu Trigger -->
+                <button class="menu-trigger">
+                    <span class="lines"></span>
+                </button>
+                <!-- Logo -->
+                <a class="headerLogo smoothScroll" href="http://www.blackcoin.co">
+                    <img style="margin-top:1.5%;padding-left:9.5%;display:inline-block;" src="./img/navlogo2.png" alt="BlackCoin"> <!--fix this-->
+                </a>
+            </header>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <nav class="mainMenu">
+                    <ul class="menu">
+                        <li><a class="smoothScroll" href="#info" ><i class="icon-cust-help"></i><span class="text">什么是黑币？</span></a></li>
+                        <li><a class="smoothScroll" href="#uses" ><i class="icon-cust-book"></i><span class="text">为什么要使用黑币？</span></a></li>
+                        <li><a class="smoothScroll" href="#specs" ><i class="icon-cust-analytics"></i><span class="text">技术特性</span></a></li>				 
+                        <li><a class="smoothScroll" href="#getting-started" ><i class="icon-cust-write"></i><span class="text">入门指南</span></a></li>
+                        <li><a class="smoothScroll" href="#wallets" ><i class="icon-cust-laptop-user"></i><span class="text">钱包</span></a></li>
+                        <li><a class="smoothScroll" href="#community" title="Membership Form"><i class="icon-cust-user"></i><span class="text">社区</span></a></li>
+                        <li><a class="smoothScroll" href="#news" ><i class="icon-cust-calendar"></i><span class="text">新闻</span></a></li>
+                    </ul>
+                </nav>
+                <nav class="backToTop">
+                    <ul class="backToTop-menu">
+                        <li><a class="smoothScroll" href="#info" title="to the top"><i class="icon-cust-arrow"></i><span class="text">回到顶端</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Main -->
+            <main>
+              
+                <!-- Language switcher -->
+                <div style="display: block; position: absolute; top: 30px; right: 40px; z-index: 100;">
+                    <a href="index.html">English</a>
+                    <a href="index-es.html">español</a> 
+                </div>
+
+                <!-- Intro -->
+                <section class="section-intro" id="intro" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
+                    <div class="content">
+                        <div class="contentContainer">
+                            <h1>
+                                <span class="sub">黑币</span>
+                                <span class="main">未来的货币</span>
+                            </h1>
+
+                        </div>
+                    </div>
+                </section>
+
+                <div id="notifications" style="display:none;">
+                    <p>请将钱包升级至1.1.0.1版，黑币网络已成功升级至PoS 2.0协议</p>
+                </div>
+
+                <style>
+                    #blackcoin-hl {
+                        color:#584930;
+                    }
+                    #blackcoin-hl:hover, #blackhalo-hl:hover {
+                        color:#584930;
+                    }
+                    .hoverable:hover { color:#584930; }
+                </style>
+                <script>
+                    $("#blackcoin-hl").click(function() {
+                        $('#blackhaloshowdiv').toggle();
+                        $('#blackcoinshowdiv').toggle();
+                    });
+                    $("#blackhalo-hl").click(function() {
+                        $('#blackhaloshowdiv').toggle();
+                        $('#blackcoinshowdiv').toggle();
+                    });
+                </script>
+
+                <!-- Quick Wallet Links -->
+                <section class="section-quickwallet">
+                    <div class="content">
+                        <div class="quickwalletContainer">
+                            <p>请选择： <span id="blackcoin-hl" onclick="$('#blackhaloshowdiv').hide();
+                        $('#blackcoinshowdiv').show();
+                        $('#blackcoin-hl').attr('style', 'color:#584930');
+                        $('#blackhalo-hl').attr('style', 'color:#9E9E9E;');
+                        $('#blackhalo-hl').addClass('hoverable');">黑币</span> | <span id="blackhalo-hl" onclick="$('#blackhaloshowdiv').show();
+                        $('#blackcoinshowdiv').hide();
+                        $('#blackcoin-hl').attr('style', 'color:#9E9E9E');
+                        $('#blackhalo-hl').attr('style', 'color:#584930;');
+                        $('#blackcoin-hl').addClass('hoverable');">BlackHalo (智能合约测试版)</span></p>
+                            <div id="blackcoinshowdiv">
+                                <a class="btn-wallet" href="http://www.maarx.nl/maarx.nl/blackcoin/files/blackcoin-1.1.2.1-windows.zip"><img class="icon" src="./img/profile/windows-sm.png" alt="">Windows</a>
+                                <a class="btn-wallet" href="http://www.maarx.nl/maarx.nl/blackcoin/files/blackcoin-1.1.2.1-linux.zip"><img class="icon" src="./img/profile/linux-sm.png" alt="">Linux</a>
+                                <a class="btn-wallet" href="http://www.maarx.nl/maarx.nl/blackcoin/files/BlackCoin-Qt-MacOSX-v1.1.1.zip"><img class="icon" src="./img/profile/mac-sm.png" alt="">OS X</a>
+                                <a class="btn-wallet" href="http://coinomi.com/"><img class="icon" src="./img/profile/android-sm.png" alt="">Android</a>
+                                <a class="btn-wallet modalbtn modal-trigger" href="#mobile-soon"><img class="icon" src="./img/profile/mac-sm.png" alt=""><span style="text-transform:lowercase;">i</span>OS</a>
+                                <a class="btn-wallet modalbtn modal-trigger" href="#web-wallets"><img class="icon" src="./img/profile/web-sm.png" alt="">Web Wallets</a>
+                                <br>
+                                <a class="btn-wallet" href="blackcoin-pos-protocol-v2-whitepaper.pdf"><img class="icon" src="./img/profile/whitepaper.png" width="27px" target="_blank" alt="">POS 2.0 Whitepaper</a>
+                                <br>
+                                <p style="margin-top:9px;">Latest wallet update: 8th of December, 2014 <a href="https://bitcointalk.org/index.php?topic=469640.msg9771081#msg9771081" target="_blank">(v1.1.2.1)</a></p>
+                            </div>
+                            <div id="blackhaloshowdiv" style="display:none;">
+                                <a class="btn-wallet" href="http://www.davtonia.com/blackhalo/blackhalo32.zip"><img class="icon" src="./img/profile/windows-sm.png" alt="">Windows 32-bit</a>
+                                <a class="btn-wallet" href="http://www.davtonia.com/blackhalo/blackhalo.zip"><img class="icon" src="./img/profile/windows-sm.png" alt="">Windows 64-bit</a>
+                                <a class="btn-wallet" href="#"><img class="icon" src="./img/profile/linux-sm.png" alt="">Linux (coming soon!)</a>
+                                <a class="btn-wallet" href="#"><img class="icon" src="./img/profile/mac-sm.png" alt="">OS X (coming soon!)</a>
+                                <br>
+                                <a class="btn-wallet" href="http://blackhalo.info/wp-content/uploads/2014/06/whitepaper_twosided.pdf"><img class="icon" src="./img/profile/whitepaper.png" target="_blank" width="27px" alt="">BlackHalo Whitepaper</a>
+                                <a class="btn-wallet" href="http://www.blackhalo.info/"><img class="icon" src="./img/profile/link.png" width="27px" target="_blank" alt="">More Information</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+				
+                <!-- Sub-intro -->
+                <section class="section-subintro">
+                    <div class="content">
+                        <div class="contentContainer">
+                            <div class="contentLeft">						
+                                <div class="quarters">
+                                    <h2>创新</h2>
+                                    <p style="height:99px;">股权证明机制为大部分数字货币带来了速度、安全性以及充满能源效率。</p>
+                                    <div class="btnContainer">
+                                        <a href="#info" class="smoothScroll btn" style="font-size:15px;">什么是黑币？</a>
+                                    </div>
+                                </div>
+                                <div class="quarters">
+                                    <h2>解放</h2>		
+                                    <p style="height:99px;">不需要中心化权力机构与银行，黑币将权力归还给了人民</p>	
+                                    <div class="btnContainer">
+                                        <a href="#uses" class="smoothScroll btn" style="font-size:15px;">为什么要使用黑币？</a>
+                                    </div>							
+                                </div>					
+                            </div>
+                            <div class="contentRight">
+                                <div class="quarters">
+                                    <h2>接受</h2>
+                                    <p style="height:99px;">黑币正快速在世界范围内取得民众、商户与服务业的支持</p>
+                                    <div class="btnContainer">
+                                        <a href="#getting-started" class="smoothScroll btn" style="font-size:15px;">入门指南</a>
+                                    </div>
+                                </div>
+                                <div class="quarters">
+                                    <h2>贡献</h2>
+                                    <p style="height:99px;">黑币拥有一个巨大的由使用者及开发者组成的在线社区。</p>
+                                    <div class="btnContainer">
+                                        <a href="#community" class="smoothScroll btn" style="font-size:15px;">加入社区</a>
+                                    </div>
+                                </div>					
+                            </div>
+                            <a class="smoothScroll arrow" href="#info"><img src="./img/arrow-down.png" alt="" /></a>
+                        </div>
+                    </div>
+                </section>  
+				
+                <!-- What is BlackCoin -->			   
+                <section class="section-audience" id="info">
+                    <!-- Seperator -->
+                    <div class="seperator">
+                        <div class="contentContainer">
+                            <h2>
+                                <span class="sub">什么是黑币</span>
+                                黑币	    
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="contentContainer">
+                            <div class="contentLeft">
+                                <ul class="figure">
+                                    <li>A</li>
+                                    <li>B</li>
+                                </ul>
+                            </div>
+                            <div class="textContent contentRight">
+                                <h3>货币的一种新形式</h3>
+                                <br>
+                                <div class="user-content">
+                                    <p>黑币是一种分布式的的点对点货币，它拥有去中心化的公账，不像掌握在传统银行手中的其他货币，人们可以查看这些公账，并能够很容易地对其进行审计。</p>
+                                    <p>管理交易、发布新币的能力都被掌握在黑币使用者所组成的网络之中。因为黑币网络是分布式运行的，通过一个名叫权益累积（Staking）的过程，黑币的持有者可以获得年利率为1%的利息。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contentContainer">
+                            <div class="contentRight">
+                                <ul class="figure">
+                                    <li>B</li>
+                                    <li>C</li>
+                                </ul>
+                            </div>
+                            <div class="textContent contentLeft">
+                                <h3>一种创新的转账方式</h3>
+                                <br>
+                                <div class="user-content">
+                                    <p>黑币技术使人们能够快速、简便、安全地和朋友、家人和商户之间进行款项的收发，无论他们身在何处。黑币使您可以管理自己的资金，而无需中央权力机构或银行。</p>
+                                    <p>黑币也是开源的，这意味着使其得以运作的软件能够让公众进行详细审查——这样能够让你感到安心。没有人拥有黑币，它不是一个单独的实体，任何人都能成为它的一部分。</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btnContainer">
+                            <a href="#getting-started" class="smoothScroll btn">入门指南</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Specifications -->
+                <section class="section-pricing" id="uses">
+                    <!-- Seperator -->
+                    <div class="seperator">
+                        <div class="contentContainer">
+                            <h2>
+                                <span class="sub">为何要使用</span>
+                                BlackCoin		    
+                            </h2>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                    <div class="content">
+                        <div class="contentContainer">
+                            <!-- Menu -->
+                            <ul class="pricing-menu">
+                                <li class="selected"><a href="#">个人</a></li>
+                                <li><a href="#">商业</a></li>
+                                <li><a href="#">开发者</a></li>
+                            </ul>
+                            <!-- L/R Nav -->
+                            <a href="#" class="pricing-nav pricing-nav-prev"><i class="icon-cust-arrow-left"></i></a>
+                            <a href="#" class="pricing-nav pricing-nav-next"><i class="icon-cust-arrow-right"></i></a>
+                            <!-- Slides -->
+                            <div class="pricing-container">
+                                <div class="pricing-wrapper">
+                                    <div class="pricing-slide">
+                                        <hgroup>
+                                            <h3>
+                                                <span class="main">个人</span>
+                                                <span class="sub">为什么个人要使用</span>
+                                                <span class="super-sub">黑币</span>
+                                            </h3>
+                                        </hgroup>
+                                        <div class="pricing-slide-content user-content">
+                                            <p>个人可以用黑币与世界各地的朋友、家人、商户转移资金。黑币既适用于面对面交易，也适用于国际数字贸易。</p>
+                                            <p>使用黑币是快速、安全和有回报的。</p>
+                                            <ul>
+                                                <li>保障和管控你的钱财</li>
+                                                <li>快捷的国际支付</li>
+                                                <li>零费率或低费率</li>
+                                                <li><a href="http://www.blackauctions.eu/" target="_blank">去中心化的电子商城</a></li>
+                                                <li>每年1%利息收益</li>
+                                                <li>使移动支付变得简单</li>
+                                            </ul>
+                                            <div class="btnContainer">
+                                                <a href="#getting-started" class="smoothScroll btn">入门指南</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-slide">
+                                        <hgroup>
+                                            <h3>
+                                                <span class="main">商业</span>
+                                                <span class="sub">为什么商业场合要使用黑币</span>
+                                                <span class="super-sub">黑币</span>
+                                            </h3>
+                                        </hgroup>
+                                        <div class="pricing-slide-content user-content">
+                                            <p>商业上采用黑币可以增加一种更快、更方便的转移资产的方式。相对于传统的单点销售和国际支付系统，黑币提供了一系列的优势。</p>
+                                            <p>接受黑币使接受数字货币变得容易</p>
+                                            <ul>
+                                                <li>免受欺诈</li>
+                                                <li>最低的费率</li>
+                                                <li>最低的费率</li>
+                                                <li>不必遵守PCI</li>
+                                                <li>记账透明性</li>
+                                            </ul>
+                                            <div class="btnContainer">
+                                                <a href="#features" class="smoothScroll btn">黑币的特点</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-slide">
+                                        <hgroup>
+                                            <h3>
+                                                <span class="main">开发者</span>
+                                                <span class="sub">为什么开发者使用黑币</span>
+                                                <span class="super-sub">黑币</span>
+                                            </h3>
+                                        </hgroup>
+                                        <div class="pricing-slide-content user-content">
+                                            <p>开发者使用黑币作为一个有效的平台，用于支付，储存以及接收报酬。黑币已经得到了大量的数字基础设施的支持，并且拥有由专注于黑币的用户和开发者所组成的庞大社区。</p>
+                                            <p>黑币的网络与技术特性使其成为了构建一个开发平台时的明智之选。</p>
+                                            <ul>
+                                                <li>最简单的支付系统</li>
+                                                <li>丰富的第三方API</li>
+                                                <li>成本低廉的小额支付</li>
+                                                <li>更多的安全性是在客户端</li>
+                                                <li>用于追踪发票的黑币地址</li>
+                                            </ul>								
+                                            <div class="btnContainer">
+                                                <a href="#specs" class="smoothScroll btn">黑币技术特性</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Specs -->
+                <section class="section-statistics" id="specs">
+                    <!-- Seperator -->
+                    <div class="seperator">
+                        <div class="contentContainer">
+                            <h2>
+                                <span class="sub">黑币</span>
+                                技术特性   
+                            </h2>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                    <div class="content">
+                        <div class="contentContainer">
+                            <hgroup>
+                                <h2>
+                                    <span class="sub">黑币的特点</span>
+                                    <span class="main">技术特性</span>
+                                </h2>
+                            </hgroup>
+                            <div class="intro user-content">
+                                <p>黑币背后的信息与数据</p>
+                            </div>
+                            <!-- Statistics -->
+                            <div class="statistics">
+                                <!-- Bar Chart -->
+                                <div class="barChart">
+                                    <div class="dummybar">
+                                        <!-- dummy bar for postitioning -->
+                                    </div>
+                                    <div class="bar" data-percentage="100">
+                                        <div class="tooltip tooltip-left">
+                                            <div class="tooltip-label">已发行的黑币</div>
+                                            <div class="tooltip-value">75,000,000</div>
+                                        </div>
+                                    </div>
+                                    <div class="bar" data-percentage="40">
+                                        <div class="tooltip tooltip-topRight">
+                                            <div class="tooltip-label">智能矿池矿工</div>
+                                            <div class="tooltip-value">3,911</div>
+                                        </div>
+                                    </div>
+                                    <div class="bar" data-percentage="15">
+                                        <div class="tooltip tooltip-right">
+                                            <div class="tooltip-label">区块链</div>
+                                            <div class="tooltip-value">250mb</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Icon Statistics -->
+                                <ul class="iconStats">
+                                    <li>
+                                        <div class="iconStats-icon"><i class="icon-cust-barchart"></i></div>
+                                        <div class="iconStats-value">7500万</div>
+                                        <div class="iconStats-label">币</div>
+                                    </li>
+                                    <li>
+                                        <div class="iconStats-icon"><i class="icon-cust-analytics"></i></div>
+                                        <div class="iconStats-value">权益证明</div>
+                                        <div class="iconStats-label">较短的POW阶段</div>
+                                    </li>
+                                    <li>
+                                        <div class="iconStats-icon"><i class="icon-cust-user"></i></div>
+                                        <div class="iconStats-value">1%</div>
+                                        <div class="iconStats-label">权益累积收益</div>
+                                    </li>	  
+                                    <li>
+                                        <div class="iconStats-icon"><i class="icon-cust-stopwatch"></i></div>
+                                        <div class="iconStats-value">30秒</div>
+                                        <div class="iconStats-label">第一个确认</div>
+                                    </li>
+                                    <li>
+                                        <div class="iconStats-icon"><i class="icon-cust-arrow-cross"></i></div>
+                                        <div class="iconStats-value">一分钟</div>
+                                        <div class="iconStats-label">区块</div>
+                                    </li>
+                                    <li>
+                                        <div class="iconStats-icon"><i class="icon-cust-paper"></i></div>
+                                        <div class="iconStats-value">难度</div>
+                                        <div class="iconStats-label">每个块重定向</div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="section-blackBook" id="features">
+                                <hgroup>
+                                    <h2 class="in-view">
+                                        <span class="sub">黑币的</span>
+                                        <span class="main">关键特性</span>
+                                    </h2>
+                                </hgroup>
+                                <div class="intro user-content">
+                                    <p>黑币有许多基础性的优势</p>
+                                </div>
+                                <div class="user-content" style="text-align:center;">
+                                    <div class="contentLeft">
+                                        <ul>
+                                            <li>低通胀<br /><span class="featurelist">黑币在其较短的POW挖矿阶段当中得到了广泛的分布。除了每年1%的权利累积收益以外，不会再产生新的黑币。</span></li>
+                                            <li>快速转账<br /><span class="featurelist">黑币的权益证明机制（POS）使得黑币网络如闪电般快速。黑币是面对面交易的理想数字货币，也适用于所有关注交易速度的场合。</span></li>
+                                            <li>区块链安全性<br /><span class="featurelist">其他数字货币由于依赖大量算力来维持网络，容易受到攻击，黑币网络可以避免这一点。</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="contentRight">
+                                        <ul>
+                                            <li>环保<br /><span class="featurelist">黑币网络不需要大量专业化的硬件来维持。相对于传统的数字货币网络，黑币要节能得多。</span></li>
+                                            <li>有创造力的社区<br /><span class="featurelist">黑币有一个强大而专业的社区，由天才的开发者和用户组成，他们致力于不断推动黑币的发展。</span></li>
+                                            <li>广泛的商业接纳度<br /><span class="featurelist">每天都有新的在线商户与服务接受黑币。随着近期加入CoinKite商户服务，可以预期黑币很快会在更多的销售应用中出现。</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>							
+                    </div>
+                </section>
+
+                <!-- Getting Started -->
+                <section class="section-timeline" id="getting-started">
+                    <!-- Seperator -->
+                    <div class="seperator">
+                        <div class="contentContainer">
+                            <h2>
+                                <span class="sub">开始</span>
+                                你的黑币之旅	    
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="contentContainer">
+                            <hgroup>
+                                <h2 class="in-view">
+                                    <span class="sub">开始你的黑币之旅</span>
+                                    <span class="main">黑币</span>
+                                </h2>
+                            </hgroup>
+                            <div class="intro user-content">
+                                <p><strong>技术方面的说明已经足够多了，让我们开始使用黑币吧！</strong></p>
+                            </div>
+                            <ul class="timeline">
+                                <li class="year">1.</li>
+                                <li>
+                                    <span class="title"><a href="wallets" class="smoothScroll">下载黑币钱包</a></span>
+                                    <span class="timeline-content">
+                                        <p>首先，你需要获得一个钱包来存储你的黑币。</p>
+                                        <a href="#wallets" class="smoothScroll btn-sm">PC钱包</a>
+                                        <a href="#web-wallets" class="btn-sm modalbtn modal-trigger">WEB钱包</a>
+                                    </span>
+                                </li>
+                                <li class="year">2.</li>
+                                <li>
+                                    <span class="title">购买黑币</span>
+                                    <span class="timeline-content">
+                                        <p>一旦你获取了钱包，就可以直接购买黑币或者用比特币来购买。</p>
+                                        <p>黑币兑换平台<br />
+                                            <a href="https://expresscoin.com" target="_blank">Expresscoin <small>(USD, CND)</small></a>, 
+                                            <a href="https://anycoindirect.eu/buy/blackcoins" target="_blank">Anycoin Direct <small>(EUR)</small></a>
+                                        </p>
+                                        <p>法币市场:<br />
+                                            <a href="https://bittylicious.com/" target="_blank">Bittylicious <small>(GBP)</small></a>, 
+                                            <a href="https://bter.com/trade/bc_cny" target="_blank">BTER <small>(CNY)</small></a>, 
+                                            <a href="https://www.litebit.eu/coin/bc/en/" target="_blank">LiteBit <small>(EURO)</small></a>, 
+                                            <a href="https://prelude.io/trade/usd/bc" target="_blank">Prelude <small>(USD)</small></a>,<br />
+                                            <a href="https://www.vaultofsatoshi.com/" target="_blank">Vault of Satoshi <small>(USD, CAD)</small></a></p>
+                                        <p>数字货币币交易所<br />
+                                            <a href="https://bittrex.com/Market/Index?MarketName=BTC-BC" target="_blank">Bittrex</a>, <a href="https://bter.com/trade/bc_cny" target="_blank">BTER</a>, 
+                                            <a href="https://www.cryptsy.com/markets/view/179" target="_blank">Cryptsy</a>, 
+                                            <a href="https://www.mintpal.com/market/BC/BTC" target="_blank">Mintpal</a>, 
+                                            <a href="https://poloniex.com/exchange/btc_bc" target="_blank">Poloni.ex</a></p>
+                                    </span>
+                                </li>
+                                <li class="year">3.</li>
+                                <li>
+                                    <span class="title">获取黑币利息</span>
+                                    <span class="timeline-content">
+                                        <p>通过所谓的权益累计过程，黑币持有者可以获取每年1%的复利。</p>
+                                        <a href="#staking" class="btn-sm modalbtn modal-trigger">如何获取</a>
+                                    </span>
+                                </li>
+                                <li style="padding-top:40px;">
+                                    <span class="title">黑币挖矿</span>
+                                    <span class="timeline-content">
+                                        <p>黑币已经挖完了，但是你的算力可以用来挖其他的币，换成比特币，然后购买黑币。</p>
+                                        <a href="http://blackcoinpool.com/" class="btn-sm">BlackCoin Pool</a>
+                                    </span>
+                                </li>
+                                <li class="year">4.</li>
+                                <li>
+                                    <span class="title">花费黑币</span>
+                                    <span class="timeline-content">
+                                        <p>你已获取了一些黑币，你可以用它来在许多在线商店和零售店买东西。</p>
+                                        <p>你可通过以下链接来定位支持黑币的商户：</p>
+                                        <a href="http://blackcoindirectory.com" class="btn-sm">BlackCoin Directory</a>
+                                        <a href="http://blackcoinmap.com" class="btn-sm">BlackCoin Map</a>
+                                    </span>
+                                </li>
+                                <li class="year">5.</li>
+                                <li>
+                                    <span class="title"><a href="#community">加入社区</a></span>
+                                    <span class="timeline-content">
+                                        <p>我们有一个由黑币的用户与开发者组成的专注、积极而友好的社区。</p>
+                                        <a href="#community" class="smoothScroll btn-sm">现在加入我们</a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Wallets -->
+                <section class="section-profile" id="wallets">
+                    <!-- Seperator -->
+                    <div class="seperator">
+                        <div class="contentContainer">
+                            <h2>
+                                <span class="sub">黑币</span>
+                                钱包                            </h2>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="content">
+                        <div class="contentContainer">
+                            <hgroup>
+                                <h2>
+                                    <span class="sub">下载</span>
+                                    <span class="main">钱包</span>
+                                </h2>
+                            </hgroup>
+                            <!-- L/R Nav -->
+                            <a href="#" class="profile-nav profile-nav-prev"><i class="icon-cust-arrow-left"></i></a>
+                            <a href="#" class="profile-nav profile-nav-next"><i class="icon-cust-arrow-right"></i></a>
+                            <!-- Profile Gallery -->
+                            <div class="profile-pagination">
+                                <div class="profile-pagination">
+                                    <div class="swiper-pagination-switch swiper-visible-switch swiper-active-switch">PC</div>
+                                    <div class="swiper-pagination-switch">智能手机</div>
+                                </div>
+                            </div>
+                            <div class="profile-container">
+                                <div class="profile-wrapper">
+                                    <div class="profile-slide profile-imac">
+                                        <div class="profile-slide-wrapper">
+                                            <!-- Windows --> 
+                                            <img src="./img/profile/windows.png" alt="" />
+                                            <div class="btnContainer">
+                                                <a href="http://www.maarx.nl/maarx.nl/blackcoin/files/blackcoin-1.1.2.1-windows.zip" class="btn" target="_blank">下载WINDOWS v1.1.2.1</a>
+                                            </div>
+                                            <!-- Linux--> <br><br><br>
+                                            <img src="./img/profile/linux.png" alt="" />
+                                            <div class="btnContainer">
+                                                <a href="http://www.maarx.nl/maarx.nl/blackcoin/files/blackcoin-1.1.2.1-linux.zip" class="btn" target="_blank">下载LINUX v1.1.2.1</a>
+                                            </div>
+                                            <!-- Mac--> <br><br><br>
+                                            <img src="./img/profile/mac.png" alt="" />
+                                            <div class="btnContainer">
+                                                <a href="http://www.maarx.nl/maarx.nl/blackcoin/files/BlackCoin-Qt-MacOSX-v1.1.1.zip" class="btn" target="_blank">下载MAC v1.1.1</a>
+                                            </div>
+                                            <!-- Github--> <br><br><br>
+                                            <img src="./img/profile/github.png" alt="" />
+                                            <div class="btnContainer">
+                                                <a href="https://github.com/rat4/blackcoin" class="btn" target="_blank">黑币代码库</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="profile-slide profile-iphone">
+                                        <div class="profile-slide-wrapper">
+                                            <!-- Android --> <br>
+                                            <img src="./img/profile/android.png" alt="" />
+                                            <div class="btnContainer">
+                                                <a href="http://coinomi.com/" class="btn" target="_blank"><i>下载Android版</i></a>
+                                            </div>
+                                            <!-- iOS--> <br><br><br>
+                                            <img src="./img/profile/ios.png" alt="" />
+                                            <div class="btnContainer">
+                                                <a href="#" class="btn" target="_blank"><i>iOS版即将发布</i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Community -->
+                <section class="section-team" id="community">
+                    <!-- Seperator -->
+                    <div class="seperator">
+                        <div class="contentContainer">
+                            <h2>
+                                <span class="sub">加入</span>
+                                社区		  
+                            </h2>
+                            <br>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                    <div class="content">
+                        <div class="contentContainer">
+                            <hgroup>
+                                <h2>
+                                    <span class="sub">加入</span>
+                                    <span class="main">我们的社区</span>
+                                </h2>
+                            </hgroup>
+                            <!-- Social Outlets -->
+                            <ul class="team-members">
+                                <li>
+                                    <div class="team-member-image">
+                                        <img src="./img/social/reddit.png" alt="Reddit" /> 					
+                                    </div>
+                                    <h3 class="team-member-title">
+                                        <span class="sub">Reddit</span> 						
+                                    </h3>
+                                    <div class="btnContainer">
+                                        <a href="http://www.reddit.com/r/blackcoin/" class="btn" target="_blank">加入REDDIT</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="team-member-image">
+                                        <img src="./img/social/twitter.png" alt="Twitter" /> 					
+                                    </div>
+                                    <h3 class="team-member-title">
+                                        <span class="sub">Twitter</span> 						
+                                    </h3>
+                                    <div class="btnContainer">
+                                        <a href="https://twitter.com/coinblack" class="btn" target="_blank">在Twitter上关注我们</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="team-member-image">
+                                        <img src="./img/social/irc.png" alt="IRC" /> 					
+                                    </div>
+                                    <h3 class="team-member-title">
+                                        <span class="sub">IRC</span> 						
+                                    </h3>
+                                    <div class="btnContainer">
+                                        <a href="http://webchat.freenode.net/?channels=%23blackcoinpool&amp;uio=d4" class="btn" target="_blank">在IRC畅聊</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="team-member-image">
+                                        <img src="./img/social/facebook.png" alt="Facebook" /> 					
+                                    </div>
+                                    <h3 class="team-member-title">
+                                        <span class="sub">Facebook</span> 						
+                                    </h3>
+                                    <div class="btnContainer">
+                                        <a href="https://www.facebook.com/coinblack" class="btn" target="_blank">在Facebook上为我们点赞</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- News -->
+                <section class="section-events" id="news">
+                    <!-- Seperator -->
+                    <div class="seperator">
+                        <div class="contentContainer">
+                            <h2>
+                                <span class="sub">黑币</span>
+                                新闻		    
+                            </h2>
+                        </div>
+                    </div>
+                    <!-- Content -->
+					                </section>
+            </main>
+        </div>
+        <!-- Modals -->
+		<div class="form modal-form gc-modal" id="proof-of-stake">
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">黑币的网络安全依赖于</span>
+						权益证明机制					</h2>
+					<h2><span class="sub">PoS：由大众运行的系统</span></h2>
+					<p>黑币基于一种叫做权益证明（POS）的独特技术。与其他数字货币采用巨大的算力来验证与保障网络不同的是，黑币通过校验人们的币来保障网络安全和处理转账。</p>
+					<p>权益证明（PoS）系统使得黑币比几乎所有其他货币都运作的更快速，你不再需要等待。权益证明确保了黑币仍然是去中心化的；没有任何个人或群体可以取得网络的控制权。</p>
+					<p>黑币持有者通过一个叫做STAKING（权益累积）的过程保障网络安全，并藉由此获得1%的年复利。</p>
+				</div>
+			</div>
+		</div>
+		<div class="form modal-form gc-modal" id="one-percent-interest">
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub"></span>
+						1%利息					</h2>
+					<h2>
+						<span class="sub">黑币支付1%的年复利</span>
+					</h2>
+					<p>黑币持有者通过一个叫做STAKING（权益累积）的过程保障网络安全，并藉由此获得1%的年复利。利息每隔几天发放一部分。</p>
+				</div>
+			</div>
+		</div>
+		<!--<div class="form modal-form gc-modal" id="wallet-guide">
+			   <div class="gc-modal-wrapper">
+					  <div class="gc-modal-container">
+							 <h2 class="form-title">
+								<span class="sub">Installing and using your</span>
+								BlackCoin Wallet    
+							 </h2>
+					  </div>
+			   </div>
+		</div>-->
+		<div class="form modal-form gc-modal" id="staking">
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">通过你的</span>
+						黑币钱包来权益累积。   
+					</h2>
+					<h2>1.<span class="sub">打开你的黑币钱包。</span></h2>
+					
+					<h2>2.<span class="sub">确认你的钱包中有黑币。</span></h2>						
+					<img src="./img/wallet/balance.png" alt="">
+					<p>权益累积是一个通过你持有的黑币获取利息的过程。首先你需要持有黑币！</p>
+					
+					<h2>3.<span class="sub">等待黑币钱包同步。</span></h2>
+					<img src="./img/wallet/sync.png" alt="">
+					<p>在你能够进行权益累积之前，必须要完成区块链同步。</p>
+
+					<h2>4.<span class="sub">解锁钱包</span></h2>
+					<img src="./img/wallet/unlock.png" alt="">
+					<p>解锁钱包使得你的黑币参与权益累积。进入设置>解锁钱包来解锁。此解锁操作默认只用于权益累积。</p>
+
+					<h2>5.<span class="sub">等待权益累积按钮变绿。</span></h2>
+					<img src="./img/wallet/staking.png" alt="">
+					<p>一旦此按钮变成绿色，你的黑币就开始进行权益累积。每隔几天你就会获得回报，回报的数量取决于你拥有多少黑币，年化收益率为1%。</p>
+				</div>
+			</div>
+		</div>
+		<div class="form modal-form gc-modal" id="international-payments">			   
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">黑币是为了</span>
+						快速、安全的跨国交易   
+					</h2>
+					<h2>
+						<span class="sub">黑币是国际贸易的理想选择。</span>
+					</h2>
+					<p>相对于传统的国际转账手续费，黑币转账要便宜好几个数量级。再加上几乎即时的到账速度，黑币是国际间转账的一个理想选择。</p>
+				</div>
+			</div>
+		</div>
+		<div class="form modal-form gc-modal" id="point-of-sale">			   
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">黑币是为了</span>
+						快速、安全的零售点交易    
+					</h2>
+					<h2>
+						<span class="sub">黑币是零售业的完美选择</span>
+					</h2>
+					<p>作为最快捷的数字货币之一，黑币是面对面和零售点支付的完美选择。黑币已加入到CoinKite商户服务平台，使得商户比以往任何时刻都更容易接受数字货币。</p>
+				</div>
+			</div>
+		</div>
+		<div class="form modal-form gc-modal" id="open-source">			   
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">黑币是</span>
+						开放源代码的					</h2>
+					<h2>
+						<span class="sub">开源表示没有人占有黑币</span>
+					</h2>
+					<p>由于黑币是开源的，任何人都可以查看黑币源代码。你可以始终确信有一个巨大的社区有能力去检视和审核黑币，确保其安全性和去中心化。开源同样确保没有个体可以控制黑币。</p>
+				</div>
+			</div>
+		</div>
+		<div class="form modal-form gc-modal" id="energy-efficient">			   
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">黑币是</span>
+						节能					</h2>
+					<h2>
+						<span class="sub">无须进行耗费巨大的挖矿，黑币使用的能源比绝大多数数字货币少得多。</span>
+					</h2>
+					<p>由于权益累积（PoS）系统，黑币网络运作于世界各地黑币用户的普通电脑与手机上。绝大部分数字货币网络运作于特殊的、高能耗的挖矿硬件之上，其在能源效率上的差距是显而易见的。黑币是绿色的数字货币。</p>
+				</div>
+			</div>
+		</div>				   
+		<div class="form modal-form gc-modal" id="decentralized-network">			   
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">黑币是</span>
+						安全与去中心化					</h2>
+					<h2>
+						<span class="sub">由于权益累积系统（PoS），黑币是安全与去中心化的。</span>
+					</h2>		
+					<p>去中心化表示没有群体或官方机构可以获得对黑币的控制。黑币网络经由每一个采用黑币钱包进行权益累积的用户来运作，而不像其他大多数数字货币一样运行于一些大型的专业化矿机之上。由于无须挖矿，黑币免于其他数字货币所要面对的算力攻击。</p>
+				</div>
+			</div>
+		</div>			   
+		<div class="form modal-form gc-modal" id="web-wallets">			   
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub"></span>
+						WEB钱包与服务  
+					</h2>
+					<h2>
+						<span class="sub">黑币由高质量的WEB服务提供支持。</span>
+					</h2>
+					<p style="padding-bottom:1em;">WEB钱包是一种由第三方服务商保障的钱包，你拥有他并可以在线接入。你的本地电脑不需要安装任何软件。你可以存储、发送或接收黑币，就像桌面钱包那样。以下是顶尖的黑币WEB钱包：</p>
+					<a href="https://coinkite.com/"><img src="./img/coinkite.png" alt="CoinKite" style="border-radius:2px;"></a>
+					<a href="https://holytransaction.com/"><img src="https://holytransaction.com/images/logo.png" alt="HolyTransaction" style="border-radius:2px;"></a>					
+					<a href="https://cointopay.com/"><img src="./img/cointopay.png" alt="MyWl.lt" style="border-radius:2px;"></a>
+				</div>
+			</div>
+		</div>
+		<div class="form modal-form gc-modal" id="mobile-soon">			   
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">BlackCoin 智能手机钱包</span>
+						更多敬请期待					</h2>
+					<h2><span class="sub">iOS钱包正在开发中。</span></h2>
+				</div>
+			</div>
+		</div>
+        <!--Analytics-->
+        <script>
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function() {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+						m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	
+			ga('create', 'UA-45840836-2', 'blackcoin.co');
+			ga('send', 'pageview');
+        </script>
+        <script type='text/javascript' src='./js/jquery.mobile.custom.min_2b23bb4a.js'></script>
+        <script type='text/javascript' src='./js/modernizr.custom_2b23bb4a.js'></script>
+        <script type='text/javascript' src='./js/response.min_2b23bb4a.js'></script>
+        <script type='text/javascript' src='./js/idangerous.swiper.min_2b23bb4a.js'></script>
+        <script type='text/javascript' src='./js/waypoints.min_2b23bb4a.js'></script>
+        <script type='text/javascript' src='./js/jquery.stellar.min_2b23bb4a.js'></script>
+        <script type='text/javascript' src='./js/main_2b23bb4a.js'></script>
+    </body>
+</html>

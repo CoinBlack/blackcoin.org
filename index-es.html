@@ -1,0 +1,889 @@
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <title>BlackCoin, La Moneda del Futuro</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="msapplication-TileColor" content="#FFFFFF" />
+
+        <link rel="shortcut icon" sizes="16x16 32x32 48x48 64x64" href="./img/favicon.png" />
+        <link rel='stylesheet' href='./fonts/fonts.css?v=4' type='text/css' media='all' />
+        <link rel='stylesheet' href='./css/style.css?v=4' type='text/css' media='all' />
+
+        <script type='text/javascript' src='./js/jquery_main.js'></script>
+        <script type='text/javascript' src='./js/jquery-minified.js'></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </head>
+
+    <body class="noscript">
+        <div class="pushWrapper">
+            <!-- Header (shown on mobile only) -->
+
+            <header class="pageHeader">
+                <!-- Menu Trigger -->
+                <button class="menu-trigger">
+                    <span class="lines"></span>
+                </button>
+                <!-- Logo -->
+                <a class="headerLogo smoothScroll" href="http://www.blackcoin.co">
+                    <img style="margin-top:1.5%;padding-left:9.5%;display:inline-block;" src="./img/navlogo2.png" alt="BlackCoin"> <!--fix this-->
+                </a>
+            </header>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <nav class="mainMenu">
+                    <ul class="menu">
+                        <li><a class="smoothScroll" href="#info" ><i class="icon-cust-help"></i><span class="text">Qué es BlackCoin?</span></a></li>
+                        <li><a class="smoothScroll" href="#uses" ><i class="icon-cust-book"></i><span class="text">Por qué utilizar BlackCoin?</span></a></li>
+                        <li><a class="smoothScroll" href="#specs" ><i class="icon-cust-analytics"></i><span class="text">Specs & Features</span></a></li>				 
+                        <li><a class="smoothScroll" href="#getting-started" ><i class="icon-cust-write"></i><span class="text">Cómo Empezar?</span></a></li>
+                        <li><a class="smoothScroll" href="#wallets" ><i class="icon-cust-laptop-user"></i><span class="text">Carteras</span></a></li>
+                        <li><a class="smoothScroll" href="#community" title="Membership Form"><i class="icon-cust-user"></i><span class="text">Comunidad</span></a></li>
+                        <li><a class="smoothScroll" href="#news" ><i class="icon-cust-calendar"></i><span class="text">Noticias</span></a></li>
+                    </ul>
+                </nav>
+                <nav class="backToTop">
+                    <ul class="backToTop-menu">
+                        <li><a class="smoothScroll" href="#info" title="to the top"><i class="icon-cust-arrow"></i><span class="text">Back to top</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Main -->
+            <main>
+              
+                <!-- Language switcher -->
+                <div style="display: block; position: absolute; top: 30px; right: 40px; z-index: 100;">
+                    <a href="index.html">English</a> 
+                    <a href="index-cn.html">中文</a>
+                </div>
+
+                <!-- Intro -->
+                <section class="section-intro" id="intro" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="0">
+                    <div class="content">
+                        <div class="contentContainer">
+                            <h1>
+                                <span class="sub">BlackCoin</span>
+                                <span class="main">La Moneda del Futuro</span>
+                            </h1>
+
+                        </div>
+                    </div>
+                </section>
+
+                <div id="notifications" style="display:none;">
+                    <p>The BlackCoin wallet has been updated to v1.1.0.1. Please update. Hardfork at block 319000!</p>
+                </div>
+
+                <style>
+                    #blackcoin-hl {
+                        color:#584930;
+                    }
+                    #blackcoin-hl:hover, #blackhalo-hl:hover {
+                        color:#584930;
+                    }
+                    .hoverable:hover { color:#584930; }
+                </style>
+                <script>
+                    $("#blackcoin-hl").click(function() {
+                        $('#blackhaloshowdiv').toggle();
+                        $('#blackcoinshowdiv').toggle();
+                    });
+                    $("#blackhalo-hl").click(function() {
+                        $('#blackhaloshowdiv').toggle();
+                        $('#blackcoinshowdiv').toggle();
+                    });
+                </script>
+
+                <!-- Quick Wallet Links -->
+                <section class="section-quickwallet">
+                    <div class="content">
+                        <div class="quickwalletContainer">
+                            <p>Choose your option: <span id="blackcoin-hl" onclick="$('#blackhaloshowdiv').hide();
+                        $('#blackcoinshowdiv').show();
+                        $('#blackcoin-hl').attr('style', 'color:#584930');
+                        $('#blackhalo-hl').attr('style', 'color:#9E9E9E;');
+                        $('#blackhalo-hl').addClass('hoverable');">BlackCoin</span> | <span id="blackhalo-hl" onclick="$('#blackhaloshowdiv').show();
+                        $('#blackcoinshowdiv').hide();
+                        $('#blackcoin-hl').attr('style', 'color:#9E9E9E');
+                        $('#blackhalo-hl').attr('style', 'color:#584930;');
+                        $('#blackcoin-hl').addClass('hoverable');">BlackHalo (Smart Contracts Client Beta)</span></p>
+                            <div id="blackcoinshowdiv">
+                                <a class="btn-wallet" href="http://www.maarx.nl/maarx.nl/blackcoin/files/blackcoin-1.1.2.1-windows.zip"><img class="icon" src="./img/profile/windows-sm.png" alt="">Windows</a>
+                                <a class="btn-wallet" href="http://www.maarx.nl/maarx.nl/blackcoin/files/blackcoin-1.1.2.1-linux.zip"><img class="icon" src="./img/profile/linux-sm.png" alt="">Linux</a>
+                                <a class="btn-wallet" href="http://www.maarx.nl/maarx.nl/blackcoin/files/BlackCoin-Qt-MacOSX-v1.1.1.zip"><img class="icon" src="./img/profile/mac-sm.png" alt="">OS X</a>
+                                <a class="btn-wallet" href="http://coinomi.com/"><img class="icon" src="./img/profile/android-sm.png" alt="">Android</a>
+                                <a class="btn-wallet modalbtn modal-trigger" href="#mobile-soon"><img class="icon" src="./img/profile/mac-sm.png" alt=""><span style="text-transform:lowercase;">i</span>OS</a>
+                                <a class="btn-wallet modalbtn modal-trigger" href="#web-wallets"><img class="icon" src="./img/profile/web-sm.png" alt="">Web Wallets</a>
+                                <br>
+                                <a class="btn-wallet" href="blackcoin-pos-protocol-v2-whitepaper.pdf"><img class="icon" src="./img/profile/whitepaper.png" width="27px" target="_blank" alt="">POS 2.0 Whitepaper</a>
+                                <br>
+                                <p style="margin-top:9px;">Latest wallet update: 8th of December, 2014 <a href="https://bitcointalk.org/index.php?topic=469640.msg9771081#msg9771081" target="_blank">(v1.1.2.1)</a></p>
+                            </div>
+                            <div id="blackhaloshowdiv" style="display:none;">
+                                <a class="btn-wallet" href="http://www.davtonia.com/blackhalo/blackhalo32.zip"><img class="icon" src="./img/profile/windows-sm.png" alt="">Windows 32-bit</a>
+                                <a class="btn-wallet" href="http://www.davtonia.com/blackhalo/blackhalo.zip"><img class="icon" src="./img/profile/windows-sm.png" alt="">Windows 64-bit</a>
+                                <a class="btn-wallet" href="#"><img class="icon" src="./img/profile/linux-sm.png" alt="">Linux (coming soon!)</a>
+                                <a class="btn-wallet" href="#"><img class="icon" src="./img/profile/mac-sm.png" alt="">OS X (coming soon!)</a>
+                                <br>
+                                <a class="btn-wallet" href="http://blackhalo.info/wp-content/uploads/2014/06/whitepaper_twosided.pdf"><img class="icon" src="./img/profile/whitepaper.png" target="_blank" width="27px" alt="">BlackHalo Whitepaper</a>
+                                <a class="btn-wallet" href="http://www.blackhalo.info/"><img class="icon" src="./img/profile/link.png" width="27px" target="_blank" alt="">More Information</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+				
+                <!-- Sub-intro -->
+                <section class="section-subintro">
+                    <div class="content">
+                        <div class="contentContainer">
+                            <div class="contentLeft">						
+                                <div class="quarters">
+                                    <h2>Innovación</h2>
+                                    <p style="height:99px;"><a href="#proof-of-stake" class="modalbtn modal-trigger">Proof of Stake</a> aporta velocidad, seguridad y eficiencia energética, por encima de la mayoría de las divisas digitales. <a href="http://www.blackhalo.info/" class="modalbtn modal-trigger" target="_blank" alt="BlackHalo Website">BlackHalo client</a> incorpora contratos inteligentes, firmas múltiples, y más. </p>
+                                    <div class="btnContainer">
+                                        <a href="#info" class="smoothScroll btn" style="font-size:15px;">Qué es BlackCoin?</a>
+                                    </div>
+                                </div>
+                                <div class="quarters">
+                                    <h2>Liberation</h2>		
+                                    <p style="height:99px;">Al ser libre de autoridades centrales, y de los bancos, BlackCoin y BlackHalo le devuelven el poder a las personas.</p>	
+                                    <div class="btnContainer">
+                                        <a href="#uses" class="smoothScroll btn" style="font-size:15px;">Por qué utilizar BlackCoin?</a>
+                                    </div>							
+                                </div>					
+                            </div>
+                            <div class="contentRight">
+                                <div class="quarters">
+                                    <h2>Adopción</h2>
+                                    <p style="height:99px;">BlackCoin está logrando rápidamente el apoyo de personas, comercios y servicios por todo el mundo.</p>
+                                    <div class="btnContainer">
+                                        <a href="#getting-started" class="smoothScroll btn" style="font-size:15px;">Get Started Now!</a>
+                                    </div>
+                                </div>
+                                <div class="quarters">
+                                    <h2>Compromiso</h2>
+                                    <p style="height:99px;">BlackCoin cuenta con una gran comunidad de apoyo en la red, tanto de usuarios como de programadores.</p>
+                                    <div class="btnContainer">
+                                        <a href="#community" class="smoothScroll btn" style="font-size:15px;">Ingrese a la Comunidad!</a>
+                                    </div>
+                                </div>					
+                            </div>
+                            <a class="smoothScroll arrow" href="#info"><img src="./img/arrow-down.png" alt="" /></a>
+                        </div>
+                    </div>
+                </section>  
+				
+                <!-- What is BlackCoin -->			   
+                <section class="section-audience" id="info">
+                    <!-- Seperator -->
+                    <div class="seperator">
+                        <div class="contentContainer">
+                            <h2>
+                                <span class="sub">Qué es</span>
+                                BlackCoin	    
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="contentContainer">
+                            <div class="contentLeft">
+                                <ul class="figure">
+                                    <li>A</li>
+                                    <li>B</li>
+                                </ul>
+                            </div>
+                            <div class="textContent contentRight">
+                                <h3>A new <span class="em">form</span> of currency</h3>
+                                <br>
+                                <div class="user-content">
+                                    <p>BlackCoin es una  moneda digital P2P con un registro de transacciones distribuido, <a href="#decentralized-network" class="modalbtn modal-trigger">descentralizado</a> y público; que, al contrario de los libros de contabilidad en los bancos tradicionales, son visibles, y fácilmente inspeccionados por las personas.</p>
+                                    <p>La capacidad de gestionar transacciones y emitir BlackCoins adicionales está a cargo de la red de usuarios que utilizan BlackCoin. Debido a que la red de BlackCoin es operada por la gente, los propietarios de BlackCoin reciben un <a href="#one-percent-interest" class="modalbtn modal-trigger">interés anual de 1%</a> a través de un proceso llamado <a href="#staking" class="modalbtn modal-trigger">staking (Inversión)</a>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contentContainer">
+                            <div class="contentRight">
+                                <ul class="figure">
+                                    <li>B</li>
+                                    <li>C</li>
+                                </ul>
+                            </div>
+                            <div class="textContent contentLeft">
+                                <h3>Un nuevo e innovador<span class="em">modo</span> de transferir dinero</h3>
+                                <br>
+                                <div class="user-content">
+                                    <p>La tecnología de BlackCoin le permite a las personas enviar y recibir pagos rápidos, sencillos y seguros entre amigos, familiars y negocios en cualquier lugar del planeta. BlackCoin le posibilita controlar tus finanzas sin la necesidad de una autoridad central, o un banco.</p>
+                                    <p>BlackCoin es <a href="#open-source" class="modalbtn modal-trigger">de código abierto</a> también, lo que significa que, el programa que lo hace funcionar, está completamente disponible para ser examinado públicamente — para su tranquilidad. No existe un dueño de BlackCoin, ya que no es una entidad individual; cualquier persona puede ser parte de Blackcoin.</p>
+                                    <p><a href="http://blackhalo.info/" class="modalbtn modal-trigger">BlackHalo</a> es el primer cliente funcional de contratos inteligentes de firma múltiple en el mundo! Trae muchas nuevas aplicaciones, directamente a las manos de los usuarios.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btnContainer">
+                            <a href="#getting-started" class="smoothScroll btn">Empiece Ya!</a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Specifications -->
+                <section class="section-pricing" id="uses">
+                    <!-- Seperator -->
+                    <div class="seperator">
+                        <div class="contentContainer">
+                            <h2>
+                                <span class="sub">Por qué utilizar</span>
+                                BlackCoin		    
+                            </h2>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                    <div class="content">
+                        <div class="contentContainer">
+                            <!-- Menu -->
+                            <ul class="pricing-menu">
+                                <li class="selected"><a href="#">Personal</a></li>
+                                <li><a href="#">Negocios</a></li>
+                                <li><a href="#">Programadores</a></li>
+                            </ul>
+                            <!-- L/R Nav -->
+                            <a href="#" class="pricing-nav pricing-nav-prev"><i class="icon-cust-arrow-left"></i></a>
+                            <a href="#" class="pricing-nav pricing-nav-next"><i class="icon-cust-arrow-right"></i></a>
+                            <!-- Slides -->
+                            <div class="pricing-container">
+                                <div class="pricing-wrapper">
+                                    <div class="pricing-slide">
+                                        <hgroup>
+                                            <h3>
+                                                <span class="main">Personal</span>
+                                                <span class="sub">Por qué las personas utilizan</span>
+                                                <span class="super-sub">BlackCoin</span>
+                                            </h3>
+                                        </hgroup>
+                                        <div class="pricing-slide-content user-content">
+                                            <p>Las personas utilizan BlackCoin para transferir dinero a y desde amigos, familiars y negocios en cualquier parte del mundo. BlackCoin es una moneda ideal para usar tanto <a href="#point-of-sale" class="modalbtn modal-trigger">en persona</a> como <a href="#international-payments" class="modalbtn modal-trigger">internacionalmente</a> en comercio digital. Con el cliente <a href="http://blackhalo.info/" class="modalbtn modal-trigger">BlackHalo</a> Ud. puede hacer contratos indisolubles e intercambiar a su gusto.</p>
+                                            <p>El uso de BlackCoin es rápido, seguro, y satisfactorio.</p>
+                                            <ul>
+                                                <li>Seguridad y control de su dinero</li>
+                                                <li><a href="#international-payments" class="modalbtn modal-trigger">Rápidos pagos internacionales</a></li>
+                                                <li>Cero o mínimos cargos</li>
+                                                <li><a href="http://www.blackauctions.eu/" target="_blank">Ebay descentralizado</a></li>
+                                                <li><a href="#one-percent-interest" class="modalbtn modal-trigger">Interés compuesto anual del 1%</a></li>
+                                                <li>Pagos fáciles por celular</li>
+                                            </ul>
+                                            <div class="btnContainer">
+                                                <a href="#getting-started" class="smoothScroll btn">Empiece Ya!</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-slide">
+                                        <hgroup>
+                                            <h3>
+                                                <span class="main">Negocios</span>
+                                                <span class="sub">Por qué los negocios utilizan</span>
+                                                <span class="super-sub">BlackCoin</span>
+                                            </h3>
+                                        </hgroup>
+                                        <div class="pricing-slide-content user-content">
+                                            <p>Los negocios utilizan BlackCoin para integrarse a un Mercado emergente, a favor de una manera más veloz y sencilla de transferir valores entre dos partes. BlackCoin ofrece numerosas ventajas, en comparación con los habituales <a href="#point-of-sale" class="modalbtn modal-trigger">puntos de venta</a> y <a href="#international-payments" class="modalbtn modal-trigger">internacionales</a> sistemas de pagos. El cliente <a href="http://blackhalo.info/" class="modalbtn modal-trigger">BlackHalo</a> es a una potente herramienta para cualquier tipo de contracto o compra-venta.</p>
+                                            <p>Aceptar BlackCoin facilita la aceptación de la moneda digital.</p>
+                                            <ul>
+                                                <li>Protección contra el fraude</li>
+                                                <li>Los cargos más bajos que se pueden encontrar</li>
+                                                <li>No se requiere conformidad con la Industria de Pago por Tarjeta (PCI)</li>
+                                                <li>Transparencia de Contabilidad</li>
+                                                <li>Contratos Indisolubles</li>
+                                            </ul>
+                                            <div class="btnContainer">
+                                                <a href="#features" class="smoothScroll btn">Ofrecimientos de BlackCoin</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pricing-slide">
+                                        <hgroup>
+                                            <h3>
+                                                <span class="main">Programadores</span>
+                                                <span class="sub">Por qué los programadores utilizan</span>
+                                                <span class="super-sub">BlackCoin</span>
+                                            </h3>
+                                        </hgroup>
+                                        <div class="pricing-slide-content user-content">
+                                            <p>Los programadores utilizan BlackCoin como una plataforma eficaz para enviar, retener, y recibir pagos. BlackCoin está respaldado por capas de útil infraestructura digital y cuenta con grandes y comprometidas comunidades de usuarios y programadores.</p>
+                                            <p>La red de BlackCoin's, y sus especificaciones, lo convierten en una sabia elección, como plataforma de programación.</p>
+                                            <ul>
+                                                <li>El más simple de todos los sistemas de pago</li>
+                                                <li>Numerosas APIs (Interfaz de Programación de Aplicaciones) de terceros</li>
+                                                <li>Micro pagos económicos</li>
+                                                <li>La mayor parte de la seguridad está del lado del cliente</li>
+                                                <li>Direcciones de BlackCoin para monitorear facturas</li>
+                                            </ul>								
+                                            <div class="btnContainer">
+                                                <a href="#specs" class="smoothScroll btn">Especificaciones Técnicas de BlackCoin</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Specs -->
+                <section class="section-statistics" id="specs">
+                    <!-- Seperator -->
+                    <div class="seperator">
+                        <div class="contentContainer">
+                            <h2>
+                                <span class="sub">BlackCoin</span>
+                                Specs & Features   
+                            </h2>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                    <div class="content">
+                        <div class="contentContainer">
+                            <hgroup>
+                                <h2>
+                                    <span class="sub">de BlackCoin</span>
+                                    <span class="main">Especificaciones</span>
+                                </h2>
+                            </hgroup>
+                            <div class="intro user-content">
+                                <p>Datos e Informaciones tras BlackCoin</p>
+                            </div>
+                            <!-- Statistics -->
+                            <div class="statistics">
+                                <!-- Bar Chart -->
+                                <div class="barChart">
+                                    <div class="dummybar">
+                                        <!-- dummy bar for postitioning -->
+                                    </div>
+                                    <div class="bar" data-percentage="100">
+                                        <div class="tooltip tooltip-left">
+                                            <div class="tooltip-label">Monedas Acuñadas</div>
+                                            <div class="tooltip-value">75,000,000</div>
+                                        </div>
+                                    </div>
+                                    <div class="bar" data-percentage="40">
+                                        <div class="tooltip tooltip-topRight">
+                                            <div class="tooltip-label">Minería en Grupo Múltiple</div>
+                                            <div class="tooltip-value">3,911</div>
+                                        </div>
+                                    </div>
+                                    <div class="bar" data-percentage="15">
+                                        <div class="tooltip tooltip-right">
+                                            <div class="tooltip-label">Blockchain</div>
+                                            <div class="tooltip-value">250mb</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Icon Statistics -->
+                                <ul class="iconStats">
+                                    <li>
+                                        <div class="iconStats-icon"><i class="icon-cust-barchart"></i></div>
+                                        <div class="iconStats-value">75 Millones</div>
+                                        <div class="iconStats-label">Monedas</div>
+                                    </li>
+                                    <li>
+                                        <div class="iconStats-icon"><i class="icon-cust-analytics"></i></div>
+                                        <div class="iconStats-value">Proof of Stake (Prueba de Inversión)</div>
+                                        <div class="iconStats-label">Corta Fase de PoW</div>
+                                    </li>
+                                    <li>
+                                        <div class="iconStats-icon"><i class="icon-cust-user"></i></div>
+                                        <div class="iconStats-value">Uno Porciento</div>
+                                        <div class="iconStats-label">de Interés por Inversión</div>
+                                    </li>	  
+                                    <li>
+                                        <div class="iconStats-icon"><i class="icon-cust-stopwatch"></i></div>
+                                        <div class="iconStats-value">30 segundos</div>
+                                        <div class="iconStats-label">para la Primera Confirmación</div>
+                                    </li>
+                                    <li>
+                                        <div class="iconStats-icon"><i class="icon-cust-arrow-cross"></i></div>
+                                        <div class="iconStats-value">1 Minute</div>
+                                        <div class="iconStats-label">por Bloque</div>
+                                    </li>
+                                    <li>
+                                        <div class="iconStats-icon"><i class="icon-cust-paper"></i></div>
+                                        <div class="iconStats-value">Dificultad</div>
+                                        <div class="iconStats-label">Redirigir Cada Bloque</div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <div class="section-blackBook" id="features">
+                                <hgroup>
+                                    <h2 class="in-view">
+                                        <span class="sub">BlackCoin's</span>
+                                        <span class="main">Características Principales</span>
+                                    </h2>
+                                </hgroup>
+                                <div class="intro user-content">
+                                    <p>BlackCoin tiene muchas ventajas fundamentales</p>
+                                </div>
+                                <div class="user-content" style="text-align:center;">
+                                    <div class="contentLeft">
+                                        <ul>
+                                            <li>Baja Inflación<br /><span class="featurelist">BlackCoin fue ampliamente distribuida durante una corta fase de extracción de proof of work. En el futuro no se acuñarán más BlackCoins, excepto el <a href="#one-percent-interest" class="modalbtn modal-trigger"> interés annual de 1%</a> que es pagado a los titulares de BlackCoin.</span></li>
+                                            <li>Transacciones Rápidas<br /><span class="featurelist">En BlackCoin<a href="#proof-of-stake" class="modalbtn modal-trigger">el proof of stake</a> es el sistema que posibilita la velocidad relámpago de la red BlackCoin. BlackCoin es la divisa digital ideal para transacciones cara a cara, y para todas aquellas aplicaciones que valoren la velocidad.</span></li>
+                                            <li>Seguridad Blockchain<br /><span class="featurelist">La red de BlackCoin está <a href="#decentralized-network" class="modalbtn modal-trigger">segura</a> frente a los ataques que enfrentan otras divisas digitales, debido a su dependencia en operaciones de extracción a gran escala para operar sus redes.</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="contentRight">
+                                        <ul>
+                                            <li>Ecológicamente Sólido<br /><span class="featurelist">La red de BlackCoin no requiere el empleo de operaciones especializadas de hardware a gran escala. BlackCoin es mucho más <a href="#energy-efficient" class="modalbtn modal-trigger">eficiente, energéticamente,</a> que las redes tradicionales de monedas digitales.</span></li>
+                                            <li>Comunidad Innovadora<br /><span class="featurelist">BlackCoin cuenta con una sólida y dedicada comunidad compuesta por talentosos programadores, así como usarios que trabajan duro para conseguir que  BlackCoin llegue tan lejos como se pueda. <a href="http://blackhalo.info/" class="modalbtn modal-trigger">BlackHalo</a> es el ejemplo perfecto. </span></li>
+                                            <li>Amplia Adopción Mercantil<br /><span class="featurelist">Cada día surgen nuevos negocios y servicios en línea que aceptan a BlackCoin. Encuentre a BlackCoin pronto en más aplicaciones de puntos de venta, con adiciones recientes a <a href="https://www.coinkite.com">CoinKite: </a> servicios de negocios.</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>							
+                    </div>
+                </section>
+
+                <!-- Getting Started -->
+                <section class="section-timeline" id="getting-started">
+                    <!-- Seperator -->
+                    <div class="seperator">
+                        <div class="contentContainer">
+                            <h2>
+                                <span class="sub">Cómo</span>
+                                Empezar	    
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="contentContainer">
+                            <hgroup>
+                                <h2 class="in-view">
+                                    <span class="sub">Cómo empezar con</span>
+                                    <span class="main">BlackCoin</span>
+                                </h2>
+                            </hgroup>
+                            <div class="intro user-content">
+                                <p><strong>Basta de jerga técnica, comencemos con BlackCoin</strong></p>
+                            </div>
+                            <ul class="timeline">
+                                <li class="year">1.</li>
+                                <li>
+                                    <span class="title"><a href="wallets" class="smoothScroll">Descargue una cartera</a></span>
+                                    <span class="timeline-content">
+                                        <p>Primeramente, Ud. necesita obtener una cartera para almacenar sus BlackCoins.</p>
+                                        <a href="#wallets" class="smoothScroll btn-sm">Carteras PC</a>
+                                        <a href="#web-wallets" class="btn-sm modalbtn modal-trigger">Carteras Web</a>
+                                    </span>
+                                </li>
+                                <li class="year">2.</li>
+                                <li>
+                                    <span class="title">Compre BlackCoins</span>
+                                    <span class="timeline-content">
+                                        <p>Una vez que haya obtenido su cartera, ahora Ud. puede comprar BlackCoins directamente o intercambiarlas por Bitcoins.</p>
+                                        <p>Negocios Minoristas de BlackCoin:<br />
+                                            <a href="https://expresscoin.com" target="_blank">Expresscoin <small>(USD, CND)</small></a>, 
+                                            <a href="https://anycoindirect.eu/buy/blackcoins" target="_blank">Anycoin Direct <small>(EUR)</small></a>
+                                        </p>
+                                        <p>Intercambios Fiduciarios (Fiat):<br />
+                                            <a href="https://bittylicious.com/" target="_blank">Bittylicious <small>(GBP)</small></a>, 
+                                            <a href="https://bter.com/trade/bc_cny" target="_blank">BTER <small>(CNY)</small></a>, 
+                                            <a href="https://www.litebit.eu/coin/bc/en/" target="_blank">LiteBit <small>(EURO)</small></a>, 
+                                            <a href="https://prelude.io/trade/usd/bc" target="_blank">Prelude <small>(USD)</small></a>,<br />
+                                            <a href="https://www.vaultofsatoshi.com/" target="_blank">Vault of Satoshi <small>(USD, CAD)</small></a></p>
+                                        <p>Mercados de Intercambio de Monedas:<br />
+                                            <a href="https://bittrex.com/Market/Index?MarketName=BTC-BC" target="_blank">Bittrex</a>, <a href="https://bter.com/trade/bc_cny" target="_blank">BTER</a>, 
+                                            <a href="https://www.cryptsy.com/markets/view/179" target="_blank">Cryptsy</a>, 
+                                            <a href="https://www.mintpal.com/market/BC/BTC" target="_blank">Mintpal</a>, 
+                                            <a href="https://poloniex.com/exchange/btc_bc" target="_blank">Poloni.ex</a></p>
+                                    </span>
+                                </li>
+                                <li class="year">3.</li>
+                                <li>
+                                    <span class="title">Invierta sus BlackCoins</span>
+                                    <span class="timeline-content">
+                                        <p>Los titulares de BlackCoin reciben un interés compuesto annual de 1%, mediante un proceso llamado “staking” (inversión).</p>
+                                        <a href="#staking" class="btn-sm modalbtn modal-trigger">Guía de Inversión Staking</a>
+                                    </span>
+                                </li>
+                                <li style="padding-top:40px;">
+                                    <span class="title">Minería de BlackCoins</span>
+                                    <span class="timeline-content">
+                                        <p>No es possible seguir extrayendo BlackCoin, pero su poder de minería puede ser usado para extraer otras monedas, intercambiarlas, y pagar en BlackCoin.</p>
+                                        <a href="http://blackcoinpool.com/" class="btn-sm">BlackCoin Pool</a>
+                                    </span>
+                                </li>
+                                <li class="year">4.</li>
+                                <li>
+                                    <span class="title">Consuma sus BlackCoins</span>
+                                    <span class="timeline-content">
+                                        <p>Ahora que tiene BlackCoins Ud. puede irse de compras a muchos negocios minoristas y en red.</p>
+                                        <p>Ud. puede localizar negocios que aceptan BlackCoin usando estos enlaces:</p>
+                                        <a href="http://blackcoindirectory.com" class="btn-sm">BlackCoin Directory</a>
+                                        <a href="http://blackcoinmap.com" class="btn-sm">BlackCoin Map</a>
+                                    </span>
+                                </li>
+                                <li class="year">5.</li>
+                                <li>
+                                    <span class="title"><a href="#community">Ingrese a la comunidad</a></span>
+                                    <span class="timeline-content">
+                                        <p>Contamos con una comunidad comprometida, positiva y amigable, integrada tanto de usuarios, como de programadores de BlackCoin.</p>
+                                        <a href="#community" class="smoothScroll btn-sm">Ingrese Hoy!</a>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Wallets -->
+                <section class="section-profile" id="wallets">
+                    <!-- Seperator -->
+                    <div class="seperator">
+                        <div class="contentContainer">
+                            <h2>
+                                <span class="sub">BlackCoin</span>
+                                Carteras                            </h2>
+                        </div>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="content">
+                        <div class="contentContainer">
+                            <hgroup>
+                                <h2>
+                                    <span class="sub">Descargue</span>
+                                    <span class="main">Una Cartera</span>
+                                </h2>
+                            </hgroup>
+                            <!-- L/R Nav -->
+                            <a href="#" class="profile-nav profile-nav-prev"><i class="icon-cust-arrow-left"></i></a>
+                            <a href="#" class="profile-nav profile-nav-next"><i class="icon-cust-arrow-right"></i></a>
+                            <!-- Profile Gallery -->
+                            <div class="profile-pagination">
+                                <div class="profile-pagination">
+                                    <div class="swiper-pagination-switch swiper-visible-switch swiper-active-switch">PC</div>
+                                    <div class="swiper-pagination-switch">Smartphone</div>
+                                </div>
+                            </div>
+                            <div class="profile-container">
+                                <div class="profile-wrapper">
+                                    <div class="profile-slide profile-imac">
+                                        <div class="profile-slide-wrapper">
+                                            <!-- Windows --> 
+                                            <img src="./img/profile/windows.png" alt="" />
+                                            <div class="btnContainer">
+                                                <a href="http://www.maarx.nl/maarx.nl/blackcoin/files/blackcoin-1.1.2.1-windows.zip" class="btn" target="_blank">Descargue Windows v1.1.2.1</a>
+                                            </div>
+                                            <!-- Linux--> <br><br><br>
+                                            <img src="./img/profile/linux.png" alt="" />
+                                            <div class="btnContainer">
+                                                <a href="http://www.maarx.nl/maarx.nl/blackcoin/files/blackcoin-1.1.2.1-linux.zip" class="btn" target="_blank">Descargue Linux v1.1.2.1</a>
+                                            </div>
+                                            <!-- Mac--> <br><br><br>
+                                            <img src="./img/profile/mac.png" alt="" />
+                                            <div class="btnContainer">
+                                                <a href="http://www.maarx.nl/maarx.nl/blackcoin/files/BlackCoin-Qt-MacOSX-v1.1.1.zip" class="btn" target="_blank">Descargue OS X v1.1.1</a>
+                                            </div>
+                                            <!-- Github--> <br><br><br>
+                                            <img src="./img/profile/github.png" alt="" />
+                                            <div class="btnContainer">
+                                                <a href="https://github.com/rat4/blackcoin" class="btn" target="_blank">Base de Código de BlackCoin</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="profile-slide profile-iphone">
+                                        <div class="profile-slide-wrapper">
+                                            <!-- Android --> <br>
+                                            <img src="./img/profile/android.png" alt="" />
+                                            <div class="btnContainer">
+                                                <a href="http://coinomi.com/" class="btn" target="_blank"><i>Descargue Android</i></a>
+                                            </div>
+                                            <!-- iOS--> <br><br><br>
+                                            <img src="./img/profile/ios.png" alt="" />
+                                            <div class="btnContainer">
+                                                <a href="#" class="btn" target="_blank"><i>iOS Próximamente</i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Community -->
+                <section class="section-team" id="community">
+                    <!-- Seperator -->
+                    <div class="seperator">
+                        <div class="contentContainer">
+                            <h2>
+                                <span class="sub">Ingrese a la</span>
+                                Comunidad		  
+                            </h2>
+                            <br>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                    <div class="content">
+                        <div class="contentContainer">
+                            <hgroup>
+                                <h2>
+                                    <span class="sub">Ingrese</span>
+                                    <span class="main">a Nuestra Comunidad</span>
+                                </h2>
+                            </hgroup>
+                            <!-- Social Outlets -->
+                            <ul class="team-members">
+                                <li>
+                                    <div class="team-member-image">
+                                        <img src="./img/social/reddit.png" alt="Reddit" /> 					
+                                    </div>
+                                    <h3 class="team-member-title">
+                                        <span class="sub">Reddit</span> 						
+                                    </h3>
+                                    <div class="btnContainer">
+                                        <a href="http://www.reddit.com/r/blackcoin/" class="btn" target="_blank">Únase a Reddit</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="team-member-image">
+                                        <img src="./img/social/twitter.png" alt="Twitter" /> 					
+                                    </div>
+                                    <h3 class="team-member-title">
+                                        <span class="sub">Twitter</span> 						
+                                    </h3>
+                                    <div class="btnContainer">
+                                        <a href="https://twitter.com/coinblack" class="btn" target="_blank">Síganos en Twitter</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="team-member-image">
+                                        <img src="./img/social/irc.png" alt="IRC" /> 					
+                                    </div>
+                                    <h3 class="team-member-title">
+                                        <span class="sub">IRC</span> 						
+                                    </h3>
+                                    <div class="btnContainer">
+                                        <a href="http://webchat.freenode.net/?channels=%23blackcoinpool&amp;uio=d4" class="btn" target="_blank">Chat on IRC</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="team-member-image">
+                                        <img src="./img/social/facebook.png" alt="Facebook" /> 					
+                                    </div>
+                                    <h3 class="team-member-title">
+                                        <span class="sub">Facebook</span> 						
+                                    </h3>
+                                    <div class="btnContainer">
+                                        <a href="https://www.facebook.com/coinblack" class="btn" target="_blank">Dénos un Me Gusta en Facebook</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- News -->
+                <section class="section-events" id="news">
+                    <!-- Seperator -->
+                    <div class="seperator">
+                        <div class="contentContainer">
+                            <h2>
+                                <span class="sub">BlackCoin</span>
+                                Noticias		    
+                            </h2>
+                        </div>
+                    </div>
+                    <!-- Content -->
+					                </section>
+            </main>
+        </div>
+        <!-- Modals -->
+		<div class="form modal-form gc-modal" id="proof-of-stake">
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">BlackCoin está asegurado por</span>
+						el Proof of Stake (Prueba de Inversión)					</h2>
+					<h2><span class="sub">Proof of Stake (Prueba de Inversión): Un sistema operado por las personas.</span></h2>
+					<p>BlackCoin está basado en una tecnología extraordinaria conocida como Proof of Stake (Prueba de Inversión). En lugar de verificar y asegurar la red con multitudes de cálculos, como hacen otras divisas digitales, other digital currencies, BlackCoin utiliza la verificación de las monedas de las personas para asegurar la red y tramitar transacciones.</p>
+					<p>El sistema de Proof of Stake (Prueba de Inversión) posibilita que BlackCoin funcione mucho más velozmente que casi todo el resto de las monedas digitales. Ya Ud. no necesitará tener que esperar por su dinero. El Proof of Stake (Prueba de Inversión) también garantiza que BlackCoin permanezca descentralizeda; ninguna persona o grupo en particular pueden adquirir control de la red.</p>
+					<p>Los titulares de BlackCoin reciben un interés compuesto anual del 1% por ayudar a mantener la red segura, mediante un proceso llamado <a href="#staking" class="modalbtn modal-trigger">staking (inversión)</a>.</p>
+				</div>
+			</div>
+		</div>
+		<div class="form modal-form gc-modal" id="one-percent-interest">
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">BlackCoin's</span>
+						1% de Interés					</h2>
+					<h2>
+						<span class="sub">BlackCoin paga un 1% anual de interés compuesto</span>
+					</h2>
+					<p>Los titulares de BlackCoin reciben un 1% annual de interés por su participación en el mantenimiento de una red segura, a través de un proceso conocido como <a href="#staking" class="modalbtn modal-trigger">staking(inversión)</a>. El interés se paga a plazos espaciados, como promedio, cada pocos días.</p>
+				</div>
+			</div>
+		</div>
+		<!--<div class="form modal-form gc-modal" id="wallet-guide">
+			   <div class="gc-modal-wrapper">
+					  <div class="gc-modal-container">
+							 <h2 class="form-title">
+								<span class="sub">Installing and using your</span>
+								BlackCoin Wallet    
+							 </h2>
+					  </div>
+			   </div>
+		</div>-->
+		<div class="form modal-form gc-modal" id="staking">
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">Staking (Inversión) con su</span>
+						Cartera BlackCoin   
+					</h2>
+					<h2>1.<span class="sub">Abra su cartera BlackCoin.</span></h2>
+					
+					<h2>2.<span class="sub">Cerciórese que tiene BlackCoins en su cartera.</span></h2>						
+					<img src="./img/wallet/balance.png" alt="">
+					<p>Staking (Inversión) es el proceso de acumular ingresos por intereses basados en sus fondos. Ante todo Ud. necesita fondos!</p>
+					
+					<h2>3.<span class="sub">Espere a que la Cartera de BlackCoin haga sincronización.</span></h2>
+					<img src="./img/wallet/sync.png" alt="">
+					<p>El blockchain debe terminar de sincronizar antes de que Ud. pueda comenzar a hacer staking (inversión).</p>
+
+					<h2>4.<span class="sub">Desbloquee la cartera.</span></h2>
+					<img src="./img/wallet/unlock.png" alt="">
+					<p>Desbloquear su cartera permite que sus monedas participen en el proceso de staking (Inversión). Diríjase a <strong>Settings(Configuración) > Desbloquee la cartera</strong> para abrir la cartera. Como opción pre-establecida, esta acción libera la cartera sólo para staking (inversión).</p>
+
+					<h2>5.<span class="sub">Espere a que el ícono de staking se ponga de color verde.</span></h2>
+					<img src="./img/wallet/staking.png" alt="">
+					<p>Una vez que el ícono de staking se colorea de verde, quiere decir que sus monedas están haciendo staking. Ud. ganará beneficios recompensas cada pocos días, en dependencia del tamaño de sus fondos, en incremento hasta el<strong>1% de interés</strong> anual.</p>
+				</div>
+			</div>
+		</div>
+		<div class="form modal-form gc-modal" id="international-payments">			   
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">BlackCoin para</span>
+						Transacciones Internacionales Rápidas y Sencillas   
+					</h2>
+					<h2>
+						<span class="sub">BlackCoin es ideal para el comercio global.</span>
+					</h2>
+					<p>Los cargos de transacción de BlackCoin son varios órdenes de magnitudes más bajos que las habituales soluciones internacionales de transferencia de dinero. Si se añade a esto el hecho de que las transacciones con BlackCoin son prácticamente inmediatas, se reconoce a BlackCoin como una excelente opción para transferir dinero a todo el mundo.</p>
+				</div>
+			</div>
+		</div>
+		<div class="form modal-form gc-modal" id="point-of-sale">			   
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">BlackCoin para</span>
+						Transacciones Seguras y Veloces en Puntos de Venta    
+					</h2>
+					<h2>
+						<span class="sub">BlackCoin is perfecto para el comercio minorista.</span>
+					</h2>
+					<p>Como una de las divisas digitales más veloces, BlackCoin es perfecto para pagos en persona, en puntos de venta. Con la incorporación de BlackCoin's a <a href = "https://coinkite.com/">CoinKite</a>, la plataforma de servicio a negocios, ahora es más fácil que nunca que los negocios minoristas puedan aceptar moneda digital: BlackCoin.</p>
+				</div>
+			</div>
+		</div>
+		<div class="form modal-form gc-modal" id="open-source">			   
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">BlackCoin está</span>
+						De Código Abierto					</h2>
+					<h2>
+						<span class="sub">Código Abierto significa que BlackCoin no tiene dueño.</span>
+					</h2>
+					<p>Gracias a que BlackCoin es de código abierto, cualquier persona puede entrar a ver el código fuente de BlackCoin\'s. Ud. siempre puede confiar en que hay una extensa comunidad capaz de revisar e inspeccionar BlackCoin, garantizando la seguridad y ensuring security and descentralización. El código abierto también implica que no existe ninguna persona o entidad en particular que tenga el control de BlackCoin.</p>
+				</div>
+			</div>
+		</div>
+		<div class="form modal-form gc-modal" id="energy-efficient">			   
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">BlackCoin está</span>
+						Energéticamente Eficiente					</h2>
+					<h2>
+						<span class="sub">Debido a que no hay derroche en minería, BlackCoin utiliza mucho menos energía que la mayoría de las divisas digitales.</span>
+					</h2>
+					<p>Gracias al sistema de to the Proof of Stake (Prueba de Inversión), la red de BlackCoin opera en computadoras y teléfonos corrientes de usuarios de todo el orbe. Casi todas las otras redes de monedas digitales son mantenidas mediante inmensas infraestructuras con hardware especializado, de elevado consumo energético. La diferencia en cuanto a eficiencia energética es clara. BlackCoin es la moneda digital “verde”.</p>
+				</div>
+			</div>
+		</div>				   
+		<div class="form modal-form gc-modal" id="decentralized-network">			   
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">BlackCoin is</span>
+						Secure & Descentralizado					</h2>
+					<h2>
+						<span class="sub">Gracias al sistema de Proof of Stake (Prueba de Inversión), BlackCoin is segura y descentralizada.</span>
+					</h2>		
+					<p>La descentralización representa que ningún grupo o autoridad puede conseguir dominio sobre BlackCoin. La red de BlackCoin es operada por todas y cada una de las personas que hacen staking (inversión) con una cartera de BlackCoin wallet, en lugar de unas pocas operaciones grandes especializadas en extracción, como ocurre en casi todas las otras divisas digitales. Al no hacer minería, BlackCoin queda a salvo de muchos vectores de ataque que afectan a otras monedas digitales.</p>
+				</div>
+			</div>
+		</div>			   
+		<div class="form modal-form gc-modal" id="web-wallets">			   
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">BlackCoin</span>
+						Servicios de Cartera Web  
+					</h2>
+					<h2>
+						<span class="sub">BlackCoin está respaldada por servicios web de alta calidad.</span>
+					</h2>
+					<p style="padding-bottom:1em;">Las carteras Web son carteras que le pertenecen a Ud., aseguradas por un servicio de tercero, y accesible en línea. Ud. no necesita instalar ningún programa en su ordenador. Tiene la posibilidad de almacenar y enviar o recibir BlackCoins, de igual modo que con la cartera de su computador. A continuación encontrará las principals carteras de la web:</p>
+					<a href="https://coinkite.com/"><img src="./img/coinkite.png" alt="CoinKite" style="border-radius:2px;"></a>
+					<a href="https://holytransaction.com/"><img src="https://holytransaction.com/images/logo.png" alt="HolyTransaction" style="border-radius:2px;"></a>					
+					<a href="https://cointopay.com/"><img src="./img/cointopay.png" alt="MyWl.lt" style="border-radius:2px;"></a>
+				</div>
+			</div>
+		</div>
+		<div class="form modal-form gc-modal" id="mobile-soon">			   
+			<div class="gc-modal-wrapper">
+				<div class="gc-modal-container">
+					<h2 class="form-title">
+						<span class="sub">Carteras BlackCoin por Celular</span>
+						Próximamente					</h2>
+					<h2><span class="sub">Actualmente se están desarrollando las Carteras iOS.</span></h2>
+				</div>
+			</div>
+		</div>
+        <!--Analytics-->
+        <script>
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function() {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+						m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	
+			ga('create', 'UA-45840836-2', 'blackcoin.co');
+			ga('send', 'pageview');
+        </script>
+        <script type='text/javascript' src='./js/jquery.mobile.custom.min_2b23bb4a.js'></script>
+        <script type='text/javascript' src='./js/modernizr.custom_2b23bb4a.js'></script>
+        <script type='text/javascript' src='./js/response.min_2b23bb4a.js'></script>
+        <script type='text/javascript' src='./js/idangerous.swiper.min_2b23bb4a.js'></script>
+        <script type='text/javascript' src='./js/waypoints.min_2b23bb4a.js'></script>
+        <script type='text/javascript' src='./js/jquery.stellar.min_2b23bb4a.js'></script>
+        <script type='text/javascript' src='./js/main_2b23bb4a.js'></script>
+    </body>
+</html>

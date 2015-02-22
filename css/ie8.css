@@ -1,0 +1,9 @@
+/* IE8 Styles */
+.menu-trigger{
+	display: none !important;
+}
+
+.contentContainer{
+	left: auto !important;
+	top: auto !important;
+}
