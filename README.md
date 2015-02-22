@@ -1,6 +1,6 @@
-blackcoin-co
+blackcoin.co
 ============
 
-Official blackcoin.co website
+Official Blackcoin website
 
-Synchronised with http://blackcoin.co/ regularly
+Changes here reflect on http://blackcoin.co/ immediately.
