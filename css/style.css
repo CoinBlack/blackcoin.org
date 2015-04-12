@@ -3958,3 +3958,10 @@ background-image: url("../img/backgrounds/social.png");
 }
 }
 
+/* link for obsidian */
+.wallet-link {
+ color:#9E9E9E;
+}
+.wallet-link:hover {
+ color:#584930;
+}
