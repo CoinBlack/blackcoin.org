@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+davtonia.com	TRUE	/blackcoin/	FALSE	1999999999	wordpress_test_cookie	WP+Cookie+check
+davtonia.com	TRUE	/blackcoin/	FALSE	1999999999	_wp_session	48e85bd425d1d302d6390f9b55648ed2%7C%7C1460708261%7C%7C1460707901
+
