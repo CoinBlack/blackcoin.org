@@ -150,6 +150,13 @@
             });
         });
     </script>
+    
+    <script>
+        ((window.gitter = {}).chat = {}).options = {
+        room: 'blkslack/blackcoin'
+        };
+    </script>
+    <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
     <link rel="alternate" hreflang="zh" href="../zh/community-projects/" />
     <link rel="alternate" hreflang="ru" href="../ru/community-projects/" />
@@ -796,10 +803,32 @@
             font-size: 0.885em;
         }
 
-       .x-scroll-top{
-	border:2px solid #ffa902;
-	color: #ffa902;
+	.gitter-open-chat-button,
+	.gitter-chat-embed {
+  	z-index: 9999;
 	}
+	
+	.gitter-open-chat-button{
+	background-color: #262626;
+	color: #ffffff;
+	}
+	
+	.gitter-open-chat-button:hover{
+	box-sizing:border-box;
+	background-color: #1a1a1a;
+	color:#fff
+	}
+
+       .x-scroll-top{
+	border: 2px solid #ddb77a !important;
+  	color: #ddb77a !important;
+  	}
+  	
+	.x-scroll-top.right {
+	Right:10px !important;
+	Bottom: 47px !important;
+	}
+	
 	ul.sub-menu li a {
 	font-size: 15px;
 	}
