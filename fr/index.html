@@ -419,9 +419,33 @@
         }
         
         .x-btn-widgetbar:hover {
-            border-top-color: #ffffff;
-            border-right-color: #ffffff;
+            border-top-color: #8B0000;
+            border-right-color: #8B0000;
         }
+
+	.x-btn-widgetbar .x-icon-plus-circle:before {
+     	    content: url(../content/uploads/newsicon.png);
+	}
+	
+	.x-btn-widgetbar {
+  	    border-width: 35px;
+	}
+	
+	.x-btn-widgetbar i {
+	    position: absolute;  
+	    top: -34px;
+	    right: -34px;
+	}
+
+	@media (max-width: 979px){
+	    .masthead-inline .x-btn-navbar {
+  		display: block;
+		float: right;
+  		position: absolute;
+		right: 35px;
+  		top: -10px;
+	    }
+	}
         
         .x-navbar {
             font-size: 13px;
