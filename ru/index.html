@@ -72,6 +72,20 @@
         });
     </script>
 
+    <script type="text/javascript">
+      var imageURLs = [
+       	  "../content/uploads/logomain.jpg"
+        , "../content/uploads/logomain2.jpg"        
+        ];
+      function getImageTag() {
+      var img = '<img src=\"';
+      var randomIndex = Math.floor(Math.random() * imageURLs.length);
+      img += imageURLs[randomIndex];
+      img += '\" alt=\"Random image"/>';
+      return img;
+      }
+    </script>
+	
     <script>
         ((window.gitter = {}).chat = {}).options = {
         room: 'blkslack/blackcoin'
@@ -822,8 +836,8 @@
                     <div id="x-section-1" class="x-section center-text " style=" margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; background-color: transparent;">
                         <div class="x-container marginless-columns" style="margin: 0px auto 0px auto; padding: 0px 0px 0px 0px;  background-color:#000000;">
                             <div class="x-column x-sm x-1-1" style="padding: 0px 0px 0px 0px; ">
-                                <hr class="x-gap" style="margin: 15px 0 0 0;"><img class="x-img x-img-none" src="../content/uploads/logomain.jpg">
-                                <hr class="x-gap" style="margin: 0px 0 0 0;">
+                                <hr class="x-gap" style="margin: 15px 0 0 0;"><script type="text/javascript">document.write(getImageTag());</script>
+                                <hr class="x-gap" style="margin: 20px 0 0 0;">
                             </div>
                         </div>
                     </div>
