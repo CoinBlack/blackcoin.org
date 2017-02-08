@@ -862,6 +862,43 @@
 	.reddit-header {
         display:none !important;
         }
+	
+	.widget {
+   	text-shadow: 0px 0px 0px rgb(6, 6, 6);
+	}  
+	    
+	.rembeddit-content {
+	font-size:small;
+ 	color:#ffffff !important;  
+        }	    
+	
+	.reddit-link-title {
+	font-size:small;
+	color:#d7bc91 !important;    
+        }  
+
+	.score.unvoted {
+ 	display:none !important;    
+        }  
+	    
+	.score.dislikes {
+	display:none !important;    
+        }
+	    
+	.reddit-comment-link {
+ 	color:#d7bc91 !important;    
+        }
+	    
+	.reddit-voting-arrows{
+	float:top; 
+	display:block;
+	border:none;
+	margin-top:5px;
+	}
+
+	a:focus, select:focus, input[type="file"]:focus, input[type="radio"]:focus, input[type="submit"]:focus, input[type="checkbox"]:focus {
+	outline: none !important;
+	} 
 
     </style>
     <style id="cornerstone-custom-page-css" type="text/css">
@@ -947,9 +984,9 @@
                 </div>
             </div>
 
-        </header>
-
-
+	    </header>
+	</div>
+        </body>
 
         <div class="x-container max width offset">
             <div class="x-main full" role="main">
@@ -962,7 +999,7 @@
                         <div class="entry-content content">
 
 
-<div id="cs-content" class="cs-content"><div id="x-section-1" class="x-section center-text " style=" margin: -50px 0px 0px 0px; padding: 0px 0px 0px 0px; background-color: transparent;">
+			   <div id="cs-content" class="cs-content"><div id="x-section-1" class="x-section center-text " style=" margin: -50px 0px 0px 0px; padding: 0px 0px 0px 0px; background-color: transparent;">
                                 <div class="x-container max width" style="margin: 0px auto 0px auto; padding: 0px 0px 0px 0px; ">
                                     <div class="x-column x-sm x-1-1" style="padding: 0px 0px 0px 0px; ">
                                         <div class="x-text left-text ">
@@ -1080,7 +1117,7 @@
     		   <div  class="x-column x-sm x-1-1" style="padding: 0px; background-color:#171717;">
     		      <div  class="x-text"><p style="text-align: center; background-color: #232323;"><span style="color: #ccc;">Reddit</span></p>
 		      </div>
-    		      <div class="x-text" ><center><script src="https://www.reddit.com/r/blackcoin/new/.embed?limit=5&amp;t=all&amp;sort=new;bordercolor=171717;bgcolor=171717;" type="text/javascript"></script></center>
+    		      <div class="x-text" ><center><script src="https://www.reddit.com/r/blackcoin/new/.embed?limit=5&amp;style=off;sort=new;bordercolor=171717;bgcolor=171717;" type="text/javascript"></script></center>
     </div></div></div></div></div></div></div>
     <div class="x-column x-md x-1-4">
        <div id="text-31" class="widget widget_text">
@@ -1160,7 +1197,7 @@
             </div>
         </div>
     </footer>
-
+	    
     <!-- END #top.site -->
 	
     <div id="pum-2926" class="pum pum-overlay pum-theme-2865 popmake-overlay" data-popmake="{&quot;id&quot;:2926,&quot;slug&quot;:&quot;slack&quot;,&quot;theme_id&quot;:2865,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;&quot;,&quot;do_default&quot;:null,&quot;cookie&quot;:{&quot;name&quot;:null}}}],&quot;meta&quot;:{&quot;display&quot;:{&quot;size&quot;:&quot;auto&quot;,&quot;responsive_min_width&quot;:&quot;&quot;,&quot;responsive_max_width&quot;:&quot;&quot;,&quot;custom_width&quot;:&quot;640&quot;,&quot;custom_height_auto&quot;:&quot;1&quot;,&quot;custom_height&quot;:&quot;380&quot;,&quot;animation_type&quot;:&quot;grow&quot;,&quot;animation_speed&quot;:&quot;50&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;position_fixed&quot;:&quot;1&quot;,&quot;location&quot;:&quot;center &quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;overlay_zindex&quot;:&quot;1999999998&quot;,&quot;zindex&quot;:&quot;1999999999&quot;,&quot;responsive_min_width_unit&quot;:&quot;px&quot;,&quot;responsive_max_width_unit&quot;:&quot;px&quot;,&quot;custom_width_unit&quot;:&quot;px&quot;,&quot;custom_height_unit&quot;:&quot;px&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:&quot;true&quot;,&quot;esc_press&quot;:&quot;true&quot;,&quot;f4_press&quot;:&quot;true&quot;},&quot;click_open&quot;:{&quot;extra_selectors&quot;:&quot;&quot;}}}" role="dialog" aria-hidden="true" >
@@ -1236,6 +1273,5 @@
             });
         })(jQuery);
     </script>
-  </body>
 </html>
 
