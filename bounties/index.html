@@ -45,8 +45,29 @@
                         railalign:"right",
                         background: "rgba(255,255,255,1)"
                         });
+                 $(".ws-m").each(function(index)
+                {
+                    var addr = $(this).find(".addr_string").text();
+                    var bounty_goal = $(this).find(".bounty-goal").text();
+                    var progress_title = $(this).find(".progress-title");
+                    var progress_bar = $(this).find(".progress-bar");
+                    var raised_percent = $(this).find(".raised-percent");
+                   
+                    bounty_goal = bounty_goal.replace(" BLK", "");
+                   
+                    $.getJSON("https://node.blackcoin.io/insight-api/addr/"+addr, function(json)
+                    {
+                        var raised = json.balance;
+                       
+                        var percent = Math.ceil(raised*100/bounty_goal);
+                       
+                        progress_title.find("span").text(raised);
+                        progress_bar.css("width", percent+"%");
+                        raised_percent.text(percent+"%");
+                    });
                 });
-        </script>    
+        });
+        </script> 
 	    
 	    
 	<style id="custom styles" type="text/css">
@@ -354,33 +375,33 @@
 
             <div class="col-md-offset-2 col-md-4 mb-sm-50">
              <div>
-                <h6><span style="color: #B09261;">Bounty goal: 2000 BLK</span></h6>
+                <h6><span style="color: #B09261;">Bounty goal: <span class="bounty-goal">2000 BLK</span></span></h6>
 		     <br>
 		     BLK donation address: <span style="color: #B09261;" class="addr_string">bTb9MTJtT6gjSA1nfR9GxRrAA7r7NzdY4R</span>
 		     <p>(Donation address held by: Janko33bd, Tapius & VinceBLK) -<a href="https://chainz.cryptoid.info/blk/address.dws?bTb9MTJtT6gjSA1nfR9GxRrAA7r7NzdY4R.htm"> Link</a>
               </div>
 		   
 		    
-		    <!-- Item 1 -->
+		     <!-- Item 1 -->
               <div class="progress-group">
                 <div class="progress progress-thin">
-                  <div class="progress-bar"  id="progress-raised" role="progressbar" aria-valuenow="21" aria-valuemin="0" aria-valuemax="100" style="width: 21%;">
-                    <span class="sr-only">21% Complete</span>
+                  <div class="progress-bar" id="progress-raised" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 12%;">
+                    <span class="sr-only">12% Complete</span>
                   </div>
                 </div>
-		      <span class="progress-title">BLK raised: <span style="color: #B09261;">411</span></span>
-                <span class="progress-value" id="raised-value">21%</span>
+              <span class="progress-title">BLK raised: <span style="color: #B09261;">0</span></span>
+                <span class="progress-value raised-percent" id="raised-value">0</span>
               </div>
-
+ 
               <!-- Item 2 -->
               <div>
-		Person responsible: <span style="color: #B09261;">Tapius</span>
-		    </div>
-		    <div>
-		Project on <a href="https://www.reddit.com/r/blackcoin/comments/7raf09/request_colored_coinstokensassets_viewer_on/">Reddit</a>
+        Person responsible: <span style="color: #B09261;">Tapius</span>
+            </div>
+            <div>
+        Project on <a href="https://www.reddit.com/r/blackcoin/comments/7raf09/request_colored_coinstokensassets_viewer_on/">Reddit</a>
               </div>
-
-              <!-- Item 3 -->
+ 
+              <!-- Item 3 
               <div class="progress-group">
                 <div class="progress progress-thin">
                   <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
@@ -389,46 +410,42 @@
                 </div>
                 <span class="progress-title">Project completion</span>
                 <span class="progress-value">0%</span>
-              </div>
+              </div> -->
             </div><!-- / .col-md-4 -->
-
+ 
             <div class="col-md-4">
               <p>This bounty is for creating a Blackcoin Blockchain explorer with ability to see the Iris created assets on the blockchain </p>
               <p>Something similar to how we can see tokens on other coins' blockchain explorers which also have this ability</p>
             </div><!-- / .col-md-4 -->
           </div><!-- / .row -->
-
-		
-		
-		
-		
-	  <div class="row ws-m">
+ 
+      <div class="row ws-m">
             <h4 class="text-center ws-s">Raspberry Pi - BLK wallets staking guide</h4>
-
+ 
             <div class="col-md-offset-2 col-md-4 mb-sm-50">
              <div>
-                <h6><span style="color: #B09261;">Bounty goal: 80 BLK</span></h6>
-		     <br>		     
-		     <p>BLK donation address: <span style="color: #B09261;">bRkgRgDGbasGUFWmC657vXuV2nMKLPUMJw</span>
-		     <p>(Donation address held by: Caad12, Janko33bd & VinceBLK) -<a href="https://chainz.cryptoid.info/blk/search.dws?q=bRkgRgDGbasGUFWmC657vXuV2nMKLPUMJw"> Link</a>
-              </div>		  		    
-	      <!-- Item 1 -->
+                <h6><span style="color: #B09261;">Bounty goal: <span class="bounty-goal">80 BLK</span></span></h6>
+             <br>            
+             <p>BLK donation address: <span style="color: #B09261;" class="addr_string">bRkgRgDGbasGUFWmC657vXuV2nMKLPUMJw</span>
+             </p><p>(Donation address held by: Caad12, Janko33bd &amp; VinceBLK) -<a href="https://chainz.cryptoid.info/blk/search.dws?q=bRkgRgDGbasGUFWmC657vXuV2nMKLPUMJw"> Link</a>
+              </p></div>                   
+          <!-- Item 1 -->
               <div class="progress-group">
                 <div class="progress progress-thin">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-                    <span class="sr-only">90% Complete</span>
+                  <div class="progress-bar" role="progressbar" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100" style="width: 44%;">
+                    <span class="sr-only">44% Complete</span>
                   </div>
                 </div>
-		      <span class="progress-title">BLK raised: <span style="color: #B09261;">72</span></span>
-                <span class="progress-value">90%</span>
+              <span class="progress-title">BLK raised: <span style="color: #B09261;">0</span></span>
+                <span class="progress-value raised-percent">44%</span>
               </div>
-
+ 
               <!-- Item 2 -->
               <div>
-		Person responsible: <span style="color: #B09261;">Caad12</span>	
+        Person responsible: <span style="color: #B09261;">Caad12</span>
               </div>
-
-              <!-- Item 3 -->
+ 
+              <!-- Item 3 
               <div class="progress-group">
                 <div class="progress progress-thin">
                   <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
@@ -437,14 +454,23 @@
                 </div>
                 <span class="progress-title">Project completion</span>
                 <span class="progress-value">0%</span>
-              </div>
+              </div>-->
+		    
             </div><!-- / .col-md-4 -->
-
+ 
             <div class="col-md-4">
-              <p>Detailed paper guide on how to configure a raspberry pi to run the Blackcoin wallets (both Original and Lore) and stake coins.  Paper will be detailed including screenshots of the raspberry pi along with details and step by step instructions for how to successfully configure.  Included will be a small write up on Blackcoin and why staking on a Raspberry pi is more beneficial to some than staking on a traditional laptop/desktop.</p>
-              <p>In addition, the guide will be aesthetically pleasing and in line with Blackcoin as opposed to simply a word document with a white background.</p>
+              <p>Detailed paper guide on how to configure a raspberry pi
+ to run the Blackcoin wallets (both Original and Lore) and stake coins.
+ Paper will be detailed including screenshots of the raspberry pi along
+with details and step by step instructions for how to successfully
+configure.  Included will be a small write up on Blackcoin and why
+staking on a Raspberry pi is more beneficial to some than staking on a
+traditional laptop/desktop.</p>
+              <p>In addition, the guide will be aesthetically pleasing
+and in line with Blackcoin as opposed to simply a word document with a
+white background.</p>
             </div><!-- / .col-md-4 -->
-          </div><!-- / .row -->
+</div><!-- / .row -->
 	
 		
 		
