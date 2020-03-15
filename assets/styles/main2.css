@@ -586,8 +586,8 @@ hr {
   display: block;
   text-transform: uppercase;
   font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 300;
-  color: #999;
+
+  color: #555;
   letter-spacing: 2.5px;
 }
 
@@ -1254,11 +1254,11 @@ mark {
 /* ---- 1.1 Text ---- */
 body, .testimonials-3col .t-item blockquote, .testimonials-3col .t-item .wrapper-404 .content-wrapper .info-wrapper .info-404, .wrapper-404 .content-wrapper .info-wrapper .testimonials-3col .t-item .info-404, .testimonials-3col .t-item .bg-maintenance .content-wrapper .content-inner p, .bg-maintenance .content-wrapper .content-inner .testimonials-3col .t-item p {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 16px;
+
   letter-spacing: 0.2px;
   line-height: 1.8em;
-  color: #777;
+  color: #444;
 }
 
 h1,
@@ -1286,8 +1286,9 @@ h6, .progress-group .progress-title,
 .blog-post-nav .next-btn, .sidebar .tags-widget .tag-list li a, .contact-1 .contact-wrapper .contact-info-wrapper address .address-group span, .contact-1 .contact-wrapper .contact-info-wrapper address .address-group a,
 .contact-1 .contact-wrapper .contact-info-wrapper address .address-group p, .contact-1 .contact-wrapper .contact-info-wrapper address .show-map-link a, .landing-hero .heading-wrapper .cta-btn, .shop-sidebar .filter-widget label, .shop-sidebar-vertical .filter-widget label, .shop-sidebar .tags-widget .tag-list li a, .shop-sidebar-vertical .tags-widget .tag-list li a, .checkout-table tbody tr td:first-child, .prod-reviews .tp-review .tpr-name {
   font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-  color: #111;
+  color: #000;
   text-transform: uppercase;
+  font-size: 20px;
 }
 
 .dropcaps:first-child:first-letter {
@@ -1306,7 +1307,7 @@ h1, .comingsoon .content-wrapper .content-inner .cs-timer .item .nbr-timer {
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 2em;
   letter-spacing: 4px;
 }
 
@@ -1316,7 +1317,6 @@ h3, .page-title .subheading {
 }
 
 h4, .ft-tabs .tabs-list li a .tab-group .tab-heading, .testimonials-3col .t-item blockquote footer cite, .testimonials-3col .t-item .wrapper-404 .content-wrapper .info-wrapper .info-404 footer cite, .wrapper-404 .content-wrapper .info-wrapper .testimonials-3col .t-item .info-404 footer cite, .testimonials-3col .t-item .bg-maintenance .content-wrapper .content-inner p footer cite, .bg-maintenance .content-wrapper .content-inner .testimonials-3col .t-item p footer cite, .team-3col .t-item .t-info .t-role, .team-4col .t-item .t-info .t-role, .freelancer-about .t-item .t-info .t-role, .t-join .t-info .t-role, .login-2 .bg-overlay .form-wrapper .form-content .cards-header, .login-2 .bg-overlay .form-wrapper .social-signup .social-card .sc-lead {
-  font-size: 1.07em;
   letter-spacing: 3px;
 }
 
@@ -1335,7 +1335,7 @@ h6, .progress-group .progress-title,
 
 .h-alt {
   font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 300;
+
 }
 
 /* ---- 1.3 Links ---- */
@@ -1970,8 +1970,7 @@ fieldset[disabled] .form-control:hover {
   display: block;
   margin: 20px 0 0 0;
   font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 300;
-  color: #777;
+  color: #444;
 }
 
 .page-title .breadcrumb li a {
@@ -2756,7 +2755,7 @@ fieldset[disabled] .form-control:hover {
 
 .navbar .navbar-nav .dropdown .cart-dropdown .cart-item .cp-name {
   font-size: 14px;
-  font-weight: 300;
+
   padding: 0;
   letter-spacing: 1px;
 }
@@ -5349,7 +5348,7 @@ fieldset[disabled] .form-control:hover {
   margin-bottom: 0;
   font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
   letter-spacing: 2.5px;
-  color: #999;
+  color: #555;
 }
 
 .portfolio-columns-fw .portfolio-item figure figcaption:hover, .portfolio-columns-boxed .portfolio-item figure figcaption:hover {
@@ -5708,7 +5707,7 @@ fieldset[disabled] .form-control:hover {
   margin-bottom: 0;
   font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
   letter-spacing: 2.5px;
-  color: #999;
+  color: #555;
 }
 
 .portfolio-masonry .p-wrapper .open-btn, .portfolio-masonry-2 .p-wrapper .open-btn, .portfolio-masonry-3 .p-wrapper .open-btn {
@@ -5792,7 +5791,7 @@ fieldset[disabled] .form-control:hover {
 
 .portfolio-1col-fw .portfolio-item figcaption .subheading, .portfolio-1col-boxed .portfolio-item figcaption .subheading {
   font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
-  color: #999;
+  color: #555;
   margin-bottom: 45px;
 }
 
@@ -6238,7 +6237,7 @@ fieldset[disabled] .form-control:hover {
   margin-left: -10px;
   vertical-align: bottom;
   font-size: 15px;
-  font-weight: 300;
+
   color: #999;
 }
 
@@ -6982,7 +6981,7 @@ form .input-error-2:focus {
   display: block;
   margin-bottom: 3px;
   font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 300;
+
   color: #999;
 }
 
@@ -7974,7 +7973,7 @@ form .input-error-2:focus {
 }
 
 .fs-slide-2 .hero-content .hero-lead span {
-  font-weight: 300;
+
 }
 
 .fs-slide-2 .hero-content .hero-subheading {
@@ -8006,7 +8005,7 @@ form .input-error-2:focus {
 }
 
 .fs-slide-3 .hero-content .hero-lead span {
-  font-weight: 300;
+
 }
 
 .fs-slide-3 .hero-content .hero-subheading {
@@ -8443,7 +8442,7 @@ form .input-error-2:focus {
 .kenburn-hero .kenburn-slider .hero-wrapper .hero-content .lead-white-bg {
   display: inline-block;
   font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 300;
+
   font-size: 6em;
   color: #111;
 }
@@ -9335,7 +9334,7 @@ form .input-error-2:focus {
 /* ---- 27.1 Shop Layout ---- */
 .shop-layout-options span {
   font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 300;
+
   color: #111;
 }
 
@@ -9591,7 +9590,7 @@ form .input-error-2:focus {
 
 .shop-sidebar .filter-widget label, .shop-sidebar-vertical .filter-widget label {
   font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
-  font-weight: 300;
+
 }
 
 .shop-sidebar .filter-widget input[type="text"], .shop-sidebar-vertical .filter-widget input[type="text"] {
