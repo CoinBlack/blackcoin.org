@@ -562,7 +562,7 @@
       <div class="col-md-6">
         <div class="faq-group-header ws-s">
           <h4 class="mb-30">General</h4>
-          <p>General questions about BlackCoin.</p>
+          <p>General questions about Blackcoin.</p>
         </div>
 
         <!-- FAQ Accordion -->
@@ -754,12 +754,12 @@
                 It is a fixed amount of BLK due to <span style="color: #c19959;">static block reward</span>, and a
                 slightly less inflation rate year on year because of that. <br />
                 <p></p>
-                The block time target is 64 seconds, so working that out per year (60/64 x 60) x 24 x 365 is 492750
-                1.5BLK block rewards in a year which is <span style="color: #c19959;">739,125 new BLK per year
-                  roughly.</span> As of right now, 739,125 is 0.972% of the total supply of 76,034,138BLK. <br />
+                The block time target is 67 seconds, so working that out per year (60/67 x 60) x 24 x 365 is 470686
+                block rewards (1.5BLK) in a year which is <span style="color: #c19959;">706,030 new BLK per year
+                  roughly.</span> As of right now, 706,030 is 1.172% of the total supply of 60,238,885 BLK. <br />
                 <p></p>
-                This 0.972% is distributed to only fraction of the shareholders, the ones who stake. <span
-                  style="color: #c19959;">The reward rate is above 1%, average 4-8% annual depend on time and amount of
+                This 1.172% is distributed to only fraction of the shareholders, the ones who stake. <span
+                  style="color: #c19959;">The reward rate is way above 1%, average to 4-8% annual depending on time and amount of
                   BLK staked.</span><br />
                 <p></p>
                 That means if only 20% of coins were being actively staked, you could actually get around 5%/year for
@@ -780,8 +780,8 @@
             </div>
             <div id="faq-1-collapse-6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-1-h-6">
               <div class="panel-body">
-                You can check the network weight on the <span style="color: #c19959;">bottom left of your
-                  wallet</span>.<br />
+                You can check the network weight on the <span style="color: #c19959;">bottom right of your
+                  wallet</span>.<br /> or by running the getstakinginfo command from the debug console. 
                 Network weight is computed from the last 72 blocks.
               </div>
             </div>
@@ -793,7 +793,7 @@
               <h4 class="panel-title">
                 <span class="collapsed" role="button" data-toggle="collapse" data-parent="#faq-accordion-1"
                   href="#faq-1-collapse-7" aria-expanded="false" aria-controls="faq-1-collapse-7">
-                  WHERE CAN I BUY BLACKCOINS?
+                  WHERE CAN I BUY BLACKCOIN?
                 </span>
               </h4>
             </div>
@@ -906,10 +906,10 @@
             </div>
             <div id="faq-1-collapse-12" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-1-h-12">
               <div class="panel-body">
-                <a href="https://blackcoin.org/" target="_blank">https://blackcoin.org</a> is <span
-                  style="color: #c19959;">the only official BlackCoin website</span>.<br />
+                <a href="https://blackcoin.org/" target="_blank">https://blackcoin.org</a> - <a href="https://blackcoinmore.org/" target="_blank">https://blackcoinmore.org</a> - <a href="https://blackcoin.nl/" target="_blank">https://blackcoin.nl</a> are <span
+                  style="color: #c19959;">the only official Blackcoin websites</span>.<br />. Note: The domain blackcoin.io is used for Blacksight, PayBLK and Iris.
                 <p></p>
-                DO NOT DOWNLOAD FROM OR SIGN UP TO ANY OTHER BLACKOIN LOOK WEBSITE!
+                DO NOT DOWNLOAD FROM OR SIGN UP TO ANY OTHER BLACKCOIN LOOK WEBSITE!
               </div>
             </div>
           </div><!-- / .panel -->
@@ -942,9 +942,9 @@
             </div>
             <div id="faq-2-collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="faq-2-h-1">
               <div class="panel-body">
-                The current bootstrap is around 1.4 GB. It can take up to 2 days to download (<span
+                The current bootstrap is around 2.0 GB. It can take a long time to download (<span
                   style="color: #c19959;">depending on your internet speed and available peers</span>). <p></p>
-                Downloading the bootstrap is a good way to speed up your first syncing. <br />
+                Downloading the bootstrap is a good way to speed up your first syncing when you use the Blackcoin Legacy wallet. <br />
                 You can find BLK Bootstrap at the bottom of the page (FAQ/OTHER/BOOTSTRAP).
               </div>
             </div>
@@ -973,16 +973,19 @@
                 <p></p>
                 5. Wallet will create his own peer circle. It takes time. <p></p>
                 However you can help the wallet with giving it a list of nodes:<p></p>
-                To apply addnode, you have to find your blackcoin.conf. It should be here: <br />
+                To apply addnode, you have to find your blackcoin.conf (Legacy) or blackmore.conf (More). It should be here: <br />
                 <p></p>
-                Windows: %APPDATA%\Blackcoin\<br />
-                Linux: $HOME/.bitcoin/<br />
-                Mac OSX: $HOME/Library/Application Support/Blackcoin/<br />
+                Windows: %APPDATA%\blackcoin\<br />
+                or %APPDATA%\blackmore\<br />
+                Linux: $HOME/.blackcoin/<br />
+                or $HOME/.blackmore/<br />
+                Mac OSX: $HOME/Library/Application Support/blackcoin/<br />
+                or $HOME/Library/Application Support/blackmore/<br />
                 <p></p>
                 Then go to https://chainz.cryptoid.info/blk/#!network<br />
                 Click on "node list"<br />
-                Copy the whole list to the end of blackcoin.conf<br />
-                Start Blackcoin-Qt<br />
+                Copy the whole list to the end of the .conf<br />
+                Start Blackcoin <br />
                 <p></p>
                 * Sometimes OS hides file extensions so check if a .conf is not actually .conf.txt<br />
                 <p></p>
