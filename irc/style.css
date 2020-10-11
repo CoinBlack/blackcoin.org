@@ -18,7 +18,8 @@
 }
 
 /* Site Specific Styles */
-html, body {
+html,
+body {
   min-height: 100%;
 }
 
@@ -34,18 +35,28 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3,{
+h1,
+h2,
+h3,
+  {
   color: white;
   margin: 1.5em 0em 0em;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "GillSans", Arial, sans-serif;
   text-transform: uppercase;
 }
 
 
- h4, h5, h6{
+h4,
+h5,
+h6 {
   margin: 1em 2em 0em;
 
 }
@@ -57,7 +68,8 @@ p {
   margin: 1em;
 }
 
-ol, ul {
+ol,
+ul {
   font-size: 1.3125em;
   color: #9E9E9E;
   font-family: Arial, sans-serif;
@@ -66,14 +78,14 @@ ol, ul {
 
 
 a {
-	color: #644b00;
-    text-decoration: none;
-    transition: 0.3s color ease
+  color: #644b00;
+  text-decoration: none;
+  transition: 0.3s color ease
 }
 
 .info {
-    display: block;
-    margin: 0.7em 0.2em;
-    color: #777;
-    font-size: 0.8em
+  display: block;
+  margin: 0.7em 0.2em;
+  color: #777;
+  font-size: 0.8em
 }

@@ -8,10 +8,10 @@
  *
  * Date: Mon, 06 May 2013 02:15:55 +0300
  */
-(function(c) {
+(function (c) {
     function A(b, a) {
         if (c.trim(a).length !== 0) {
-            var d = function() {
+            var d = function () {
                 var b = c(this).attr("id").substr(c(this).attr("id").lastIndexOf("_") + 1),
                     a = c("#" + e + "img_" + b);
                 c("#" + e + b).attr("data-source", 1);
@@ -27,7 +27,7 @@
         h.push(b);
         o.push(a);
         A(b, a);
-        q = setTimeout(function() {
+        q = setTimeout(function () {
             var b = {
                     ln0: t_jp.lang,
                     sr0: p,
@@ -40,7 +40,7 @@
                 type: "POST",
                 url: t_jp.ajaxurl,
                 data: b,
-                success: function() {
+                success: function () {
                     var b = r / i * 100;
                     t_jp.progress && c("#" + k).progressbar("value", b)
                 }
@@ -70,8 +70,8 @@
     }
 
     function t(b, a) {
-        s(a, function(a) {
-            c(a.results).each(function(a) {
+        s(a, function (a) {
+            c(a.results).each(function (a) {
                 j(b[a], this)
             })
         }, t_jp.lang)
@@ -93,8 +93,8 @@
     }
 
     function C(b, a) {
-        u(a, function(d) {
-            typeof d.error !== "undefined" ? t(b, a) : c(d.data.translations).each(function(a) {
+        u(a, function (d) {
+            typeof d.error !== "undefined" ? t(b, a) : c(d.data.translations).each(function (a) {
                 j(b[a], this.translatedText)
             })
         }, t_jp.lang)
@@ -104,7 +104,7 @@
         if (t_jp.msn_key) {
             var f =
                 "[";
-            c(b).each(function(a) {
+            c(b).each(function (a) {
                 f += '"' + encodeURIComponent(b[a].replace(/[\\"]/g, "\\$&").replace(/(\r\n|\n|\r)/gm, " ")) + '",'
             });
             f = f.slice(0, -1) + "]";
@@ -114,9 +114,9 @@
                 jsonp: "oncomplete",
                 success: a
             })
-        } else v === 1 ? setTimeout(function() {
+        } else v === 1 ? setTimeout(function () {
             m(b, a, d)
-        }, 500) : (v = 1, c.getScript("http://www.microsofttranslator.com/ajax/v2/toolkit.ashx?loc=en&amp;toolbar=none", function() {
+        }, 500) : (v = 1, c.getScript("http://www.microsofttranslator.com/ajax/v2/toolkit.ashx?loc=en&amp;toolbar=none", function () {
             t_jp.msn_key = _mstConfig.appId;
             m(b, a, d)
         }))
@@ -124,8 +124,8 @@
 
     function D(b, a) {
         p = 2;
-        m(a, function(a) {
-            c(a).each(function(a) {
+        m(a, function (a) {
+            c(a).each(function (a) {
                 j(b[a], this.TranslatedText)
             })
         }, t_jp.binglang)
@@ -147,8 +147,8 @@
 
     function E(b, a) {
         p = 3;
-        w(a, function(a) {
-            a.responseStatus >= 200 && a.responseStatus < 300 && (a.responseData.translatedText !== void 0 ? j(b[0], a.responseData.translatedText) : c(a.responseData).each(function(a) {
+        w(a, function (a) {
+            a.responseStatus >= 200 && a.responseStatus < 300 && (a.responseData.translatedText !== void 0 ? j(b[0], a.responseData.translatedText) : c(a.responseData).each(function (a) {
                 this.responseStatus === 200 && j(b[a],
                     this.responseData.translatedText)
             }))
@@ -164,7 +164,7 @@
             a = 0,
             d = [],
             f = [];
-        c("." + e + '[data-source=""]').each(function() {
+        c("." + e + '[data-source=""]').each(function () {
             var e = c(this).attr("data-token"),
                 g = c(this).attr("data-orig");
             g === void 0 && (g = c(this).html());
@@ -179,7 +179,7 @@
     }
 
     function n(b) {
-        n.hit ? b() : (n.hit = true, z(function() {
+        n.hit ? b() : (n.hit = true, z(function () {
             c.fn.propAttr = c.fn.prop || c.fn.attr;
             c.xLazyLoader({
                 js: t_jp.jQueryUI + "jquery-ui.min.js",
@@ -203,13 +203,13 @@
     t_jp.dat = w;
     t_jp.tfl = z;
     t_jp.tfju = n;
-    c(function() {
+    c(function () {
         if (t_jp.msn)
             if (t_jp.binglang =
                 t_jp.lang, t_jp.binglang === "zh") t_jp.binglang = "zh-chs";
             else if (t_jp.binglang === "zh-tw") t_jp.binglang = "zh-cht";
         else if (t_jp.binglang === "mw") t_jp.binglang = "mww";
-        c("." + e + "setdeflang").click(function() {
+        c("." + e + "setdeflang").click(function () {
             c.ajax({
                 url: t_jp.ajaxurl,
                 data: {
@@ -224,7 +224,7 @@
         c.ajaxSetup({
             cache: true
         });
-        if (i && !t_jp.noauto && (t_jp.google || t_jp.msn || t_jp.apertium)) t_jp.progress ? n(function() {
+        if (i && !t_jp.noauto && (t_jp.google || t_jp.msn || t_jp.apertium)) t_jp.progress ? n(function () {
             c("#" + e + "credit").css({
                 overflow: "auto"
             }).append('<div style="float: left;width: 90%;height: 10px" id="' +

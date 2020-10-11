@@ -1,8 +1,8 @@
 var speed = 5000;
 canTick = true;
 
-$(document).ready(function() {
-	$('.ticker-container ul div').each(function(i) {
+$(document).ready(function () {
+	$('.ticker-container ul div').each(function (i) {
 		if ($(window).width() >= 500) {
 			$(this).find('li').width($(window).width() - parseInt($(this).css('left')));
 		}
@@ -25,8 +25,8 @@ $(document).ready(function() {
 	animateTickerElementHorz();
 });
 
-$(window).resize(function() {
-	$('.ticker-container ul div').each(function(i) {
+$(window).resize(function () {
+	$('.ticker-container ul div').each(function (i) {
 		if ($(this).find('li').height() > 30) {
 			$(this).css({
 				'height': '20px',
@@ -40,7 +40,7 @@ $(window).resize(function() {
 });
 
 function startTicker() {
-	setInterval(function() {
+	setInterval(function () {
 		if (canTick) {
 			$('.ticker-container ul div.ticker-active')
 				.removeClass('ticker-active')
@@ -57,7 +57,7 @@ function startTicker() {
 			$('.ticker-container ul div.next')
 				.removeClass('not-active next')
 				.addClass('ticker-active');
-			setTimeout(function() {
+			setTimeout(function () {
 				$('.ticker-container ul div.remove')
 					.css('transition', '0s ease-in-out')
 					.removeClass('remove')
@@ -71,7 +71,7 @@ function startTicker() {
 						$('.ticker-container ul div.finished').removeClass('finished');
 					}
 				}
-				setTimeout(function() {
+				setTimeout(function () {
 					$('.ticker-container ul div')
 						.css('transition', '0.25s ease-in-out');
 				}, 75);
@@ -84,35 +84,35 @@ function startTicker() {
 function animateTickerElementHorz() {
 	if ($(window).width() < 500) {
 		if ($('.ticker-container ul div.ticker-active li').width() > $(window).width()) {
-			setTimeout(function() {
+			setTimeout(function () {
 				$('.ticker-container ul div.ticker-active li').animate({
 					'margin-left': '-' + (($('.ticker-container ul div.ticker-active li').width() - $(window).width()) + 15)
-				}, speed - (speed / 5), 'swing', function() {
-					setTimeout(function() {
+				}, speed - (speed / 5), 'swing', function () {
+					setTimeout(function () {
 						$('.ticker-container ul div.finished').removeClass('finished').find('li').css('margin-left', 0);
-					}, ((speed / 5) / 2)); 
+					}, ((speed / 5) / 2));
 				});
 			}, ((speed / 5) / 2));
 		}
 	} else {
 		if ($('.ticker-container ul div.ticker-active li').width() > ($(window).width() - parseInt($('.ticker-container ul div.ticker-active').css('left')))) {
-			setTimeout(function() {
+			setTimeout(function () {
 				$('.ticker-container ul div.ticker-active li').animate({
 					'margin-left': Math.abs($('.ticker-container ul div.ticker-active li').width() - ($(window).width() - parseInt($('.ticker-container ul div.ticker-active').css('left'))) + 15) * -1
-				}, speed - (speed / 5), 'swing', function() {
-					setTimeout(function() {
+				}, speed - (speed / 5), 'swing', function () {
+					setTimeout(function () {
 						$('.ticker-container ul div.finished').removeClass('finished').find('li').css('margin-left', 0);
-					}, ((speed / 5) / 2)); 
+					}, ((speed / 5) / 2));
 				});
 			}, ((speed / 5) / 2));
 		}
 	}
 }
 
-$('.ticker-container').on('mouseover', function() {
+$('.ticker-container').on('mouseover', function () {
 	canTick = false;
 });
 
-$('.ticker-container').on('mouseout', function() {
+$('.ticker-container').on('mouseout', function () {
 	canTick = true;
 });

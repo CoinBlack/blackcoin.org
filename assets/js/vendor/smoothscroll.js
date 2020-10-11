@@ -11,37 +11,37 @@
 // without getting a written permission first.
 //
 
-(function(){
+(function () {
 
 
-    if (navigator.appVersion.indexOf("Win")!=-1) {
+    if (navigator.appVersion.indexOf("Win") != -1) {
 
         // Scroll Variables (tweakable)
         var defaultOptions = {
 
             // Scrolling Core
-            frameRate        : 150, // [Hz]
-            animationTime    : 500, // [px]
-            stepSize         : 150, // [px] (120 default)
+            frameRate: 150, // [Hz]
+            animationTime: 500, // [px]
+            stepSize: 150, // [px] (120 default)
 
             // Pulse (less tweakable)
             // ratio of "tail" to "acceleration"
-            pulseAlgorithm   : true,
-            pulseScale       : 6, // (8 default)
-            pulseNormalize   : 1,
+            pulseAlgorithm: true,
+            pulseScale: 6, // (8 default)
+            pulseNormalize: 1,
 
             // Acceleration
-            accelerationDelta : 20,  // 20
-            accelerationMax   : 1,   // 1
+            accelerationDelta: 20, // 20
+            accelerationMax: 1, // 1
 
             // Keyboard Settings
-            keyboardSupport   : true,  // option
-            arrowScroll       : 50,     // [px]
+            keyboardSupport: true, // option
+            arrowScroll: 50, // [px]
 
             // Other
-            touchpadSupport   : true,
-            fixedBackground   : true, 
-            excluded          : ''    
+            touchpadSupport: true,
+            fixedBackground: true,
+            excluded: ''
         };
 
         var options = defaultOptions;
@@ -50,16 +50,28 @@
         // Other Variables
         var isExcluded = false;
         var isFrame = false;
-        var direction = { x: 0, y: 0 };
-        var initDone  = false;
+        var direction = {
+            x: 0,
+            y: 0
+        };
+        var initDone = false;
         var root = document.documentElement;
         var activeElement;
         var observer;
         var deltaBuffer = [];
         var isMac = /^Mac/.test(navigator.platform);
 
-        var key = { left: 37, up: 38, right: 39, down: 40, spacebar: 32, 
-                    pageup: 33, pagedown: 34, end: 35, home: 36 };
+        var key = {
+            left: 37,
+            up: 38,
+            right: 39,
+            down: 40,
+            spacebar: 32,
+            pageup: 33,
+            pagedown: 34,
+            end: 35,
+            home: 36
+        };
 
 
         /***********************************************
@@ -86,20 +98,20 @@
          * Sets up scrolls array, determines if frames are involved.
          */
         function init() {
-          
+
             if (initDone || !document.body) return;
 
             initDone = true;
 
             var body = document.body;
             var html = document.documentElement;
-            var windowHeight = window.innerHeight; 
+            var windowHeight = window.innerHeight;
             var scrollHeight = body.scrollHeight;
-            
+
             // check compat mode for root element
             root = (document.compatMode.indexOf('CSS') >= 0) ? html : body;
             activeElement = body;
-            
+
             initTest();
 
             // Checks if this script is running in a frame
@@ -113,8 +125,8 @@
              * on some pages. e.g.: html, body { height: 100% }
              */
             else if (scrollHeight > windowHeight &&
-                    (body.offsetHeight <= windowHeight || 
-                     html.offsetHeight <= windowHeight)) {
+                (body.offsetHeight <= windowHeight ||
+                    html.offsetHeight <= windowHeight)) {
 
                 // DOMChange (throttle): fix height
                 var pending = false;
@@ -134,9 +146,9 @@
                 setTimeout(refresh, 10);
 
                 var config = {
-                    attributes: true, 
-                    childList: true, 
-                    characterData: false 
+                    attributes: true,
+                    childList: true,
+                    characterData: false
                 };
 
                 observer = new MutationObserver(refresh);
@@ -144,7 +156,7 @@
 
                 // clearfix
                 if (root.offsetHeight <= windowHeight) {
-                    var underlay = document.createElement('div');   
+                    var underlay = document.createElement('div');
                     underlay.style.clear = 'both';
                     body.appendChild(underlay);
                 }
@@ -173,7 +185,7 @@
         /************************************************
          * SCROLLING 
          ************************************************/
-         
+
         var que = [];
         var pending = false;
         var lastScroll = Date.now();
@@ -182,7 +194,7 @@
          * Pushes scroll actions to the scrolling queue.
          */
         function scrollArray(elem, left, top, delay) {
-            
+
             delay || (delay = 1000);
             directionCheck(left, top);
 
@@ -194,87 +206,87 @@
                     if (factor > 1) {
                         factor = Math.min(factor, options.accelerationMax);
                         left *= factor;
-                        top  *= factor;
+                        top *= factor;
                     }
                 }
                 lastScroll = Date.now();
-            }          
-            
+            }
+
             // push a scroll command
             que.push({
-                x: left, 
-                y: top, 
+                x: left,
+                y: top,
                 lastX: (left < 0) ? 0.99 : -0.99,
-                lastY: (top  < 0) ? 0.99 : -0.99, 
+                lastY: (top < 0) ? 0.99 : -0.99,
                 start: Date.now()
             });
-                
+
             // don't act if there's a pending queue
             if (pending) {
                 return;
-            }  
+            }
 
             var scrollWindow = (elem === document.body);
-            
+
             var step = function (time) {
-                
+
                 var now = Date.now();
                 var scrollX = 0;
-                var scrollY = 0; 
-            
+                var scrollY = 0;
+
                 for (var i = 0; i < que.length; i++) {
-                    
+
                     var item = que[i];
-                    var elapsed  = now - item.start;
+                    var elapsed = now - item.start;
                     var finished = (elapsed >= options.animationTime);
-                    
+
                     // scroll position: [0, 1]
                     var position = (finished) ? 1 : elapsed / options.animationTime;
-                    
+
                     // easing [optional]
                     if (options.pulseAlgorithm) {
                         position = pulse(position);
                     }
-                    
+
                     // only need the difference
                     var x = (item.x * position - item.lastX) >> 0;
                     var y = (item.y * position - item.lastY) >> 0;
-                    
+
                     // add this to the total scrolling
                     scrollX += x;
-                    scrollY += y;            
-                    
+                    scrollY += y;
+
                     // update last values
                     item.lastX += x;
                     item.lastY += y;
-                
+
                     // delete and step back if it's over
                     if (finished) {
-                        que.splice(i, 1); i--;
-                    }           
+                        que.splice(i, 1);
+                        i--;
+                    }
                 }
 
                 // scroll left and top
                 if (scrollWindow) {
                     window.scrollBy(scrollX, scrollY);
-                } 
-                else {
+                } else {
                     if (scrollX) elem.scrollLeft += scrollX;
-                    if (scrollY) elem.scrollTop  += scrollY;                    
+                    if (scrollY) elem.scrollTop += scrollY;
                 }
-                
+
                 // clean up if there's nothing left to do
                 if (!left && !top) {
                     que = [];
                 }
-                
-                if (que.length) { 
-                    requestFrame(step, elem, (delay / options.frameRate + 1)); 
-                } else { 
+
+                if (que.length) {
+                    requestFrame(step, elem, (delay / options.frameRate + 1));
+                } else {
                     pending = false;
                 }
             };
-            
+
             // start a new queue of actions
             requestFrame(step, elem, 0);
             pending = true;
@@ -294,7 +306,7 @@
             if (!initDone) {
                 init();
             }
-            
+
             var target = event.target;
             var overflowing = overflowingAncestor(target);
 
@@ -304,17 +316,17 @@
             if (!overflowing || event.defaultPrevented || event.ctrlKey) {
                 return true;
             }
-            
+
             // leave embedded content alone (flash & pdf)
-            if (isNodeName(activeElement, 'embed') || 
-               (isNodeName(target, 'embed') && /\.pdf/i.test(target.src)) ||
-               isNodeName(activeElement, 'object')) {
+            if (isNodeName(activeElement, 'embed') ||
+                (isNodeName(target, 'embed') && /\.pdf/i.test(target.src)) ||
+                isNodeName(activeElement, 'object')) {
                 return true;
             }
 
             var deltaX = -event.wheelDeltaX || event.deltaX || 0;
             var deltaY = -event.wheelDeltaY || event.deltaY || 0;
-            
+
             if (isMac) {
                 if (event.wheelDeltaX && isDivisible(event.wheelDeltaX, 120)) {
                     deltaX = -120 * (event.wheelDeltaX / Math.abs(event.wheelDeltaX));
@@ -323,7 +335,7 @@
                     deltaY = -120 * (event.wheelDeltaY / Math.abs(event.wheelDeltaY));
                 }
             }
-            
+
             // use wheelDelta if deltaX/Y is not available
             if (!deltaX && !deltaY) {
                 deltaY = -event.wheelDelta || 0;
@@ -334,7 +346,7 @@
                 deltaX *= 40;
                 deltaY *= 40;
             }
-            
+
             // check if it's a touchpad scroll that should be ignored
             if (!options.touchpadSupport && isTouchpad(deltaY)) {
                 return true;
@@ -349,7 +361,7 @@
             if (Math.abs(deltaY) > 1.2) {
                 deltaY *= options.stepSize / 120;
             }
-            
+
             scrollArray(overflowing, deltaX, deltaY);
             event.preventDefault();
             scheduleClearCache();
@@ -361,33 +373,34 @@
          */
         function keydown(event) {
 
-            var target   = event.target;
-            var modifier = event.ctrlKey || event.altKey || event.metaKey || 
-                          (event.shiftKey && event.keyCode !== key.spacebar);
-            
+            var target = event.target;
+            var modifier = event.ctrlKey || event.altKey || event.metaKey ||
+                (event.shiftKey && event.keyCode !== key.spacebar);
+
             // do nothing if user is editing text
             // or using a modifier key (except shift)
             // or in a dropdown
             // or inside interactive elements
             var inputNodeNames = /^(textarea|select|embed|object)$/i;
             var buttonTypes = /^(button|submit|radio|checkbox|file|color|image)$/i;
-            if ( inputNodeNames.test(target.nodeName) ||
-                 isNodeName(target, 'input') && !buttonTypes.test(target.type) ||
-                 isNodeName(activeElement, 'video') ||
-                 isInsideYoutubeVideo(event) ||
-                 target.isContentEditable || 
-                 event.defaultPrevented   ||
-                 modifier ) {
-              return true;
+            if (inputNodeNames.test(target.nodeName) ||
+                isNodeName(target, 'input') && !buttonTypes.test(target.type) ||
+                isNodeName(activeElement, 'video') ||
+                isInsideYoutubeVideo(event) ||
+                target.isContentEditable ||
+                event.defaultPrevented ||
+                modifier) {
+                return true;
             }
-            
+
             // spacebar should trigger button press
             if (isNodeName(target, 'button') &&
                 event.keyCode === key.spacebar) {
-              return true;
+                return true;
             }
-            
-            var shift, x = 0, y = 0;
+
+            var shift, x = 0,
+                y = 0;
             var elem = overflowingAncestor(activeElement);
             var clientHeight = elem.clientHeight;
 
@@ -401,7 +414,7 @@
                     break;
                 case key.down:
                     y = options.arrowScroll;
-                    break;         
+                    break;
                 case key.spacebar: // (+ shift)
                     shift = event.shiftKey ? 1 : -1;
                     y = -shift * clientHeight * 0.9;
@@ -417,14 +430,14 @@
                     break;
                 case key.end:
                     var damt = elem.scrollHeight - elem.scrollTop - clientHeight;
-                    y = (damt > 0) ? damt+10 : 0;
+                    y = (damt > 0) ? damt + 10 : 0;
                     break;
                 case key.left:
                     x = -options.arrowScroll;
                     break;
                 case key.right:
                     x = options.arrowScroll;
-                    break;            
+                    break;
                 default:
                     return true; // a key we don't care about
             }
@@ -460,7 +473,9 @@
 
         function scheduleClearCache() {
             clearTimeout(clearCacheTimer);
-            clearCacheTimer = setInterval(function () { cache = {}; }, 1*1000);
+            clearCacheTimer = setInterval(function () {
+                cache = {};
+            }, 1 * 1000);
         }
 
         function setCache(elems, overflowing) {
@@ -489,9 +504,9 @@
                 if (rootScrollHeight === el.scrollHeight) {
                     var topOverflowsNotHidden = overflowNotHidden(root) && overflowNotHidden(body);
                     var isOverflowCSS = topOverflowsNotHidden || overflowAutoOrScroll(root);
-                    if (isFrame && isContentOverflowing(root) || 
-                       !isFrame && isOverflowCSS) {
-                        return setCache(elems, getScrollRoot()); 
+                    if (isFrame && isContentOverflowing(root) ||
+                        !isFrame && isOverflowCSS) {
+                        return setCache(elems, getScrollRoot());
                     }
                 } else if (isContentOverflowing(el) && overflowAutoOrScroll(el)) {
                     return setCache(elems, el);
@@ -521,15 +536,15 @@
          ***********************************************/
 
         function addEvent(type, fn, bubble) {
-            window.addEventListener(type, fn, (bubble||false));
+            window.addEventListener(type, fn, (bubble || false));
         }
 
         function removeEvent(type, fn, bubble) {
-            window.removeEventListener(type, fn, (bubble||false));  
+            window.removeEventListener(type, fn, (bubble || false));
         }
 
         function isNodeName(el, tag) {
-            return (el.nodeName||'').toLowerCase() === tag.toLowerCase();
+            return (el.nodeName || '').toLowerCase() === tag.toLowerCase();
         }
 
         function directionCheck(x, y) {
@@ -564,7 +579,7 @@
                 }
             }, 1000);
             return !allDeltasDivisableBy(120) && !allDeltasDivisableBy(100);
-        } 
+        }
 
         function isDivisible(n, divisor) {
             return (Math.floor(n / divisor) == n / divisor);
@@ -572,17 +587,17 @@
 
         function allDeltasDivisableBy(divisor) {
             return (isDivisible(deltaBuffer[0], divisor) &&
-                    isDivisible(deltaBuffer[1], divisor) &&
-                    isDivisible(deltaBuffer[2], divisor));
+                isDivisible(deltaBuffer[1], divisor) &&
+                isDivisible(deltaBuffer[2], divisor));
         }
 
         function isInsideYoutubeVideo(event) {
             var elem = event.target;
             var isControl = false;
-            if (document.URL.indexOf ('www.youtube.com/watch') != -1) {
+            if (document.URL.indexOf('www.youtube.com/watch') != -1) {
                 do {
-                    isControl = (elem.classList && 
-                                 elem.classList.contains('html5-video-controls'));
+                    isControl = (elem.classList &&
+                        elem.classList.contains('html5-video-controls'));
                     if (isControl) break;
                 } while (elem = elem.parentNode);
             }
@@ -590,44 +605,44 @@
         }
 
         var requestFrame = (function () {
-              return (window.requestAnimationFrame       || 
-                      window.webkitRequestAnimationFrame || 
-                      window.mozRequestAnimationFrame    ||
-                      function (callback, element, delay) {
-                         window.setTimeout(callback, delay || (1000/60));
-                     });
+            return (window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                function (callback, element, delay) {
+                    window.setTimeout(callback, delay || (1000 / 60));
+                });
         })();
 
-        var MutationObserver = (window.MutationObserver || 
-                                window.WebKitMutationObserver ||
-                                window.MozMutationObserver);  
+        var MutationObserver = (window.MutationObserver ||
+            window.WebKitMutationObserver ||
+            window.MozMutationObserver);
 
-        var getScrollRoot = (function() {
-          var SCROLL_ROOT;
-          return function() {
-            if (!SCROLL_ROOT) {
-              var dummy = document.createElement('div');
-              dummy.style.cssText = 'height:10000px;width:1px;';
-              document.body.appendChild(dummy);
-              var bodyScrollTop  = document.body.scrollTop;
-              var docElScrollTop = document.documentElement.scrollTop;
-              window.scrollBy(0, 1);
-              if (document.body.scrollTop != bodyScrollTop)
-                (SCROLL_ROOT = document.body);
-              else 
-                (SCROLL_ROOT = document.documentElement);
-              window.scrollBy(0, -1);
-              document.body.removeChild(dummy);
-            }
-            return SCROLL_ROOT;
-          };
+        var getScrollRoot = (function () {
+            var SCROLL_ROOT;
+            return function () {
+                if (!SCROLL_ROOT) {
+                    var dummy = document.createElement('div');
+                    dummy.style.cssText = 'height:10000px;width:1px;';
+                    document.body.appendChild(dummy);
+                    var bodyScrollTop = document.body.scrollTop;
+                    var docElScrollTop = document.documentElement.scrollTop;
+                    window.scrollBy(0, 1);
+                    if (document.body.scrollTop != bodyScrollTop)
+                        (SCROLL_ROOT = document.body);
+                    else
+                        (SCROLL_ROOT = document.documentElement);
+                    window.scrollBy(0, -1);
+                    document.body.removeChild(dummy);
+                }
+                return SCROLL_ROOT;
+            };
         })();
 
 
         /***********************************************
          * PULSE (by Michael Herf)
          ***********************************************/
-         
+
         /**
          * Viscous fluid with a pulse for part and decay for the rest.
          * - Applies a fixed force over an interval (a damped acceleration), and
@@ -640,7 +655,7 @@
             x = x * options.pulseScale;
             if (x < 1) { // acceleartion
                 val = x - (1 - Math.exp(-x));
-            } else {     // tail
+            } else { // tail
                 // the previous animation ended here:
                 start = Math.exp(-1);
                 // simple viscous drag

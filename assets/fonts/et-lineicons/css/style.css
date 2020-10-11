@@ -1,7 +1,7 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoona5a1.eot?-3gtgps');
-	src:url('../fonts/icomoond41d.eot?#iefix-3gtgps') format('embedded-opentype'),
+	src: url('../fonts/icomoona5a1.eot?-3gtgps');
+	src: url('../fonts/icomoond41d.eot?#iefix-3gtgps') format('embedded-opentype'),
 		url('../fonts/icomoona5a1.woff?-3gtgps') format('woff'),
 		url('../fonts/icomoona5a1.ttf?-3gtgps') format('truetype'),
 		url('../fonts/icomoona5a1.svg?-3gtgps#icomoon') format('svg');
@@ -9,7 +9,8 @@
 	font-style: normal;
 }
 
-[class^="et-"], [class*=" et-"] {
+[class^="et-"],
+[class*=" et-"] {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -422,4 +423,3 @@
 .et-wine:before {
 	content: "\e663";
 }
-

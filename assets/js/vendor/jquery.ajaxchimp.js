@@ -10,12 +10,12 @@ Author: Siddharth Doshi
 
     $.ajaxChimp = {
         responses: {
-            'We have sent you a confirmation email'                                             : 0,
-            'Please enter a value'                                                              : 1,
-            'An email address must contain a single @'                                          : 2,
-            'The domain portion of the email address is invalid (the portion after the @: )'    : 3,
-            'The username portion of the email address is invalid (the portion before the @: )' : 4,
-            'This email address looks fake or invalid. Please enter a real email address'       : 5
+            'We have sent you a confirmation email': 0,
+            'Please enter a value': 1,
+            'An email address must contain a single @': 2,
+            'The domain portion of the email address is invalid (the portion after the @: )': 3,
+            'The username portion of the email address is invalid (the portion before the @: )': 4,
+            'This email address looks fake or invalid. Please enter a real email address': 5
         },
         translations: {
             'en': null
@@ -26,7 +26,7 @@ Author: Siddharth Doshi
     };
 
     $.fn.ajaxChimp = function (options) {
-        $(this).each(function(i, elem) {
+        $(this).each(function (i, elem) {
             var form = $(elem);
             var email = form.find('input[type=email]');
             var label = form.find('label[for=' + email.attr('id') + ']');
@@ -43,6 +43,7 @@ Author: Siddharth Doshi
 
             form.submit(function () {
                 var msg;
+
                 function successCallback(resp) {
                     if (resp.result === 'success') {
                         msg = 'We have sent you a confirmation email';
@@ -66,8 +67,7 @@ Author: Siddharth Doshi
                                     msg = resp.msg;
                                 }
                             }
-                        }
-                        catch (e) {
+                        } catch (e) {
                             index = -1;
                             msg = resp.msg;
                         }
@@ -75,11 +75,11 @@ Author: Siddharth Doshi
 
                     // Translate and display message
                     if (
-                        settings.language !== 'en'
-                        && $.ajaxChimp.responses[msg] !== undefined
-                        && $.ajaxChimp.translations
-                        && $.ajaxChimp.translations[settings.language]
-                        && $.ajaxChimp.translations[settings.language][$.ajaxChimp.responses[msg]]
+                        settings.language !== 'en' &&
+                        $.ajaxChimp.responses[msg] !== undefined &&
+                        $.ajaxChimp.translations &&
+                        $.ajaxChimp.translations[settings.language] &&
+                        $.ajaxChimp.translations[settings.language][$.ajaxChimp.responses[msg]]
                     ) {
                         msg = $.ajaxChimp.translations[settings.language][$.ajaxChimp.responses[msg]];
                     }
@@ -109,11 +109,11 @@ Author: Siddharth Doshi
 
                 // Translate and display submit message
                 var submitMsg = 'Submitting...';
-                if(
-                    settings.language !== 'en'
-                    && $.ajaxChimp.translations
-                    && $.ajaxChimp.translations[settings.language]
-                    && $.ajaxChimp.translations[settings.language]['submit']
+                if (
+                    settings.language !== 'en' &&
+                    $.ajaxChimp.translations &&
+                    $.ajaxChimp.translations[settings.language] &&
+                    $.ajaxChimp.translations[settings.language]['submit']
                 ) {
                     submitMsg = $.ajaxChimp.translations[settings.language]['submit'];
                 }
@@ -132,20 +132,19 @@ Author: Siddharth Doshi
     Your info from MailChimp goes bellow
 -------------------------------------------------- */
 (function ($) {
-    
+
     "use strict";
 
     $('.mc-ajax').ajaxChimp({
         callback: mailchimpCallback,
         // Replace this with your own url, id and user code (see documentation). 
-        url: "http://viktorandonov.us8.list-manage.com/subscribe/post?u=0d1613dc78dfba6e3ad02aaa5&amp;id=25d4404c02" 
+        url: "http://viktorandonov.us8.list-manage.com/subscribe/post?u=0d1613dc78dfba6e3ad02aaa5&amp;id=25d4404c02"
     });
 
     function mailchimpCallback(resp) {
         if (resp.result === 'success') {
             $('.subscribe-result').hide().html('<div class="alert alert-success alert-dismissible wow fadeInUp" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Thank you!</strong><br>You must confirm the subscription in your inbox.</div>').slideDown().delay(10000).slideUp();
-        }
-        else if (resp.result === 'error') {
+        } else if (resp.result === 'error') {
             $('.subscribe-result').hide().html('<div class="alert alert-danger alert-dismissible wow fadeInUp" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>').slideDown().delay(10000).slideUp();
         }
     }

@@ -1,4 +1,3 @@
-
 /*  Copyright (c) 2013 Nicola Hibbert  (http://nicolahibbert.com/liteaccordion-v2/)
     Extensions (c) 2013 Matt Lowe; Added support for jQuery UI theming
     
@@ -22,76 +21,77 @@
     WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 */
-;(function($) {
+;
+(function ($) {
 
-    var LiteAccordion = function(elem, options) {
+    var LiteAccordion = function (elem, options) {
 
         var defaults = {
-            containerWidth : 960,                   // fixed (px)
-            containerHeight : 320,                  // fixed (px)
-            headerWidth : 48,                       // fixed (px)
+                containerWidth: 960, // fixed (px)
+                containerHeight: 320, // fixed (px)
+                headerWidth: 48, // fixed (px)
 
-            activateOn : 'click',                   // click or mouseover
-            firstSlide : 1,                         // displays slide (n) on page load
-            slideSpeed : 800,                       // slide animation speed
-            onTriggerSlide : function(e) {},        // callback on slide activate
-            onSlideAnimComplete : function() {},    // callback on slide anim complete
+                activateOn: 'click', // click or mouseover
+                firstSlide: 1, // displays slide (n) on page load
+                slideSpeed: 800, // slide animation speed
+                onTriggerSlide: function (e) {}, // callback on slide activate
+                onSlideAnimComplete: function () {}, // callback on slide anim complete
 
-            autoPlay : false,                       // automatically cycle through slides
-            pauseOnHover : false,                   // pause on hover
-            cycleSpeed : 6000,                      // time between slide cycles
-            easing : 'swing',                       // custom easing function
+                autoPlay: false, // automatically cycle through slides
+                pauseOnHover: false, // pause on hover
+                cycleSpeed: 6000, // time between slide cycles
+                easing: 'swing', // custom easing function
 
-            theme : 'jqueryui',                     // jqueryui, basic, dark, light, or stitch
-            rounded : false,                        // square or rounded corners
-            enumerateSlides : false,                // put numbers on slides
-            linkable : false                        // link slides via hash
-        },
+                theme: 'jqueryui', // jqueryui, basic, dark, light, or stitch
+                rounded: false, // square or rounded corners
+                enumerateSlides: false, // put numbers on slides
+                linkable: false // link slides via hash
+            },
 
-        // merge defaults with options in new settings object
+            // merge defaults with options in new settings object
             settings = $.extend({}, defaults, options),
 
-        // 'globals'
+            // 'globals'
             slides = elem.children('ol').children('li'),
             header = slides.children(':first-child'),
             slideLen = slides.length,
             slideWidth = settings.containerWidth - slideLen * settings.headerWidth,
 
-        // public methods
+            // public methods
             methods = {
 
                 // start elem animation
-                play : function(index) {
+                play: function (index) {
                     var next = core.nextSlide(index && index);
 
                     if (core.playing) return;
 
                     // start autoplay
-                    core.playing = setInterval(function() {
+                    core.playing = setInterval(function () {
                         header.eq(next()).trigger('click.liteAccordion');
                     }, settings.cycleSpeed);
                 },
 
                 // stop elem animation
-                stop : function() {
+                stop: function () {
                     clearInterval(core.playing);
                     core.playing = 0;
                 },
 
                 // trigger next slide
-                next : function() {
+                next: function () {
                     methods.stop();
                     header.eq(core.currentSlide === slideLen - 1 ? 0 : core.currentSlide + 1).trigger('click.liteAccordion');
                 },
 
                 // trigger previous slide
-                prev : function() {
+                prev: function () {
                     methods.stop();
                     header.eq(core.currentSlide - 1).trigger('click.liteAccordion');
                 },
 
                 // destroy plugin instance
-                destroy : function() {
+                destroy: function () {
                     // stop autoplay
                     methods.stop();
 
@@ -119,22 +119,22 @@
                 },
 
                 // poke around the internals (NOT CHAINABLE)
-                debug : function() {
+                debug: function () {
                     return {
-                        elem : elem,
-                        defaults : defaults,
-                        settings : settings,
-                        methods : methods,
-                        core : core
+                        elem: elem,
+                        defaults: defaults,
+                        settings: settings,
+                        methods: methods,
+                        core: core
                     };
                 }
             },
 
-        // core utility and animation methods
+            // core utility and animation methods
             core = {
 
                 // set style properties
-                setStyles : function() {
+                setStyles: function () {
                     // set container height and width, theme and corner style
                     elem
                         .width(settings.containerWidth)
@@ -150,11 +150,11 @@
                             .addClass('ui-widget');
                         elem
                             .find('h3')
-                                .addClass('ui-helper-reset')
-                                .find('span')
-                                    .addClass('ui-accordion-header')
-                                    .addClass('ui-state-default')
-                                    .addClass('ui-corner-all');
+                            .addClass('ui-helper-reset')
+                            .find('span')
+                            .addClass('ui-accordion-header')
+                            .addClass('ui-state-default')
+                            .addClass('ui-corner-all');
                         elem.find('h3').next()
                             .addClass('ui-corner-all')
                             .addClass('ui-widget-content');
@@ -171,14 +171,14 @@
                 },
 
                 // set initial positions for each slide
-                setSlidePositions : function() {
+                setSlidePositions: function () {
                     var selected = header.filter('.selected');
 
                     // account for already selected slide
                     if (!selected.length)
                         header.eq(settings.firstSlide - 1).addClass('selected');
 
-                    header.each(function(index) {
+                    header.each(function (index) {
                         var $this = $(this),
                             left = index * settings.headerWidth,
                             margin = header.first().next(),
@@ -196,8 +196,11 @@
                             .css('left', left)
                             .width(settings.containerHeight)
                             .next()
-                                .width(slideWidth - offset)
-                                .css({ left : left, paddingLeft : settings.headerWidth });
+                            .width(slideWidth - offset)
+                            .css({
+                                left: left,
+                                paddingLeft: settings.headerWidth
+                            });
 
                         // add number to bottom of tab
                         settings.enumerateSlides && $this.append('<b>' + (index + 1) + '</b>');
@@ -206,7 +209,7 @@
                 },
 
                 // bind events
-                bindEvents : function() {
+                bindEvents: function () {
                     // bind click and mouseover events
                     if (settings.activateOn === 'click') {
                         header.on('click.liteAccordion', core.triggerSlide);
@@ -216,8 +219,8 @@
 
                     // bind hashchange event
                     if (settings.linkable) {
-                        $(window).on('hashchange.liteAccordion', function(e) {
-                            var url = slides.filter(function() {
+                        $(window).on('hashchange.liteAccordion', function (e) {
+                            var url = slides.filter(function () {
                                 return $(this).attr('data-slide-name') === window.location.hash.split('#')[1];
                             });
 
@@ -232,42 +235,42 @@
                     // pause on hover (can't use custom events with $.hover())
                     if (settings.pauseOnHover && settings.autoPlay) {
                         elem
-                            .on('mouseover.liteAccordion', function() {
+                            .on('mouseover.liteAccordion', function () {
                                 core.playing && methods.stop();
                             })
-                            .on('mouseout.liteAccordion', function() {
+                            .on('mouseout.liteAccordion', function () {
                                 !core.playing && methods.play(core.currentSlide);
                             });
                     }
                 },
 
                 // counter for autoPlay (zero index firstSlide on init)
-                currentSlide : settings.firstSlide - 1,
+                currentSlide: settings.firstSlide - 1,
 
                 // next slide index
-                nextSlide : function(index) {
+                nextSlide: function (index) {
                     var next = index + 1 || core.currentSlide + 1;
 
                     // closure
-                    return function() {
+                    return function () {
                         return next++ % slideLen;
                     };
                 },
 
                 // holds interval counter
-                playing : 0,
+                playing: 0,
 
-                slideAnimCompleteFlag : false,
+                slideAnimCompleteFlag: false,
 
                 // trigger slide animation
-                triggerSlide : function(e) {
+                triggerSlide: function (e) {
                     var $this = $(this),
                         tab = {
-                            elem : $this,
-                            index : header.index($this),
-                            next : $this.next(),
-                            prev : $this.parent().prev().children('h3'),
-                            parent : $this.parent()
+                            elem: $this,
+                            index: header.index($this),
+                            next: $this.next(),
+                            prev: $this.parent().prev().children('h3'),
+                            parent: $this.parent()
                         };
 
                     // current hash not correct?
@@ -303,7 +306,7 @@
                     }
                 },
 
-                animSlide : function(triggerTab) {
+                animSlide: function (triggerTab) {
                     var _this = this;
 
                     // set pos for single selected tab
@@ -318,11 +321,11 @@
                             .add(this.next)
                             .stop(true)
                             .animate({
-                                left : this.pos + this.index * settings.headerWidth
-                            },
+                                    left: this.pos + this.index * settings.headerWidth
+                                },
                                 settings.slideSpeed,
                                 settings.easing,
-                                function() {
+                                function () {
                                     // flag ensures that fn is only called one time per triggerSlide
                                     if (!core.slideAnimCompleteFlag) {
                                         // trigger onSlideAnimComplete callback in context of sibling div (jQuery wrapped)
@@ -331,20 +334,20 @@
                                     }
                                 });
 
-                            // remove, then add selected class
-                            header.removeClass('selected').filter(this.prev).addClass('selected');
+                        // remove, then add selected class
+                        header.removeClass('selected').filter(this.prev).addClass('selected');
 
                     }
                 },
 
                 // animates left and right groups of slides
-                animSlideGroup : function(triggerTab) {
+                animSlideGroup: function (triggerTab) {
                     var group = ['left', 'right'];
 
-                    $.each(group, function(index, side) {
+                    $.each(group, function (index, side) {
                         var filterExpr, left;
 
-                        if (side === 'left')  {
+                        if (side === 'left') {
                             filterExpr = ':lt(' + (triggerTab.index + 1) + ')';
                             left = 0;
                         } else {
@@ -355,14 +358,14 @@
                         slides
                             .filter(filterExpr)
                             .children('h3')
-                            .each(function() {
+                            .each(function () {
                                 var $this = $(this),
                                     tab = {
-                                        elem : $this,
-                                        index : header.index($this),
-                                        next : $this.next(),
-                                        prev : $this.parent().prev().children('h3'),
-                                        pos : left
+                                        elem: $this,
+                                        index: header.index($this),
+                                        next: $this.next(),
+                                        prev: $this.parent().prev().children('h3'),
+                                        pos: left
                                     };
 
                                 // trigger item anim, pass original trigger context for callback fn
@@ -375,11 +378,11 @@
                     header.removeClass('selected').filter(triggerTab.elem).addClass('selected');
                 },
 
-                ieClass : function(version) {
+                ieClass: function (version) {
                     if (version < 7) methods.destroy();
                     if (version >= 10) return;
                     if (version === 7 || version === 8) {
-                        slides.each(function(index) {
+                        slides.each(function (index) {
                             $(this).addClass('slide-' + index);
                         });
                     }
@@ -387,7 +390,7 @@
                     elem.addClass('ie ie' + version);
                 },
 
-                init : function() {
+                init: function () {
                     var ua = navigator.userAgent,
                         index = ua.indexOf('MSIE');
 
@@ -417,13 +420,13 @@
 
     };
 
-    $.fn.liteAccordion = function(method) {
+    $.fn.liteAccordion = function (method) {
         var elem = this,
             instance = elem.data('liteAccordion');
 
         // if creating a new instance
         if (typeof method === 'object' || !method) {
-            return elem.each(function() {
+            return elem.each(function () {
                 var liteAccordion;
 
                 // if plugin already instantiated, return
@@ -434,7 +437,7 @@
                 elem.data('liteAccordion', liteAccordion);
             });
 
-        // otherwise, call method on current instance
+            // otherwise, call method on current instance
         } else if (typeof method === 'string' && instance[method]) {
             // debug method isn't chainable b/c we need the debug object to be returned
             if (method === 'debug') {
@@ -466,32 +469,33 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 */
-;(function($) {
-    $.fn.squelchToggles = function(options) {
-        
+;
+(function ($) {
+    $.fn.squelchToggles = function (options) {
+
         var defaults = {
-            speed:      800,
-            active:     false,
-            theme:      'jqueryui'
+            speed: 800,
+            active: false,
+            theme: 'jqueryui'
         };
 
         var settings = $.extend({}, defaults, options);
-        var $toggle  = this;
+        var $toggle = this;
         var $toggles = this.children('div');
         var $headers = this.children('h3');
 
         // Add the jQuery UI accordion classes when needed
         if (settings.theme == 'blank') {
-			$headers.each(function(){
-				$(this).prepend('<span class="ui-icon ui-icon-triangle-1-e"></span>');				
-			});
+            $headers.each(function () {
+                $(this).prepend('<span class="ui-icon ui-icon-triangle-1-e"></span>');
+            });
         } else if (settings.theme == 'jqueryui') {
             $toggle.addClass('ui-widget ui-accordion ui-widget ui-helper-reset');
             $toggles.addClass('ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom');
-            $headers.each(function() {
+            $headers.each(function () {
                 $(this).addClass('ui-accordion-header ui-helper-reset ui-state-default ui-corner-all ui-accordion-icons');
                 $(this).attr('role', 'tab');
-                $(this).attr('aria-selected', 'false' );
+                $(this).attr('aria-selected', 'false');
                 $(this).prepend('<span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>');
             });
         }
@@ -502,12 +506,12 @@
         // Add the actions:
 
         // hover
-        $headers.hover(function() {
+        $headers.hover(function () {
             if (settings.theme == 'jqueryui') {
                 $(this).addClass('ui-state-hover');
             }
             $(this).addClass('squelch-taas-toggle-shortcode-header-hover');
-        }, function() {
+        }, function () {
             if (settings.theme == 'jqueryui') {
                 $(this).removeClass('ui-state-hover');
             }
@@ -515,7 +519,7 @@
         });
 
         // click
-        $headers.click(function(ev) {
+        $headers.click(function (ev) {
             if (settings.theme == 'blank') {
                 $(this).find('span.ui-icon').toggleClass('ui-icon-triangle-1-e ui-icon-triangle-1-s');
             } else if (settings.theme == 'jqueryui') {
@@ -532,10 +536,10 @@
         });
 
         // Set active pane
-        if ((settings.active !== false) && (settings.active != 'false') && (typeof(settings.active) == 'string')) {
+        if ((settings.active !== false) && (settings.active != 'false') && (typeof (settings.active) == 'string')) {
             // active can be comma-separated to activate more than one pane
             var allActive = settings.active.split(/[, ]/);
-            $.each( allActive, function(index, value) {
+            $.each(allActive, function (index, value) {
                 var active = parseInt(value);
 
                 if (!isNaN(active)) {
@@ -550,68 +554,69 @@
 
 
 
-;(function($) {
-    $(document).ready(function() {
+;
+(function ($) {
+    $(document).ready(function () {
 
         // Create accordions
-        $(".squelch-taas-accordion").each(function() {
+        $(".squelch-taas-accordion").each(function () {
 
-            var dataActive      = parseInt($(this).attr( 'data-active' ));
-            var dataDisabled    = $(this).attr( 'data-disabled'     )   == 'true' ? true : false;
-            var dataAutoHeight  = $(this).attr( 'data-autoheight'   )   == 'true' ? true : false;
-            var dataCollapsible = $(this).attr( 'data-collapsible'  )   == 'true' ? true : false;
+            var dataActive = parseInt($(this).attr('data-active'));
+            var dataDisabled = $(this).attr('data-disabled') == 'true' ? true : false;
+            var dataAutoHeight = $(this).attr('data-autoheight') == 'true' ? true : false;
+            var dataCollapsible = $(this).attr('data-collapsible') == 'true' ? true : false;
 
             var dataHeightStyle = dataAutoHeight ? 'auto' : 'content';
 
             $(this).accordion({
-                disabled:       dataDisabled,
-                active:         dataActive,
-                heightStyle:    dataHeightStyle,
-                collapsible:    dataCollapsible
+                disabled: dataDisabled,
+                active: dataActive,
+                heightStyle: dataHeightStyle,
+                collapsible: dataCollapsible
             });
         });
 
 
         // Create hAccordions
-        $(".squelch-taas-haccordion").each(function() {
+        $(".squelch-taas-haccordion").each(function () {
 
-            var dataWidth           = parseInt($(this).attr( 'data-width'       ));
-            var dataHeight          = parseInt($(this).attr( 'data-height'      ));
-            var dataHWidth          = parseInt($(this).attr( 'data-h-width'     ));
+            var dataWidth = parseInt($(this).attr('data-width'));
+            var dataHeight = parseInt($(this).attr('data-height'));
+            var dataHWidth = parseInt($(this).attr('data-h-width'));
 
-            var dataActivateOn      = $(this).attr( 'data-activate-on'           );
-            var dataActive          = parseInt($(this).attr( 'data-active'      ));
-            var dataSpeed           = parseInt($(this).attr( 'data-speed'       ));
+            var dataActivateOn = $(this).attr('data-activate-on');
+            var dataActive = parseInt($(this).attr('data-active'));
+            var dataSpeed = parseInt($(this).attr('data-speed'));
 
-            var dataAutoPlay        = $(this).attr( 'data-autoplay'         )   == 'true' ? true : false;
-            var dataPauseOnHover    = $(this).attr( 'data-pauseonhover'     )   == 'true' ? true : false;
-            var dataCycleSpeed      = parseInt($(this).attr( 'data-cyclespeed'  ));
+            var dataAutoPlay = $(this).attr('data-autoplay') == 'true' ? true : false;
+            var dataPauseOnHover = $(this).attr('data-pauseonhover') == 'true' ? true : false;
+            var dataCycleSpeed = parseInt($(this).attr('data-cyclespeed'));
 
-            var dataTheme           = $(this).attr( 'data-theme'                 );
-            var dataRounded         = $(this).attr( 'data-rounded'               );
-            var dataEnumerate       = $(this).attr( 'data-enumerate'        )   == 'true' ? true : false;
+            var dataTheme = $(this).attr('data-theme');
+            var dataRounded = $(this).attr('data-rounded');
+            var dataEnumerate = $(this).attr('data-enumerate') == 'true' ? true : false;
 
             //TODO? Or drop support for this attribute?
             //var dataDisabled        = $(this).attr( 'data-disabled'         )   == 'true' ? true : false;
 
             $(this).liteAccordion({
-                containerWidth:     dataWidth,
-                containerHeight:    dataHeight,
-                headerWidth:        dataHWidth,
+                containerWidth: dataWidth,
+                containerHeight: dataHeight,
+                headerWidth: dataHWidth,
 
-                activateOn:         dataActivateOn,
-                firstSlide:         dataActive,
-                slideSpeed:         dataSpeed,
+                activateOn: dataActivateOn,
+                firstSlide: dataActive,
+                slideSpeed: dataSpeed,
 
-                autoPlay:           dataAutoPlay,
-                pauseOnHover:       dataPauseOnHover,
-                cycleSpeed:         dataCycleSpeed,
+                autoPlay: dataAutoPlay,
+                pauseOnHover: dataPauseOnHover,
+                cycleSpeed: dataCycleSpeed,
 
-                theme:              dataTheme,
-                rounded:            dataRounded,
-                enumerateSlides:    dataEnumerate,
+                theme: dataTheme,
+                rounded: dataRounded,
+                enumerateSlides: dataEnumerate,
 
-                onTriggerSlide:     function(tab) {
+                onTriggerSlide: function (tab) {
                     if ('jqueryui' === dataTheme) {
                         $(tab).parents('.squelch-taas-haccordion').eq(0).find('.ui-state-active').removeClass('ui-state-active');
                         $(tab).find('span').addClass('ui-state-active');
@@ -623,35 +628,33 @@
 
 
         // Create tabs
-        $(".squelch-taas-tab-group").each(function() {
-            var dataDisabled    = $(this).attr( 'data-disabled'     )   == 'true' ? true : false;
-            var dataCollapsible = $(this).attr( 'data-collapsible'  )   == 'true' ? true : false;
-            var dataActive      = parseInt($(this).attr( 'data-active' ));
-            var dataEvent       = $(this).attr( 'data-event' );
+        $(".squelch-taas-tab-group").each(function () {
+            var dataDisabled = $(this).attr('data-disabled') == 'true' ? true : false;
+            var dataCollapsible = $(this).attr('data-collapsible') == 'true' ? true : false;
+            var dataActive = parseInt($(this).attr('data-active'));
+            var dataEvent = $(this).attr('data-event');
 
             $(this).tabs({
-                disabled:       dataDisabled,
-                collapsible:    dataCollapsible,
-                active:         dataActive,
-                event:          dataEvent
+                disabled: dataDisabled,
+                collapsible: dataCollapsible,
+                active: dataActive,
+                event: dataEvent
             });
         });
 
 
         // Create toggles
-        $(".squelch-taas-toggle").each(function() {
-            var dataSpeed   = $(this).attr( 'data-speed'  );
-            var dataActive  = $(this).attr( 'data-active' );
-            var dataTheme   = $(this).attr( 'data-theme'  );
+        $(".squelch-taas-toggle").each(function () {
+            var dataSpeed = $(this).attr('data-speed');
+            var dataActive = $(this).attr('data-active');
+            var dataTheme = $(this).attr('data-theme');
 
             $(this).squelchToggles({
-                speed:  dataSpeed,
+                speed: dataSpeed,
                 active: dataActive,
-                theme:  dataTheme
+                theme: dataTheme
             });
         });
 
     });
 })(jQuery);
-
-
