@@ -77,7 +77,7 @@ $(document).ready(function () {
 			mapOptions);
 
 		// Map marker 
-		var image = 'http://www.octarinethemes.com.s3.amazonaws.com/resources/definity/map-pin.png';
+		var image = 'https://www.octarinethemes.com.s3.amazonaws.com/resources/definity/map-pin.png';
 		var myLatLng = new google.maps.LatLng(41.880038, -87.631127);
 		var beachMarker = new google.maps.Marker({
 			position: myLatLng,

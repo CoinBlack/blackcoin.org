@@ -194,7 +194,7 @@
 			}
 
 			function yql(a, b) {
-				return 'http://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from ' + b + ' where url=\"' + a + '\" limit ' + params.feedcount) + '&format=json';
+				return 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from ' + b + ' where url=\"' + a + '\" limit ' + params.feedcount) + '&format=json';
 			};
 
 			function getRSS() {

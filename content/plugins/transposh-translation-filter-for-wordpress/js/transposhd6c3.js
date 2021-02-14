@@ -1,10 +1,10 @@
 /*
  * Transposh v0.9.3
- * http://transposh.org/
+ * https://transposh.org/
  *
  * Copyright 2013, Team Transposh
  * Licensed under the GPL Version 2 or higher.
- * http://transposh.org/license
+ * https://transposh.org/license
  *
  * Date: Mon, 06 May 2013 02:15:55 +0300
  */
@@ -109,14 +109,14 @@
             });
             f = f.slice(0, -1) + "]";
             c.ajax({
-                url: "http://api.microsofttranslator.com/V2/Ajax.svc/TranslateArray?appId=" + t_jp.msn_key + "&to=" + d + "&texts=" + f,
+                url: "https://api.microsofttranslator.com/V2/Ajax.svc/TranslateArray?appId=" + t_jp.msn_key + "&to=" + d + "&texts=" + f,
                 dataType: "jsonp",
                 jsonp: "oncomplete",
                 success: a
             })
         } else v === 1 ? setTimeout(function () {
             m(b, a, d)
-        }, 500) : (v = 1, c.getScript("http://www.microsofttranslator.com/ajax/v2/toolkit.ashx?loc=en&amp;toolbar=none", function () {
+        }, 500) : (v = 1, c.getScript("https://www.microsofttranslator.com/ajax/v2/toolkit.ashx?loc=en&amp;toolbar=none", function () {
             t_jp.msn_key = _mstConfig.appId;
             m(b, a, d)
         }))
@@ -133,7 +133,7 @@
 
     function w(b, a, d) {
         c.ajax({
-            url: "http://api.apertium.org/json/translate",
+            url: "https://api.apertium.org/json/translate",
             data: {
                 q: b,
                 langpair: t_jp.olang + "|" + d,

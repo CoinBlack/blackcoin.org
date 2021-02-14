@@ -1,4 +1,4 @@
-/*  Copyright (c) 2013 Nicola Hibbert  (http://nicolahibbert.com/liteaccordion-v2/)
+/*  Copyright (c) 2013 Nicola Hibbert  (https://nicolahibbert.com/liteaccordion-v2/)
     Extensions (c) 2013 Matt Lowe; Added support for jQuery UI theming
     
     Permission is hereby granted, free of charge, to any person obtaining
@@ -453,7 +453,7 @@
 
 
 
-/*  Copyright 2013  Matt Lowe / Squelch Design  (http://squelch.it/  ... email: hi@squelchdesign.com)
+/*  Copyright 2013  Matt Lowe / Squelch Design  (https://squelch.it/  ... email: hi@squelchdesign.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License, version 2, as 

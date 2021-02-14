@@ -1,10 +1,10 @@
 /*!
  * VERSION: 1.13.1
  * DATE: 2014-07-22
- * UPDATES AND DOCS AT: http://www.greensock.com
+ * UPDATES AND DOCS AT: https://www.greensock.com
  *
  * @license Copyright (c) 2008-2014, GreenSock. All rights reserved.
- * This work is subject to the terms at http://www.greensock.com/terms_of_use.html or for
+ * This work is subject to the terms at https://www.greensock.com/terms_of_use.html or for
  * Club GreenSock members, the software agreement that was issued with your membership.
  * 
  * @author: Jack Doyle, jack@greensock.com
@@ -594,10 +594,10 @@
 /*!
  * VERSION: beta 1.9.4
  * DATE: 2014-07-17
- * UPDATES AND DOCS AT: http://www.greensock.com
+ * UPDATES AND DOCS AT: https://www.greensock.com
  *
  * @license Copyright (c) 2008-2014, GreenSock. All rights reserved.
- * This work is subject to the terms at http://www.greensock.com/terms_of_use.html or for
+ * This work is subject to the terms at https://www.greensock.com/terms_of_use.html or for
  * Club GreenSock members, the software agreement that was issued with your membership.
  * 
  * @author: Jack Doyle, jack@greensock.com
@@ -726,14 +726,14 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
     }, !0)
 }), _gsScope._gsDefine && _gsScope._gsQueue.pop()();
 
-// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
-// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+// https://paulirish.com/2011/requestanimationframe-for-smart-animating/
+// https://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
 // requestAnimationFrame polyfill by Erik Möller. fixes from Paul Irish and Tino Zijdel
 // MIT license
 
 // Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is". 
-// Read more here: [License](http://tympanus.net/codrops/licensing/)
-// [© Codrops 2014](http://www.codrops.com)
+// Read more here: [License](https://tympanus.net/codrops/licensing/)
+// [© Codrops 2014](https://www.codrops.com)
 ! function () {
     for (var e = 0, n = ["ms", "moz", "webkit", "o"], t = 0; t < n.length && !window.requestAnimationFrame; ++t) window.requestAnimationFrame = window[n[t] + "RequestAnimationFrame"], window.cancelAnimationFrame = window[n[t] + "CancelAnimationFrame"] || window[n[t] + "CancelRequestAnimationFrame"];
     window.requestAnimationFrame || (window.requestAnimationFrame = function (n) {
