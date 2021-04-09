@@ -206,6 +206,11 @@ hr {
   padding-right: 0;
 }
 
+ .no-gap ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .no-gap-left {
   padding-left: 0;
 }
@@ -6302,9 +6307,9 @@ fieldset[disabled] .form-control:hover {
 
 .testimonials-parallax .t-clients li,
 .testimonials-dark .t-clients li {
-  display: inline-block;
-  padding-left: 35px;
-  padding-right: 35px;
+  display: inline-flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .testimonials-bg-2 {
