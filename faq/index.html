@@ -212,7 +212,7 @@
 
   <!-- ========== Navigation ========== -->
 
-  <nav class="navbar navbar-default navbar-static-top mega navbar-inverse">
+  <nav class="navbar navbar-default navbar-fixed-top mega navbar-inverse navbar-trans" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -224,8 +224,7 @@
         </button>
 
         <!-- Logo -->
-        <a class="navbar-brand" href="../"><img class="navbar-logo" src="../assets/images/logo-light.png"
-            alt="Blackcoin - Logo"></a>
+        <a class="navbar-brand" href="../"><img src="assets/images/logo-light.png" alt="Blackcoin - Logo"></a>
       </div><!-- / .navbar-header -->
 
       <!-- Navbar Links -->
@@ -247,12 +246,12 @@
               <div class="row">
                 <!-- Basic -->
                 <div class="col-lg-6 mb-sm-30">
-                  <li><a href="../#about">About</a></li>
-                  <!--<li><a href="../bounties/">Bounties</a></li>-->
-                  <li><a href="../#community">Community</a></li>
-                  <li><a href="../donations/">Donations</a></li>
-                  <!--<li><a href="../#features">Features</a></li>-->
-                  <li><a href="../faq/"><span style="color: #ddb77a;">FAQ</span></a></li>
+                  <li><a href="#about">About</a></li>
+                  <!--<li><a href="bounties/">Bounties</a></li>-->
+                  <li><a href="#community">Community</a></li>
+                  <li><a href="donations/">Donations</a></li>
+                  <!--<li><a href="#features">Features</a></li>-->
+                  <li><a href="faq/"><span style="color: #ddb77a;">FAQ</span></a></li>
                 </div>
               </div><!-- / .row -->
             </ul><!-- / .dropdown-menu -->
@@ -261,22 +260,14 @@
 
           <!-- Buy -->
           <li class="dropdown mega-fw">
-            <a href="../#buy">Buy </a>
+            <a href="#buy">Buy </a>
           </li><!-- / Buy -->
 
 
           <!-- Downloads -->
           <li class="dropdown mega-fw">
-            <a href="../#downloads">Downloads </a>
+            <a href="#downloads">Downloads </a>
           </li><!-- / Downloads -->
-
-
-          <!-- Merchants -->
-          <li class="dropdown mega-fw">
-            <a href="../#merchants">Merchants </a>
-          </li><!-- / Merchants -->
-
-
 
 
         </ul><!-- / .nav .navbar-nav -->
@@ -284,8 +275,6 @@
 
         <!-- Navbar Links Right -->
         <ul class="nav navbar-nav navbar-right">
-
-
 
 
           <!-- Links -->
@@ -317,67 +306,83 @@
                 <li role="separator" class="divider"></li>
                 <center>
                   <p>
-                    <script type="text/javascript">
-                      baseUrl = "https://widgets.cryptocompare.com/";
-                      var scripts = document.getElementsByTagName("script");
-                      var embedder = scripts[scripts.length - 1];
-                      var cccTheme = {
-                        "General": {
-                          "background": "#000000",
-                          "borderWidth": "0px",
-                          "borderColor": "#000",
-                          "borderRadius": "4px 4px 0 0"
-                        },
-                        "Header": {
-                          "background": "#000000",
-                          "color": "#FFF",
-                          "displayFollowers": false
-                        },
-                        "Followers": {
-                          "background": "",
-                          "color": "#CCC",
-                          "borderColor": "#000",
-                          "counterBorderColor": "",
-                          "counterColor": ""
-                        },
-                        "Data": {
-                          "priceColor": "#FFF",
-                          "infoLabelColor": "#CCC",
-                          "infoValueColor": "#CCC"
-                        },
-                        "Chart": {
-                          "animation": true,
-                          "fillColor": "rgba(253, 201, 4, 1)",
-                          "borderColor": "#bf9700"
-                        },
-                        "Conversion": {
-                          "background": "#000",
-                          "color": "#999"
+                    <script>
+                      var x = window.matchMedia("(max-width: 700px)")
+                      cryptocompare1(x) // Call listener function at run time
+                      x.addListener(cryptocompare1) // Attach listener function on state changes
+                        function cryptocompare1(x) {
+                          if (x.matches) { // If media query matches
+                            return
+                          } else {
+                        baseUrl = "https://widgets.cryptocompare.com/";
+                        var scripts = document.getElementsByTagName("script");
+                        var embedder = scripts[scripts.length - 1];
+                        var cccTheme = {
+                          "General": {
+                            "background": "#000000",
+                            "borderWidth": "0px",
+                            "borderColor": "#000",
+                            "borderRadius": "4px 4px 0 0"
+                          },
+                          "Header": {
+                            "background": "#000000",
+                            "color": "#FFF",
+                            "displayFollowers": false
+                          },
+                          "Followers": {
+                            "background": "",
+                            "color": "#CCC",
+                            "borderColor": "#000",
+                            "counterBorderColor": "",
+                            "counterColor": ""
+                          },
+                          "Data": {
+                            "priceColor": "#FFF",
+                            "infoLabelColor": "#CCC",
+                            "infoValueColor": "#CCC"
+                          },
+                          "Chart": {
+                            "animation": true,
+                            "fillColor": "rgba(253, 201, 4, 1)",
+                            "borderColor": "#bf9700"
+                          },
+                          "Conversion": {
+                            "background": "#000",
+                            "color": "#999"
+                          }
+                        };
+                        (function () {
+                          var appName = encodeURIComponent(window.location.hostname);
+                          if (appName == "") {
+                            appName = "local";
+                          }
+                          var s = document.createElement("script");
+                          s.type = "text/javascript";
+                          s.async = true;
+                          var theUrl = baseUrl + 'serve/v2/coin/chart?fsym=BLK&tsym=BTC';
+                          s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                          embedder.parentNode.appendChild(s);
+                        })();
                         }
-                      };
-                      (function () {
-                        var appName = encodeURIComponent(window.location.hostname);
-                        if (appName == "") {
-                          appName = "local";
-                        }
-                        var s = document.createElement("script");
-                        s.type = "text/javascript";
-                        s.async = true;
-                        var theUrl = baseUrl + 'serve/v2/coin/chart?fsym=BLK&tsym=BTC';
-                        s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
-                        embedder.parentNode.appendChild(s);
-                      })();
+                      }
                     </script>
+                  </p>
                 </center>
 
                 <div class="textwidget">
                   <center>
-                    <p>More charts: <a href="https://bittrex.com/Market/Index?MarketName=BTC-BLK" target="_blank"><span
-                          style="color: #d7bc91;">BITTREX </span></a>;
-                      <a href="https://coinmarketcap.com/currencies/blackcoin/#charts" target="_blank"><span
-                          style="color: #d7bc91;"> CMC </span></a>
+                    <p>More charts: <a href="https://www.coingecko.com/en/coins/blackcoin" target="_blank"><span
+                          style="color: #d7bc91;"> CoinGecko </span></a>;
 
-                      <script type="text/javascript">
+                    <script>
+
+                    var x = window.matchMedia("(max-width: 700px)")
+                    cryptocompare2(x) // Call listener function at run time
+                    x.addListener(cryptocompare2) 
+                      function cryptocompare2(x) {
+                        if (x.matches) { // If media query matches
+                          return
+                        } else {
                         baseUrl = "https://widgets.cryptocompare.com/";
                         var scripts = document.getElementsByTagName("script");
                         var embedder = scripts[scripts.length - 1];
@@ -442,13 +447,24 @@
                           s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
                           embedder.parentNode.appendChild(s);
                         })();
-                      </script>
+
+                        }
+                      }
+                    </script>
                   </center>
                 </div>
 
                 <div class="textwidget">
                   <center>
-                    <script type="text/javascript">
+                    <script>
+                    var x = window.matchMedia("(max-width: 700px)")
+                    cryptocompare3(x) // Call listener function at run time
+                    x.addListener(cryptocompare3) 
+                      function cryptocompare3(x) {
+                        if (x.matches) { // If media query matches
+                          return
+                        } else {
+
                       baseUrl = "https://widgets.cryptocompare.com/";
                       var scripts = document.getElementsByTagName("script");
                       var embedder = scripts[scripts.length - 1];
@@ -464,6 +480,8 @@
                         s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
                         embedder.parentNode.appendChild(s);
                       })();
+                        }
+                      }
                     </script>
                   </center>
                 </div>
@@ -476,7 +494,8 @@
                   <center>
                     <script
                       src="https://www.reddit.com/r/blackcoin/new/.embed?limit=5&amp;style=off;sort=new;bordercolor=171717;bgcolor=171717;"
-                      type="text/javascript"></script>
+                      type="text/javascript">
+                    </script>
                   </center>
                 </div>
               </div>
@@ -494,18 +513,27 @@
                       <a class="twitter-timeline" href="https://twitter.com/BlackcoinOrg">@BlackcoinOrg</a><br />
                       <a class="twitter-timeline" href="https://twitter.com/BlackcoinNL">@BlackcoinNL</a><br />
 
-                      <script>
-                        ! function (d, s, id) {
-                          var js, fjs = d.getElementsByTagName(s)[0],
-                            p = /^http:/.test(d.location) ? 'http' : 'https';
-                          if (!d.getElementById(id)) {
-                            js = d.createElement(s);
-                            js.id = id;
-                            js.src = p + "://platform.twitter.com/widgets.js";
-                            fjs.parentNode.insertBefore(js, fjs);
-                          }
-                        }(document, "script", "twitter-wjs");
-                      </script>
+                    <script>
+                    var x = window.matchMedia("(max-width: 700px)")
+                    twiterFeed(x) // Call listener function at run time
+                    x.addListener(twiterFeed)   
+                      function twiterFeed(x) {
+                        if (x.matches) { // If media query matches
+                          return 
+                        } else {
+                          ! function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0],
+                              p = /^http:/.test(d.location) ? 'http' : 'https';
+                            if (!d.getElementById(id)) {
+                              js = d.createElement(s);
+                              js.id = id;
+                              js.src = p + "://platform.twitter.com/widgets.js";
+                              fjs.parentNode.insertBefore(js, fjs);
+                            }
+                          }(document, "script", "twitter-wjs");
+                        }
+                      }
+                    </script>
                   </center>
                 </div>
               </div>
@@ -516,6 +544,12 @@
       <!--/.navbar-collapse -->
     </div><!-- / .container -->
   </nav><!-- / .navbar -->
+
+  <!-- ========== END HEAD ========== -->
+  <!-- ========== END HEAD ========== -->
+  <!-- ========== END HEAD ========== -->
+  <!-- ========== END HEAD ========== -->
+  <!-- ========== END HEAD ========== -->
 
 
 
