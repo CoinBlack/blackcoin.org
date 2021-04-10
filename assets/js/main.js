@@ -96,8 +96,6 @@
 			}
 
 			// Remove dropdown open on hover for small screens
-			if ($('nav').hasClass('mobile-nav')) {
-
 				$('.dropdown-toggle').on('mouseover', function (e) {
 					e.preventDefault();
 
@@ -105,7 +103,6 @@
 
 					e.stopPropagation();
 				});
-			}
 
 			// Close mobile menu when clicked link
 			// var isNotDropdown = $('nav:not(.mobile-nav)');

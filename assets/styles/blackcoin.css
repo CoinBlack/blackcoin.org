@@ -1,3 +1,20 @@
 .pd-15px {
     padding-top: 15px;
 }
+
+.testimonials-parallax ul {
+	padding: 0 .1rem
+}
+.slick-track img {
+	width: 100%;
+}
+
+/*hide address overflow*/
+.ft-boxed-hover ul li .hover-content {
+	overflow: hidden;
+}
+
+.no-gap ul {
+  display: flex;
+  flex-flow: row wrap;
+}
