@@ -104,8 +104,7 @@
   }
 
   .navbar .navbar-collapse .navbar-nav .dropdown .dropdown-menu {
-    padding-top: 10px;
-    height: 100%;
+    padding: 0px;
     border: none;
   }
 
@@ -1118,7 +1117,7 @@
   }
 
   .agency2-hero .hero-content-wrapper .hero-content .hero-lead {
-    font-size: 3em;
+    font-size: 4rem;
   }
 
   .agency2-hero .hero-content-wrapper .hero-content .hero-secondary {
@@ -1156,7 +1155,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 280px) {
 
   .main-demo-hero .hero-content-wrapper,
   .fs-video-hero .hero-content-wrapper,

@@ -2,9 +2,6 @@
     padding-top: 15px;
 }
 
-.testimonials-parallax ul {
-	padding: 0 .1rem
-}
 .slick-track img {
 	width: 100%;
 }
@@ -22,5 +19,32 @@
 @media (min-width: 700px) {
 	.reddit {
 		display: block;
+	}
+}
+
+#donation-link {
+	font-size: 4rem;
+}
+
+@media (max-width: 1260px){
+	.dropdown-menu {
+		position: relative;
+	}
+}
+
+@media (max-height: 600) {
+	.agency2-hero {
+		height: 600px !important;
+	}
+}
+
+@media (max-width: 400px){
+	.hero-content-wrapper {
+		top: 50px !important;
+	}
+}
+@media (max-width: 340px){
+	#page-top {
+	    width: 127vw !important;
 	}
 }

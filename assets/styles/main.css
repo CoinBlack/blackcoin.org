@@ -851,7 +851,7 @@ hr {
 .sec-heading .subheading {
   display: block;
   text-transform: uppercase;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 
   color: #555;
   letter-spacing: 2.5px;
@@ -1834,7 +1834,7 @@ hr {
   background: #111;
   font-size: 11px;
   letter-spacing: 1.8px;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   text-transform: uppercase;
   opacity: .5;
   z-index: 800;
@@ -1900,7 +1900,7 @@ body,
 .wrapper-404 .content-wrapper .info-wrapper .testimonials-3col .t-item .info-404,
 .testimonials-3col .t-item .bg-maintenance .content-wrapper .content-inner p,
 .bg-maintenance .content-wrapper .content-inner .testimonials-3col .t-item p {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 16px;
 
   letter-spacing: 0.2px;
@@ -1964,10 +1964,10 @@ h6,
 .shop-sidebar-vertical .tags-widget .tag-list li a,
 .checkout-table tbody tr td:first-child,
 .prod-reviews .tp-review .tpr-name {
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   color: #000;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 17px;
 }
 
 .dropcaps:first-child:first-letter {
@@ -2055,12 +2055,12 @@ h6,
 .shop-sidebar-vertical .tags-widget .tag-list li a,
 .checkout-table tbody tr td:first-child,
 .prod-reviews .tp-review .tpr-name {
-  font-size: 0.85em;
+  font-size: 1rem;
   letter-spacing: 2px;
 }
 
 .h-alt {
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 
 }
 
@@ -2286,7 +2286,7 @@ blockquote footer cite,
   padding: 8px 38px;
   background: #111;
   color: #ececec;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-size: 0.9em;
@@ -2547,7 +2547,7 @@ input[class="btn-ghost-light"]:hover {
   height: 42px;
   width: 42px;
   line-height: 1.9em;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   color: #777;
 }
 
@@ -2635,7 +2635,7 @@ fieldset[disabled] .form-control:hover {
 
 .form-group label {
   font-size: .8em;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #111;
@@ -2654,7 +2654,7 @@ fieldset[disabled] .form-control:hover {
 
 .progress .progress-bar {
   background: #111;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 13px;
   line-height: 1.9em;
   letter-spacing: 1px;
@@ -2916,7 +2916,7 @@ fieldset[disabled] .form-control:hover {
 .page-title .subheading {
   display: block;
   margin: 20px 0 0 0;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   color: #444;
 }
 
@@ -3049,7 +3049,7 @@ fieldset[disabled] .form-control:hover {
 }
 
 .copyright small {
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: .8em;
   text-transform: uppercase;
   letter-spacing: 1.3px;
@@ -3085,7 +3085,6 @@ fieldset[disabled] .form-control:hover {
 
 .footer-social-links ul li {
   display: inline-block;
-  padding-right: 35px;
   margin-right: 35px;
   border-right: 1px solid #777;
 }
@@ -3625,7 +3624,7 @@ fieldset[disabled] .form-control:hover {
 
 .navbar .navbar-nav .dropdown .dropdown-menu .dropdown-header {
   padding: 0 25px;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 0.8em;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -3747,7 +3746,7 @@ fieldset[disabled] .form-control:hover {
 
 .navbar .navbar-nav .dropdown .cart-dropdown .item-totals span {
   float: right;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-weight: 400;
   color: #777;
 }
@@ -3767,7 +3766,7 @@ fieldset[disabled] .form-control:hover {
   padding: 8px 38px;
   background: #111;
   color: #ececec;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-size: 0.9em;
@@ -4273,7 +4272,7 @@ fieldset[disabled] .form-control:hover {
   top: 7px;
   left: 0;
   color: rgba(204, 204, 204, 0.4);
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-weight: lighter;
   font-size: 165px;
 }
@@ -4937,7 +4936,7 @@ fieldset[disabled] .form-control:hover {
 }
 
 .ft-tabs .tabs-list li a .tab-group .tab-info {
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   letter-spacing: 2px;
   color: #999;
 }
@@ -5666,7 +5665,7 @@ fieldset[disabled] .form-control:hover {
   border-radius: 0;
   border: none;
   border-top: 1px solid transparent;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 11px;
   letter-spacing: 2px;
   color: #999;
@@ -5796,7 +5795,7 @@ fieldset[disabled] .form-control:hover {
 .number-counters-dark-bg .count-wrapper .count-item .count-nbr {
   display: block;
   margin-bottom: 30px;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 65px;
   font-weight: lighter;
   color: #ececec;
@@ -6402,7 +6401,7 @@ fieldset[disabled] .form-control:hover {
 .wrapper-404 .content-wrapper .info-wrapper .testimonials-3col .t-item .info-404 footer cite,
 .testimonials-3col .t-item .bg-maintenance .content-wrapper .content-inner p footer cite,
 .bg-maintenance .content-wrapper .content-inner .testimonials-3col .t-item p footer cite {
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   color: #777;
 }
 
@@ -6412,7 +6411,7 @@ fieldset[disabled] .form-control:hover {
 .testimonials-3col .t-item .bg-maintenance .content-wrapper .content-inner p footer cite span,
 .bg-maintenance .content-wrapper .content-inner .testimonials-3col .t-item p footer cite span {
   display: block;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   letter-spacing: 2px;
   color: #111;
 }
@@ -6963,7 +6962,7 @@ fieldset[disabled] .form-control:hover {
 .team-4col .t-item .t-info .t-role,
 .freelancer-about .t-item .t-info .t-role {
   display: block;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 13px;
   letter-spacing: 3.5px;
   color: #999;
@@ -7107,7 +7106,7 @@ fieldset[disabled] .form-control:hover {
 .t-join .t-info .t-role {
   display: block;
   padding-bottom: 12px;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 12px;
   letter-spacing: 3.5px;
   color: #999;
@@ -7190,7 +7189,7 @@ fieldset[disabled] .form-control:hover {
 .portfolio-filters li a {
   padding: 3px 15px;
   text-transform: uppercase;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: .85em;
   letter-spacing: 2.5px;
   color: #777;
@@ -7698,7 +7697,7 @@ fieldset[disabled] .form-control:hover {
 .portfolio-columns-boxed .portfolio-item figure figcaption .p-content span:last-child {
   margin-top: 10px;
   margin-bottom: 0;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   letter-spacing: 2.5px;
   color: #555;
 }
@@ -8472,7 +8471,7 @@ fieldset[disabled] .form-control:hover {
 .portfolio-masonry-3 .p-wrapper .p-hover .p-content span:last-child {
   margin-top: 10px;
   margin-bottom: 0;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   letter-spacing: 2.5px;
   color: #555;
 }
@@ -8576,7 +8575,7 @@ fieldset[disabled] .form-control:hover {
 
 .portfolio-1col-fw .portfolio-item figcaption .subheading,
 .portfolio-1col-boxed .portfolio-item figcaption .subheading {
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   color: #555;
   margin-bottom: 45px;
 }
@@ -9323,7 +9322,7 @@ fieldset[disabled] .form-control:hover {
 
 .pricing-tables .p-table .price .value {
   display: inline-block;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 70px;
   color: #111;
 }
@@ -9339,7 +9338,7 @@ fieldset[disabled] .form-control:hover {
   margin-top: 20px;
   margin-bottom: 0;
   padding-bottom: 20px;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   color: #777;
 }
 
@@ -9605,7 +9604,7 @@ fieldset[disabled] .form-control:hover {
   display: inline-block;
   padding-left: 10px;
   border-left: 1px solid #ececec;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: .75em;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -9763,7 +9762,7 @@ fieldset[disabled] .form-control:hover {
   display: inline-block;
   padding-left: 10px;
   border-left: 1px solid #ececec;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: .75em;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -9937,7 +9936,7 @@ fieldset[disabled] .form-control:hover {
   padding: 0 10px;
   margin-bottom: 5px;
   border: 1px solid #ccc;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   color: #999;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -9990,7 +9989,7 @@ fieldset[disabled] .form-control:hover {
 }
 
 .sidebar .comments-widget .widget-item span .widget-comm-title {
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   letter-spacing: 1.5px;
   color: #777;
 }
@@ -10051,7 +10050,7 @@ fieldset[disabled] .form-control:hover {
   margin-left: 30px;
   margin-right: 30px;
   text-transform: uppercase;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: .8em;
   letter-spacing: 1.5px;
   color: #ccc;
@@ -10195,7 +10194,7 @@ form .input-error-2:focus {
 .contact-1 .contact-wrapper .contact-info-wrapper address .address-group p {
   display: block;
   margin-bottom: 3px;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 
   color: #999;
 }
@@ -10814,7 +10813,7 @@ form .input-error-2:focus {
 }
 
 .comingsoon .content-wrapper .content-inner .cs-timer .item .title-timer {
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   color: #777;
 }
 
@@ -11113,7 +11112,7 @@ form .input-error-2:focus {
 
 .scroller .scroller-text {
   display: block;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 10px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
@@ -11223,6 +11222,7 @@ form .input-error-2:focus {
   position: relative;
   width: 100%;
   height: 100vh;
+  top: 30px;
   background: url(../images/hero/fog.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -11237,8 +11237,8 @@ form .input-error-2:focus {
 .animated-hero .bg-overlay,
 .web-app-hero .bg-overlay {
   position: absolute;
-  width: 100%;
   height: 100vh;
+  width: 100%;
   top: 0;
   left: 0;
   background: rgba(236, 236, 236, 0.6);
@@ -11346,7 +11346,7 @@ form .input-error-2:focus {
 }
 
 .fs-slide-1 .hero-content .hero-lead {
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 6em;
   font-weight: 800;
   letter-spacing: 5px;
@@ -11403,7 +11403,7 @@ form .input-error-2:focus {
 
 .fs-slide-3 .hero-content .hero-lead {
   margin-bottom: 35px;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 4em;
   font-weight: 800;
   letter-spacing: 15px;
@@ -11603,7 +11603,7 @@ form .input-error-2:focus {
 }
 
 .text-slider-hero .hero-content-wrapper .hero-content .hero-lead {
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 9em;
   font-weight: 800;
   letter-spacing: 20px;
@@ -11841,7 +11841,7 @@ form .input-error-2:focus {
 
 .agency2-hero .hero-content-wrapper .hero-content .hero-lead {
   margin-top: 0;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 4em;
   font-weight: 400;
   letter-spacing: 10px;
@@ -11985,7 +11985,7 @@ form .input-error-2:focus {
 
 .kenburn-hero .kenburn-slider .hero-wrapper .hero-content .lead-white-bg {
   display: inline-block;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 
   font-size: 6em;
   color: #111;
@@ -12134,7 +12134,7 @@ form .input-error-2:focus {
 
 .web-app-hero .hero-content-wrapper .hero-content .hero-lead {
   margin-top: 0;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 70px;
   letter-spacing: 10px;
 }
@@ -12656,7 +12656,7 @@ form .input-error-2:focus {
 .hover-light .p-hover .p-content span:last-child {
   margin-top: 10px;
   margin-bottom: 0;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   letter-spacing: 2.5px;
   color: #999;
 }
@@ -13174,7 +13174,7 @@ form .input-error-2:focus {
 -------------------------------------------------- */
 /* ---- 27.1 Shop Layout ---- */
 .shop-layout-options span {
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 
   color: #111;
 }
@@ -13332,7 +13332,7 @@ form .input-error-2:focus {
 .shop-product-card .product-meta .product-price {
   display: block;
   padding-bottom: 1px;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
@@ -13553,7 +13553,7 @@ form .input-error-2:focus {
 
 .shop-sidebar .filter-widget label,
 .shop-sidebar-vertical .filter-widget label {
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 
 }
 
@@ -13681,7 +13681,7 @@ form .input-error-2:focus {
   padding: 0 10px;
   margin-bottom: 5px;
   border: 1px solid #ccc;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   color: #999;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -13729,7 +13729,7 @@ form .input-error-2:focus {
   padding-top: 23px;
   padding-bottom: 23px;
   border: none;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 11px !important;
   font-weight: 400 !important;
   letter-spacing: 2px;
@@ -14164,7 +14164,7 @@ form .input-error-2:focus {
   margin: 0;
   text-align: right;
   float: right;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 13px;
   letter-spacing: 2px;
 }
@@ -14267,7 +14267,7 @@ form .input-error-2:focus {
 }
 
 .prod-cat {
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 12px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
@@ -14286,7 +14286,7 @@ form .input-error-2:focus {
 
 .prod-price .price-cut {
   padding-left: 10px;
-  font-family: "Open Sans", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 14px;
   color: #999;
 }
@@ -14435,7 +14435,7 @@ form .input-error-2:focus {
 .table thead tr th {
   padding: 15px;
   border: none;
-  font-family: "Montserrat", "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
   font-size: 11px !important;
   font-weight: 400 !important;
   letter-spacing: 2px;

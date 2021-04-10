@@ -346,7 +346,7 @@
 		// Testimonials Sliders
 		$('.t-slider').slick({
 			autoplay: false,
-			autoplaySpeed: 4000,
+			autoplaySpeed: 800,
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			dots: false,
@@ -358,7 +358,7 @@
 		// Brands/Clients Slider
 		$('.clients-slider').slick({
 			autoplay: true,
-			autoplaySpeed: 4000,
+			autoplaySpeed: 500,
 			slidesToShow: 5,
 			slidesToScroll: 1,
 			dots: false,
@@ -366,22 +366,22 @@
 			responsive: [{
 					breakpoint: 999,
 					settings: {
-						slidesToShow: 3,
-						slidesToScroll: 2,
+						slidesToShow: 4,
+						slidesToScroll: 1,
 						infinite: true,
 					}
 				},
 				{
 					breakpoint: 770,
 					settings: {
-						slidesToShow: 2,
+						slidesToShow: 3,
 						slidesToScroll: 1
 					}
 				},
 				{
 					breakpoint: 599,
 					settings: {
-						slidesToShow: 1,
+						slidesToShow: 2,
 						slidesToScroll: 1
 					}
 				}
@@ -420,8 +420,8 @@
 					settings: {
 						arrows: false,
 						centerMode: true,
-						centerPadding: '40px',
-						slidesToShow: 1
+						centerPadding: '20px',
+						slidesToShow: 2
 					}
 				}
 			]
