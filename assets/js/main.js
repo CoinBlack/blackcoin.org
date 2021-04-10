@@ -9,29 +9,18 @@
 	$(document).ready(function () {
 
 		initNavbar();
-		initScroller();
 		initCountCirc();
 		initCountCircMin();
 		initCountNbr();
 		initCountMin();
 		initSliders();
 		initGallery();
-		initAnimation();
 		initVideoBg();
 		initKenburns();
 		initCountdown();
 
 		if (document.getElementById('shop-slider-range')) {
 			initRangeSlider();
-		}
-
-		// Parallax disabled for mobile screens
-		if ($(window).width() >= 1260) {
-			initParallax();
-
-			$(window).stellar({
-				hideDistantElements: false
-			});
 		}
 
 	});
@@ -126,24 +115,6 @@
 
 
 	} // initNavbar
-
-
-
-	/* --------------------------------------------------
-		Scroll Nav
-	-------------------------------------------------- */
-
-	function initScroller() {
-
-		$('#navbar').localScroll({
-			easing: 'easeInOutExpo'
-		});
-
-		$('#page-top').localScroll({
-			easing: 'easeInOutExpo'
-		});
-	} // initScroller
-
 
 
 
@@ -673,39 +644,6 @@
 			percentPosition: true
 		});
 	}
-
-
-
-
-	/* --------------------------------------------------
-	  Contact Pages
-	-------------------------------------------------- */
-
-	$('.show-map').on('click', function (e) {
-		e.preventDefault();
-		$('.contact-info-wrapper').toggleClass('map-open');
-		$('.show-info-link').toggleClass('info-open');
-	});
-
-	$('.show-info-link').on('click', function (e) {
-		e.preventDefault();
-		$('.contact-info-wrapper').toggleClass('map-open');
-		$(this).toggleClass('info-open');
-	});
-
-
-
-	/* --------------------------------------------------
-		Animation
-	-------------------------------------------------- */
-
-	function initAnimation() {
-
-		new WOW().init();
-
-	}
-
-
 
 
 	/* --------------------------------------------------
