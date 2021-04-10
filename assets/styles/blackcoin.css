@@ -18,3 +18,9 @@
   display: flex;
   flex-flow: row wrap;
 }
+
+@media (min-width: 700px) {
+	.reddit {
+		display: block;
+	}
+}
