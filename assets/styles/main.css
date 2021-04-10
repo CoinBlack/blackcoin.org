@@ -3505,6 +3505,7 @@ fieldset[disabled] .form-control:hover {
   border-bottom: 1px solid #ececec;
   border-radius: 0;
   background: #000;
+  width: 100vw;
 }
 
 .navbar .navbar-header {
@@ -11222,7 +11223,6 @@ form .input-error-2:focus {
   position: relative;
   width: 100%;
   height: 100vh;
-  top: 30px;
   background: url(../images/hero/fog.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -11252,7 +11252,7 @@ form .input-error-2:focus {
 .agency2-hero .hero-content-wrapper,
 .animated-hero .hero-content-wrapper,
 .web-app-hero .hero-content-wrapper {
-  display: table;
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;
@@ -11270,7 +11270,7 @@ form .input-error-2:focus {
 .animated-hero .hero-content-wrapper .hero-content,
 .web-app-hero .hero-content-wrapper .hero-content {
   display: table-cell;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   vertical-align: middle;
 }
