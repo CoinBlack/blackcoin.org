@@ -224,7 +224,7 @@
         </button>
 
         <!-- Logo -->
-        <a class="navbar-brand" href="../"><img src="assets/images/logo-light.png" alt="Blackcoin - Logo"></a>
+        <a class="navbar-brand" href="../"><img src="../assets/images/logo-light.png" alt="Blackcoin - Logo"></a>
       </div><!-- / .navbar-header -->
 
       <!-- Navbar Links -->
@@ -239,19 +239,19 @@
 
           <!-- Discover -->
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
+            <a href="/#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
               role="button" aria-haspopup="true" aria-expanded="false"><span style="color: #ddb77a;">Discover
               </span><span class="caret"></span></a>
             <ul class="dropdown-menu">
               <div class="row">
                 <!-- Basic -->
                 <div class="col-lg-6 mb-sm-30">
-                  <li><a href="#about">About</a></li>
+                  <li><a href="../#about">About</a></li>
                   <!--<li><a href="bounties/">Bounties</a></li>-->
-                  <li><a href="#community">Community</a></li>
-                  <li><a href="donations/">Donations</a></li>
+                  <li><a href="../#community">Community</a></li>
+                  <li><a href="../donations/">Donations</a></li>
                   <!--<li><a href="#features">Features</a></li>-->
-                  <li><a href="faq/"><span style="color: #ddb77a;">FAQ</span></a></li>
+                  <li><a href="../faq/"><span style="color: #ddb77a;">FAQ</span></a></li>
                 </div>
               </div><!-- / .row -->
             </ul><!-- / .dropdown-menu -->
@@ -260,13 +260,13 @@
 
           <!-- Buy -->
           <li class="dropdown mega-fw">
-            <a href="#buy">Buy </a>
+            <a href="../#buy">Buy </a>
           </li><!-- / Buy -->
 
 
           <!-- Downloads -->
           <li class="dropdown mega-fw">
-            <a href="#downloads">Downloads </a>
+            <a href="../#downloads">Downloads </a>
           </li><!-- / Downloads -->
 
 
@@ -279,7 +279,7 @@
 
           <!-- Links -->
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
+            <a href="../#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
               role="button" aria-haspopup="true" aria-expanded="false"><span style="color: #ddb77a;">Links </span><span
                 class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -550,6 +550,7 @@
   <!-- ========== END HEAD ========== -->
   <!-- ========== END HEAD ========== -->
   <!-- ========== END HEAD ========== -->
+
 
 
 
@@ -1359,6 +1360,8 @@
 
 
 
+
+
   <!-- ========== Footer Widgets ========== -->
 
   <footer class="footer-widgets">
@@ -1375,7 +1378,7 @@
           </div>
 
           <div class="col-sm-6">
-            <small><a href="#page-top" class="pull-right to-the-top">To the top<i
+            <small><a href="../#page-top" class="pull-right to-the-top">To the top<i
                   class="fa fa-angle-up"></i></a></small>
           </div>
 
@@ -1391,8 +1394,8 @@
     <div id="popmake-2890" class="pum-container popmake theme-2865 pum-position-fixed">
       <div class="pum-content popmake-content">
         <center><span style="color: #ffffff;">Slack</span></center><br />
-        <center><a href="https://slack-blackcoin.herokuapp.com/">Join</a> / <a
-            href="https://blackcoin-team.slack.com/">Log in</a></center>
+        <center><a href="../https://slack-blackcoin.herokuapp.com/">Join</a> / <a
+            href="../https://blackcoin-team.slack.com/">Log in</a></center>
       </div>
       <button type="button" class="pum-close popmake-close" aria-label="Close">
         × </button>
@@ -1405,9 +1408,9 @@
     <div id="popmake-2900" class="pum-container popmake theme-2865 pum-position-fixed">
       <div class="pum-content popmake-content">
         <center><span style="color: #ffffff;">GitHub</span></center><br />
-        <center><a href="https://github.com/CoinBlack">BlackCoin</a><span style="color: #d9d9d9;"> / </span><a
-            href="https://github.com/janko33bd/bitcoin/tree/Blackcoin-Lore">BlackCoin Lore</a><span
-            style="color: #d9d9d9;"> / </span><a href="https://github.com/joshuajbouw/joshuajbouw.github.io">Website</a>
+        <center><a href="../https://github.com/CoinBlack">BlackCoin</a><span style="color: #d9d9d9;"> / </span><a
+            href="../https://github.com/janko33bd/bitcoin/tree/Blackcoin-Lore">BlackCoin Lore</a><span
+            style="color: #d9d9d9;"> / </span><a href="../https://github.com/joshuajbouw/joshuajbouw.github.io">Website</a>
         </center><br />
       </div>
       <button type="button" class="pum-close popmake-close" aria-label="Close">
@@ -1417,32 +1420,30 @@
 
 
   <!-- ========== Scripts ========== -->
-  <script type='text/javascript' src='../assets/js/jquery/core.min.js'></script>
-  <script type='text/javascript' src='../assets/js/jquery/position.min.js'></script>
-  <script type='text/javascript'>
-    /* <![CDATA[ */
-    var pum_vars = {
-      "default_theme": "2860"
-    };
-    var popmake_default_theme = "2860";
-    /* ]]> */
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js"
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : ";
+      j.async = true;
+      j.src =
+        "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-NT3KCBH");
   </script>
-  <script type="text/javascript" src="../plugins/popup-maker/assets/js/site.min.js"></script>
-  <script src="../assets/js/jquery-2.1.4.min.js"></script>
-  <script src="../assets/js/google-fonts.js"></script>
-  <script src="../assets/js/jquery.easing.js"></script>
-  <script src="../assets/js/jquery.waypoints.min.js"></script>
+  <!-- JS -->
+  <script src="../assets/js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../plugins/jquery-updater/js/jquery-2.1.4.min.js"></script>
+
+  
   <script src="../assets/js/bootstrap.min.js"></script>
-  <script src="../assets/js/jquery.localScroll.min.js"></script>
-  <script src="../assets/js/jquery.scrollTo.min.js"></script>
-  <script src="../assets/js/jquery.stellar.min.js"></script>
-  <script src="../assets/js/jquery.parallax.js"></script>
-  <script src="../assets/js/slick.min.js"></script>
-  <script src="../assets/js/jquery.easypiechart.min.js"></script>
-  <script src="../assets/js/countup.min.js"></script>
-  <script src="../assets/js/isotope.min.js"></script>
-  <script src="../assets/js/jquery.magnific-popup.min.js"></script>
-  <script src="../assets/js/wow.min.js"></script>
+
 
   <!-- Definity JS -->
   <script src="../assets/js/main.js"></script>
