@@ -10,9 +10,9 @@
  * @author: Jack Doyle, jack@greensock.com
  */
 var x = window.matchMedia("(max-width: 700px)")
-cryptocompare1(x) // Call listener function at run time
-x.addListener(cryptocompare1) // Attach listener function on state changes
-function cryptocompare1(x) {
+animDots(x) // Call listener function at run time
+x.addListener(animDots) // Attach listener function on state changes
+function animDots(x) {
   if (x.matches) { // If media query matches
     return
   } else {
@@ -849,4 +849,4 @@ function cryptocompare1(x) {
         var s, u, w, f, h, v, g, y = !0;
         e(), a(), n()
     }();
-}
+}}
