@@ -9,15 +9,6 @@
 	$(document).ready(function () {
 
 		initNavbar();
-		initCountCirc();
-		initCountCircMin();
-		initCountNbr();
-		initCountMin();
-		initSliders();
-		initGallery();
-		initVideoBg();
-		initKenburns();
-		initCountdown();
 
 		if (document.getElementById('shop-slider-range')) {
 			initRangeSlider();
@@ -34,6 +25,15 @@
 
 		});
 
+		initCountCirc();
+		initCountCircMin();
+		initCountNbr();
+		initCountMin();
+		initSliders();
+		initGallery();
+		initVideoBg();
+		initKenburns();
+		initCountdown();
 		initPortfolio();
 		initBlogMasonry();
 
