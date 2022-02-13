@@ -3085,7 +3085,8 @@ fieldset[disabled] .form-control:hover {
 
 .footer-social-links ul li {
   display: inline-block;
-  margin-right: 35px;
+  margin-right: 15px;
+  padding-right: 15px;
   border-right: 1px solid #777;
 }
 
