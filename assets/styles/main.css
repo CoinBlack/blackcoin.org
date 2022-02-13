@@ -4807,7 +4807,7 @@ fieldset[disabled] .form-control:hover {
 .ft-boxed-hover ul li {
   display: inline-block;
   position: relative;
-  width: 33.3%;
+  width: 25%;
   float: left;
   margin-top: -1px;
   margin-left: -1px;
@@ -4817,6 +4817,10 @@ fieldset[disabled] .form-control:hover {
   text-align: center;
   -webkit-transition: border-color 0.3s;
   transition: border-color 0.3s;
+}
+
+.ft-boxed-hover-3x ul li {
+  width: 33.3% !important;
 }
 
 .ft-boxed-hover ul li:hover {
@@ -4871,12 +4875,13 @@ fieldset[disabled] .form-control:hover {
 .ft-boxed-hover ul li .hover-content p {
   margin: 0;
   color: #999;
+  font-size: 12px;
 }
 
 .ft-boxed-hover ul li .hover-content a {
   display: inline-block;
   position: relative;
-  margin-top: 20px;
+  margin-top: 15px;
   color: #999;
   z-index: 10 !important;
 }
