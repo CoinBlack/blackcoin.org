@@ -165,6 +165,28 @@
     .qis-error {
       border: 1px solid red !important;
     }
+
+    .support-blackcoin div {
+      color: #777;
+    }
+
+    .support-blackcoin p {
+      line-height: 1.35em;
+    }
+
+    .support-blackcoin img {
+      width: 200px;
+      margin: 0px auto 10px;
+    }
+
+    .support-blackcoin span.address {
+      cursor: pointer;
+      color: #999;
+    }
+
+    .support-blackcoin span.address:hover {
+      color: #bbb;
+    }
   </style>
   <meta name="generator" content="Bluefish 2.2.10" />
   <style id="x-generated-css" type="text/css">
@@ -1055,21 +1077,26 @@
   </div><!-- / .gray-bg -->
 
   <!-- ====== Support Blackcoin ========== -->
+
   <div class="testimonials-parallax">
     <div class="bg-overlay">
-      <div class="container">
+      <div class="container support-blackcoin">
         <br>
         <center><a name="donations">
             <h3><span style="color: #ffffff;">Support Blackcoin</span></h3>
-          </a></center>
+        </a></center>
         <br>
         <center>
-        <div style="color: #777;">
+        <div>
         If you would like to donate to the <a href="team/">Blackcoin Team</a> to support the project, please send your donations to the addresses below.<br><br>
-<p>BLK: BKDvboD1CzZ5KycP1FRSXRoi7XXhHoQhS1<br>
-BTC: bc1q3d39ungxf64rmxsdyqlp6vr8ypy2kmfegqeq8a<br>
-ETH: 0x8D304B05c9a06A6936Ee4C3F0BEdb726fE2C4c4a<br>
-LTC: ltc1qk75mufpdzaqqtgdwgah6ze7pycdna9nvcdp0pn</p>
+<p>BLK: <span class="address" id="show-blk">BKDvboD1CzZ5KycP1FRSXRoi7XXhHoQhS1</span><br>
+<span id="qrcode-blk" style="display: none;"><br><img src="assets/images/qr-codes/blk.png"></span></p>
+<p>BTC: <span class="address" id="show-btc" style="cursor: pointer">bc1q3d39ungxf64rmxsdyqlp6vr8ypy2kmfegqeq8a</span><br>
+<span id="qrcode-btc" style="display: none;"><br><img src="assets/images/qr-codes/btc.png"></span></p>
+<p>ETH: <span class="address" id="show-eth">0x8D304B05c9a06A6936Ee4C3F0BEdb726fE2C4c4a</span><br>
+<span id="qrcode-eth" style="display: none;"><br><img src="assets/images/qr-codes/eth.png"></span></p>
+<p>LTC: <span class="address" id="show-ltc">ltc1qk75mufpdzaqqtgdwgah6ze7pycdna9nvcdp0pn</span><br>
+<span id="qrcode-ltc" style="display: none;"><br><img src="assets/images/qr-codes/ltc.png"></span></p>
         </div>
         </center>
       </div><!-- / .container -->
@@ -1185,6 +1212,23 @@ LTC: ltc1qk75mufpdzaqqtgdwgah6ze7pycdna9nvcdp0pn</p>
         color: 'darkred'
       });
     });
+  </script>
+  
+  <script>
+  $(document).ready(function(){
+      $('#show-blk').click(function() {
+        $('#qrcode-blk').toggle("slide");
+      });
+      $('#show-btc').click(function() {
+        $('#qrcode-btc').toggle("slide");
+      });
+      $('#show-eth').click(function() {
+        $('#qrcode-eth').toggle("slide");
+      });
+      $('#show-ltc').click(function() {
+        $('#qrcode-ltc').toggle("slide");
+      });
+  });
   </script>
 </body>
 
