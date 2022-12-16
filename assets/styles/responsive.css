@@ -1332,4 +1332,11 @@
   }
 }
 
+/* ---- Blackcoin Stuff ---- */
+@media (max-width: 992px) {
+  .donations-content {
+    padding-bottom: 40px;
+  }
+}
+
 /*# sourceMappingURL=responsive.css.map */
