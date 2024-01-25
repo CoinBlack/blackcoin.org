@@ -20,18 +20,18 @@
   <!-- Popup Maker -->
   <link rel="stylesheet" href="plugins/popup-maker/assets/css/site.min.css">
   <!-- News Slider -->
-  <link rel="stylesheet" type="text/css" href="plugins/breakingnewsticker/css/breakingNews.css" />
+  <link rel="stylesheet" href="plugins/breakingnewsticker/css/breakingNews.css">
 
   <link rel="stylesheet" href="assets/styles/main.css">
 
-  <link rel='stylesheet' id='qis_style-css' href='plugins/quick-interest-slider/quick-interest-slider.css' type='text/css' media='all' />
+  <link rel='stylesheet' id='qis_style-css' href='plugins/quick-interest-slider/quick-interest-slider.css' type='text/css' media='all'>
 
   <link rel="stylesheet" href="assets/styles/responsive.css">
 
   <!-- Specific to this site - Last to run -->
   <link rel="stylesheet" href="assets/styles/blackcoin.css">
 
-  <style type="text/css" media="screen">
+  <style media="screen">
     .qis_form.rounded {
       border: 0px solid #ddb77a;
     }
@@ -166,6 +166,10 @@
       border: 1px solid red !important;
     }
 
+    .support-blackcoin {
+      text-align: center;
+    }
+
     .support-blackcoin div {
       color: #777;
     }
@@ -187,9 +191,15 @@
     .support-blackcoin span.address:hover {
       color: #bbb;
     }
+
+    .center-aligned {
+      width: 100%;
+      max-width: 960px;
+      margin:0 auto;
+    }
   </style>
-  <meta name="generator" content="Bluefish 2.2.10" />
-  <style id="x-generated-css" type="text/css">
+  <meta name="generator" content="Bluefish 2.2.10">
+  <style id="x-generated-css">
     a,
     h1 a:hover,
     h2 a:hover,
@@ -295,7 +305,7 @@
       ;
     }
   </style>
-  <style id="custom styles" type="text/css">
+  <style id="custom-styles">
     .gitter-open-chat-button,
     .gitter-chat-embed {
       z-index: 9999;
@@ -341,7 +351,7 @@
     }
   </style>
 
-  <style id="pum-styles" type="text/css">
+  <style id="pum-styles">
 
     /* Popup Theme 2865: Framed Border */
     .pum-theme-2865,
@@ -411,7 +421,7 @@
 
   <!-- ========== Navigation ========== -->
 
-  <nav class="navbar navbar-default navbar-fixed-top mega navbar-inverse navbar-trans" role="navigation">
+  <nav class="navbar navbar-default navbar-fixed-top mega navbar-inverse navbar-trans">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -423,7 +433,7 @@
         </button>
 
         <!-- Logo -->
-        <a class="navbar-brand" href="../"><img src="assets/images/logo-light.png" alt="Blackcoin - Logo"></a>
+        <a class="navbar-brand" href="../"><img src="assets/images/logo-light.png" alt="Blackcoin logo"></a>
       </div><!-- / .navbar-header -->
 
       <!-- Navbar Links -->
@@ -699,9 +709,9 @@
                     <p style=" background-color: #171717;">
                       <a class="twitter-timeline" href="https://twitter.com/hashtag/Blackcoin"
                         data-widget-id="746421924109164548"
-                        data-chrome="noheader noborders nofooter transparent noscrollbar">#Blackcoin Tweets</a><br />
-                      <a class="twitter-timeline" href="https://twitter.com/BlackcoinOrg">@BlackcoinOrg</a><br />
-                      <a class="twitter-timeline" href="https://twitter.com/BlackcoinNL">@BlackcoinNL</a><br />
+                        data-chrome="noheader noborders nofooter transparent noscrollbar">#Blackcoin Tweets</a><br>
+                      <a class="twitter-timeline" href="https://twitter.com/BlackcoinOrg">@BlackcoinOrg</a><br>
+                      <a class="twitter-timeline" href="https://twitter.com/BlackcoinNL">@BlackcoinNL</a><br>
 
                     <script>
                     var x = window.matchMedia("(max-width: 700px)")
@@ -752,18 +762,18 @@
         <!-- Hero Content -->
         <div class="hero-content-wrapper">
           <div class="hero-content">
-            <img src="assets/images/hero/ag2-logo.png" alt=" ">
+            <img src="assets/images/hero/ag2-logo.png" alt="">
             <h1 class="hero-lead">Blackcoin</h1>
             <h4 class="h-alt hero-secondary">Pure Proof of Stake since 2014</h4>
             <br>
             <p></p>
-            <center><a href="#community"><img id="join-community" src="assets/images/joincommunity.png"></a></center>
-            <div style="width:100%; max-width:960px; margin:0 auto; padding:0 20px 50px 20px; box-sizing:border-box; color: #fff; text-transform: uppercase; font-weight: bold;">
+            <div class="center-aligned"><a href="#community"><img id="join-community" src="assets/images/joincommunity.png" alt="Join BLK community"></a></div>
+            <div style="padding:0 20px 50px 20px; box-sizing:border-box; color: #fff; text-transform: uppercase; font-weight: bold;">
               <p style="font-weight: bold;">ATTENTION!</p>
               <p>Blackcoin hard fork will take place on <a href="https://www.tickcounter.com/countdown/2024apr24/UTC/060000/Blackcoin_Hardfork">April 24, 2024 6:00:00 AM (UTC)</a>.</p>
               <p>Please <a href="https://blackcoinmore.org/">download</a> the latest version of Blackcoin More and update your node before this date.</p>
             </div>
-            <div style="width:100%; max-width:960px; margin:0 auto; padding:0 20px 50px 20px; box-sizing:border-box;">
+            <div class="center-aligned" style="padding:0 20px 50px 20px; box-sizing:border-box;">
               <br>
               <div class="breakingNews" id="bn7">
                 <div class="bn-title">
@@ -799,7 +809,6 @@
               <!-- -->
               <p>&nbsp;</p>
             </div>
-          </div>
 
           <!-- Scroller -->
           <a href="#about" class="scroller">
@@ -821,7 +830,7 @@
   <section class="container section ft-x">
     <div class="row">
       <header class="sec-heading">
-        <a name="about">
+        <a id="about">
           <h2>About Blackcoin</h2>
         </a>
       </header>
@@ -915,12 +924,10 @@
   <div class="testimonials-parallax">
     <div class="bg-overlay">
       <div class="container">
-        <div class="cta-wrapper">
-          <br />
-          <center>
-            <h3 class="h-alt wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s"><a name="community"><span
-                  style="color: #FFFFFF;">Join The Blackcoin Community</span></a></h3>
-          </center>
+        <div class="cta-wrapper" style="text-align: center;">
+          <br>
+          <h3 class="h-alt wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s"><a id="community"><span
+                style="color: #FFFFFF;">Join The Blackcoin Community</span></a></h3>
         </div>
         <div class="row">
           <div class="ws-s"></div>
@@ -955,12 +962,10 @@
   <div class="testimonials-parallax">
     <div class="bg-overlay">
       <div class="container">
-        <div class="cta-wrapper">
-          <br />
-          <center>
-            <h3 class="h-alt wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s"><a name="buy"><span
-                  style="color: #FFFFFF;">WHERE TO BUY</span></a></h3>
-          </center>
+        <div class="cta-wrapper" style="text-align: center;">
+          <br>
+          <h3 class="h-alt wow fadeIn" data-wow-delay=".1s" data-wow-duration="1s"><a id="buy"><span
+                style="color: #FFFFFF;">WHERE TO BUY</span></a></h3>
         </div>
         <div class="row">
           <div class="ws-s"></div>
@@ -991,10 +996,10 @@
                   alt="Link to HolyTransaction Exchange"></a></li>
             <!--<li><a href="https://shapeshift.io/"><img class="exchange" src="assets/images/shapeshift.png" alt="Link to ShapeShift Exchange"></a></li>-->
           </ul><!-- / .t-clients -->
-          <center>
+          <div style="text-align: center;">
             <h6><span><span style="color: #CCC;"><i class="fa fa-info-circle"></i> Check </span><a
                   href="https://www.coingecko.com/en/coins/blackcoin">Markets Volume</a></span></h6>
-          </center>
+            </div>
           <br>
         </div><!-- / .row -->
       </div><!-- / .container -->
@@ -1009,7 +1014,7 @@
     <section id="services" class="container section ft-boxed-hover ft-boxed-hover-2x">
       <div class="row">
         <header class="sec-heading">
-          <a name="downloads">
+          <a id="downloads">
             <h2>Downloads</h2>
           </a>
           <span class="subheading">Blackcoin wallet software</span>
@@ -1018,23 +1023,23 @@
           <ul>
             <!-- Item 1 -->
             <li>
-                <img style="margin: 12px 0 0 0; width: 80px;" src="assets/images/logo-more-bw-sm.png"><br><br>
+                <img style="margin: 12px 0 0 0; width: 80px;" src="assets/images/logo-more-bw-sm.png" alt="Blackcoin More"><br><br>
               <h5>MORE WALLET</h5>
               <div class="hover-content" style="padding-top: 0.75em !important;">
                 <span style="color: #FFFFFF;">Blackcoin More v13.2.2</span><br>
                 <span style="color: #FFFFFF;">Blackcoin More v25.1-alpha-2</span><br>
                 <a href="https://blackcoinmore.org"><span>The community supported wallet</span><br>
-                  <img src="assets/images/logo-more-bw-sm.png"></a><br>
+                  <img src="assets/images/logo-more-bw-sm.png" alt="Blackcoin More"></a><br>
               </div><!-- / .hover-content -->
             </li>
             <!-- Item 2 -->
             <li>
-                <img style="margin: 0; width: 70px;" src="assets/images/mwallets.png">
+                <img style="margin: 0; width: 70px;" src="assets/images/mwallets.png" alt="Mobile wallets">
               <h5>MOBILE WALLETS</h5>
               <div class="hover-content">
                 <br>
                 <span style="color: #FFFFFF;">Coinomi</span><br>
-                <a href="https://coinomi.com/"><span><img src="assets/images/coinominew.png" style="margin: 20px auto 0;"> </span></a><br>
+                <a href="https://coinomi.com/"><span><img src="assets/images/coinominew.png" style="margin: 20px auto 0;" alt="Coinomi"> </span></a><br>
                 <!-- <a href="https://atomicdex.io/"><span><img src="assets/images/atomicdex.png" style="margin: 10px auto;"> </span></a><br>
                 <a href="https://abra.com/"><span><img src="assets/images/abra-logo-white.svg"> </span></a><br> -->
               </div><!-- / .hover-content -->
@@ -1053,23 +1058,23 @@
             </li>-->
             <!-- Item 4 -->
             <li>
-              <img style="margin: 12px 0 0 0; width: 80px;" src="assets/images/elecblk.png"><br><br>
+              <img style="margin: 12px 0 0 0; width: 80px;" src="assets/images/elecblk.png" alt="Electrum-BLK"><br><br>
             <h5>ELECTRUM-BLK</h5>
             <div class="hover-content">
               <span style="color: #FFFFFF;">Electrum-BLK v4.5.0b1</span><br>
               <a href="https://github.com/CoinBlack/electrum-blk/releases/tag/v4.5.0b1"><span>All platforms
-                  downloads</span><br><img src="assets/images/elecblk.png" style="margin-top: 14px"></a><br>
+                  downloads</span><br><img src="assets/images/elecblk.png" style="margin-top: 14px" alt="Electrum-BLK"></a><br>
             </div><!-- / .hover-content -->
           </li>
             <!-- Item 5 -->
             <li>
-              <br><img style="margin: 0;" src="assets/images/atomicdex.png"><br><br>
+              <br><img style="margin: 0;" src="assets/images/atomicdex.png" alt="AtomicDEX"><br><br>
             <h5>ATOMICDEX</h5>
             <div class="hover-content">
               <br>
               <span style="color: #FFFFFF;">AtomicDEX</span><br>
               <a href="https://atomicdex.io"><span>All platforms
-                  downloads</span><br><img src="assets/images/atomicdex.png" style="margin-top: 14px"></a><br>
+                  downloads</span><br><img src="assets/images/atomicdex.png" style="margin-top: 14px" alt="AtomicDEX"></a><br>
             </div><!-- / .hover-content -->
           </li>
           </ul>
@@ -1084,23 +1089,19 @@
     <div class="bg-overlay">
       <div class="container support-blackcoin">
         <br>
-        <center><a name="donations">
-            <h3><span style="color: #ffffff;">Support Blackcoin</span></h3>
-        </a></center>
+        <h3><a id="donations"><span style="color: #ffffff;">Support Blackcoin</span></a></h3>
         <br>
-        <center>
         <div class="donations-content">
         If you would like to donate to the <a href="team/">Blackcoin Team</a> to support the project, please send your donations to the addresses below.<br><br>
 <p>BLK: <span class="address" id="show-blk">BKDvboD1CzZ5KycP1FRSXRoi7XXhHoQhS1</span><br>
-<span id="qrcode-blk" style="display: none;"><br><img src="assets/images/qr-codes/blk.png"></span></p>
+<span id="qrcode-blk" style="display: none;"><br><img src="assets/images/qr-codes/blk.png" alt="BLK donation address"></span></p>
 <p>BTC: <span class="address" id="show-btc">bc1q3d39ungxf64rmxsdyqlp6vr8ypy2kmfegqeq8a</span><br>
-<span id="qrcode-btc" style="display: none;"><br><img src="assets/images/qr-codes/btc.png"></span></p>
+<span id="qrcode-btc" style="display: none;"><br><img src="assets/images/qr-codes/btc.png" alt="BTC donation address"></span></p>
 <p>ETH: <span class="address" id="show-eth">0x8D304B05c9a06A6936Ee4C3F0BEdb726fE2C4c4a</span><br>
-<span id="qrcode-eth" style="display: none;"><br><img src="assets/images/qr-codes/eth.png"></span></p>
+<span id="qrcode-eth" style="display: none;"><br><img src="assets/images/qr-codes/eth.png" alt="ETH donation address"></span></p>
 <p>LTC: <span class="address" id="show-ltc">ltc1qk75mufpdzaqqtgdwgah6ze7pycdna9nvcdp0pn</span><br>
-<span id="qrcode-ltc" style="display: none;"><br><img src="assets/images/qr-codes/ltc.png"></span></p>
+<span id="qrcode-ltc" style="display: none;"><br><img src="assets/images/qr-codes/ltc.png" alt="LTC donation address"></span></p>
         </div>
-        </center>
       </div><!-- / .container -->
     </div><!-- / .dark-bg -->
   </div>
@@ -1160,11 +1161,11 @@
     role="dialog" aria-hidden="true">
     <div id="popmake-2900" class="pum-container popmake theme-2865 pum-position-fixed">
       <div class="pum-content popmake-content">
-        <center><span style="color: #ffffff;">GitHub/Gitlab</span></center><br />
+        <center><span style="color: #ffffff;">GitHub/Gitlab</span></center><br>
         <center><a href="https://github.com/CoinBlack/blackcoin-more">Blackcoin More</a><span style="color: #d9d9d9;">
             /
           </span><a href="https://gitlab.com/blackcoin/blackcoin/">Blackcoin Legacy</a><span style="color: #d9d9d9;">
-            / </span><a href="https://github.com/CoinBlack/blackcoin.org">Blackcoin Website</a></center><br />
+            / </span><a href="https://github.com/CoinBlack/blackcoin.org">Blackcoin Website</a></center><br>
       </div>
       <button type="button" class="pum-close popmake-close" aria-label="Close">
         × </button>
@@ -1173,7 +1174,7 @@
 
   <script src="assets/js/jQuery.js"></script>
   <script src="assets/js/main.js"> </script>
-  <script type="text/javascript" src="plugins/popup-maker/assets/js/site.min.js"></script>
+  <script src="plugins/popup-maker/assets/js/site.min.js"></script>
   <script src="plugins/breakingnewsticker/js/breakingNews.js"></script>
 
   <script src="assets/js/animDots.js"></script>
@@ -1184,7 +1185,7 @@
   <script src="assets/js/slick.min.js"></script>
 
 
-  <script type="text/javascript">
+  <script>
     qis__rates = [];
   </script>
   <script type="module">
@@ -1195,7 +1196,7 @@
   <script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
 
   <!-- JS -->
-  <script type='text/javascript'>
+  <script>
     /* <![CDATA[ */
     var pum_vars = {
       "default_theme": "2860"
