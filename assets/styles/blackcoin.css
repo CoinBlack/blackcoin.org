@@ -6,9 +6,17 @@
 	width: 100%;
 }
 
+.ft-boxed-hover ul li {
+	width: 33% !important;
+}
+
 /*hide address overflow*/
 .ft-boxed-hover ul li .hover-content {
 	overflow: hidden;
+}
+
+.ft-boxed-hover img {
+	max-width: 180px;
 }
 
 .no-gap ul {
