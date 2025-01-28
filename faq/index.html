@@ -177,195 +177,202 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
               role="button" aria-haspopup="true" aria-expanded="false"><span class="label label-red">News </span><span
                 class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <div class="col-lg-4 mb-sm-20">
-                <li class="dropdown-header">Markets</li>
-                <li role="separator" class="divider"></li>
-                <center>
-                  <p>
-                    <script>
-                      var x = window.matchMedia("(max-width: 700px)")
-                      cryptocompare1(x) // Call listener function at run time
-                      x.addListener(cryptocompare1) // Attach listener function on state changes
-                        function cryptocompare1(x) {
-                          if (x.matches) { // If media query matches
-                            return
-                          } else {
-                        baseUrl = "https://widgets.cryptocompare.com/";
-                        var scripts = document.getElementsByTagName("script");
-                        var embedder = scripts[scripts.length - 1];
-                        var cccTheme = {
-                          "General": {
-                            "background": "#000000",
-                            "borderWidth": "0px",
-                            "borderColor": "#000",
-                            "borderRadius": "4px 4px 0 0"
-                          },
-                          "Header": {
-                            "background": "#000000",
-                            "color": "#FFF",
-                            "displayFollowers": false
-                          },
-                          "Followers": {
-                            "background": "",
-                            "color": "#CCC",
-                            "borderColor": "#000",
-                            "counterBorderColor": "",
-                            "counterColor": ""
-                          },
-                          "Data": {
-                            "priceColor": "#FFF",
-                            "infoLabelColor": "#CCC",
-                            "infoValueColor": "#CCC"
-                          },
-                          "Chart": {
-                            "animation": true,
-                            "fillColor": "rgba(253, 201, 4, 1)",
-                            "borderColor": "#bf9700"
-                          },
-                          "Conversion": {
-                            "background": "#000",
-                            "color": "#999"
+                <ul class="dropdown-menu">
+                  <div class="col-lg-4 mb-sm-20">
+                    <li class="dropdown-header">Markets</li>
+                    <li role="separator" class="divider"></li>
+                    <div style="padding: 0 20px;">
+                        <script src="https://widgets.coingecko.com/gecko-coin-ticker-widget.js"></script>
+                        <gecko-coin-ticker-widget locale="en" dark-mode="true" transparent-background="true" coin-id="blackcoin" initial-currency="usd"></gecko-coin-ticker-widget>
+                    </div>
+                    <br>
+                    <!--
+                    <center>
+                      <p>
+                        <script>
+                          var x = window.matchMedia("(max-width: 700px)")
+                          cryptocompare1(x) // Call listener function at run time
+                          x.addListener(cryptocompare1) // Attach listener function on state changes
+                            function cryptocompare1(x) {
+                              if (x.matches) { // If media query matches
+                                return
+                              } else {
+                            baseUrl = "https://widgets.cryptocompare.com/";
+                            var scripts = document.getElementsByTagName("script");
+                            var embedder = scripts[scripts.length - 1];
+                            var cccTheme = {
+                              "General": {
+                                "background": "#000000",
+                                "borderWidth": "0px",
+                                "borderColor": "#000",
+                                "borderRadius": "4px 4px 0 0"
+                              },
+                              "Header": {
+                                "background": "#000000",
+                                "color": "#FFF",
+                                "displayFollowers": false
+                              },
+                              "Followers": {
+                                "background": "",
+                                "color": "#CCC",
+                                "borderColor": "#000",
+                                "counterBorderColor": "",
+                                "counterColor": ""
+                              },
+                              "Data": {
+                                "priceColor": "#FFF",
+                                "infoLabelColor": "#CCC",
+                                "infoValueColor": "#CCC"
+                              },
+                              "Chart": {
+                                "animation": true,
+                                "fillColor": "rgba(253, 201, 4, 1)",
+                                "borderColor": "#bf9700"
+                              },
+                              "Conversion": {
+                                "background": "#000",
+                                "color": "#999"
+                              }
+                            };
+                            (function () {
+                              var appName = encodeURIComponent(window.location.hostname);
+                              if (appName == "") {
+                                appName = "local";
+                              }
+                              var s = document.createElement("script");
+                              s.type = "text/javascript";
+                              s.async = true;
+                              var theUrl = baseUrl + 'serve/v2/coin/chart?fsym=BLK&tsym=BTC';
+                              s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                              embedder.parentNode.appendChild(s);
+                            })();
+                            }
                           }
-                        };
-                        (function () {
-                          var appName = encodeURIComponent(window.location.hostname);
-                          if (appName == "") {
-                            appName = "local";
+                        </script>
+                      </p>
+                    </center>
+    
+                    <div class="textwidget">
+                      <center>
+                        <p>More charts: <a href="https://www.coingecko.com/en/coins/blackcoin" target="_blank"><span
+                              style="color: #d7bc91;"> CoinGecko </span></a>;
+    
+                        <script>
+    
+                        var x = window.matchMedia("(max-width: 700px)")
+                        cryptocompare2(x) // Call listener function at run time
+                        x.addListener(cryptocompare2) 
+                          function cryptocompare2(x) {
+                            if (x.matches) { // If media query matches
+                              return
+                            } else {
+                            baseUrl = "https://widgets.cryptocompare.com/";
+                            var scripts = document.getElementsByTagName("script");
+                            var embedder = scripts[scripts.length - 1];
+                            var cccTheme = {
+                              "General": {
+                                "background": "#171717",
+                                "borderColor": "#171717"
+                              },
+                              "Header": {
+                                "background": "#171717",
+                                "color": "#FFF"
+                              },
+                              "Header": {
+                                "background": "#171717",
+                                "color": "#FFF",
+                                "displayFollowers": false
+                              },
+                              "Followers": {
+                                "background": "#171717",
+                                "color": "#171717",
+                                "borderColor": "#171717",
+                                "counterBorderColor": "#171717",
+                                "counterColor": "#171717"
+                              },
+                              "Data": {
+                                "priceColor": "#FFF",
+                                "infoLabelColor": "#CCC",
+                                "infoValueColor": "#CCC"
+                              },
+                              "Chart": {
+                                "animation": true,
+                                "fillColor": "#c8b267",
+                                "borderColor": "#3e3e3e"
+                              },
+                              "EvenRow": {
+                                "background": "#171717",
+                                "color": "#FFF",
+                                "borderColor": "#444"
+                              },
+                              "OddRow": {
+                                "background": "#171717",
+                                "color": "#FFF",
+                                "borderColor": "#444"
+                              },
+                              "Trend": {
+                                "colorUnchanged": "#FFF"
+                              },
+                              "Conversion": {
+                                "background": "#171717",
+                                "color": "#171717"
+                              }
+                            };
+                            (function () {
+                              var appName = encodeURIComponent(window.location.hostname);
+                              if (appName == "") {
+                                appName = "local";
+                              }
+                              var s = document.createElement("script");
+                              s.type = "text/javascript";
+                              s.async = true;
+                              var theUrl = baseUrl + 'serve/v1/coin/list?fsym=BLK&tsyms=USD,EUR';
+                              s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                              embedder.parentNode.appendChild(s);
+                            })();
+    
+                            }
                           }
-                          var s = document.createElement("script");
-                          s.type = "text/javascript";
-                          s.async = true;
-                          var theUrl = baseUrl + 'serve/v2/coin/chart?fsym=BLK&tsym=BTC';
-                          s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
-                          embedder.parentNode.appendChild(s);
-                        })();
-                        }
-                      }
-                    </script>
-                  </p>
-                </center>
-
-                <div class="textwidget">
-                  <center>
-                    <p>More charts: <a href="https://www.coingecko.com/en/coins/blackcoin" target="_blank"><span
-                          style="color: #d7bc91;"> CoinGecko </span></a>;
-
-                    <script>
-
-                    var x = window.matchMedia("(max-width: 700px)")
-                    cryptocompare2(x) // Call listener function at run time
-                    x.addListener(cryptocompare2) 
-                      function cryptocompare2(x) {
-                        if (x.matches) { // If media query matches
-                          return
-                        } else {
-                        baseUrl = "https://widgets.cryptocompare.com/";
-                        var scripts = document.getElementsByTagName("script");
-                        var embedder = scripts[scripts.length - 1];
-                        var cccTheme = {
-                          "General": {
-                            "background": "#171717",
-                            "borderColor": "#171717"
-                          },
-                          "Header": {
-                            "background": "#171717",
-                            "color": "#FFF"
-                          },
-                          "Header": {
-                            "background": "#171717",
-                            "color": "#FFF",
-                            "displayFollowers": false
-                          },
-                          "Followers": {
-                            "background": "#171717",
-                            "color": "#171717",
-                            "borderColor": "#171717",
-                            "counterBorderColor": "#171717",
-                            "counterColor": "#171717"
-                          },
-                          "Data": {
-                            "priceColor": "#FFF",
-                            "infoLabelColor": "#CCC",
-                            "infoValueColor": "#CCC"
-                          },
-                          "Chart": {
-                            "animation": true,
-                            "fillColor": "#c8b267",
-                            "borderColor": "#3e3e3e"
-                          },
-                          "EvenRow": {
-                            "background": "#171717",
-                            "color": "#FFF",
-                            "borderColor": "#444"
-                          },
-                          "OddRow": {
-                            "background": "#171717",
-                            "color": "#FFF",
-                            "borderColor": "#444"
-                          },
-                          "Trend": {
-                            "colorUnchanged": "#FFF"
-                          },
-                          "Conversion": {
-                            "background": "#171717",
-                            "color": "#171717"
+                        </script>
+                      </center>
+                    </div>
+    
+                    <div class="textwidget">
+                      <center>
+                        <script>
+                        var x = window.matchMedia("(max-width: 700px)")
+                        cryptocompare3(x) // Call listener function at run time
+                        x.addListener(cryptocompare3) 
+                          function cryptocompare3(x) {
+                            if (x.matches) { // If media query matches
+                              return
+                            } else {
+    
+                          baseUrl = "https://widgets.cryptocompare.com/";
+                          var scripts = document.getElementsByTagName("script");
+                          var embedder = scripts[scripts.length - 1];
+                          (function () {
+                            var appName = encodeURIComponent(window.location.hostname);
+                            if (appName == "") {
+                              appName = "local";
+                            }
+                            var s = document.createElement("script");
+                            s.type = "text/javascript";
+                            s.async = true;
+                            var theUrl = baseUrl + 'serve/v1/coin/list?fsym=BTC&tsyms=BTC,USD';
+                            s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+                            embedder.parentNode.appendChild(s);
+                          })();
+                            }
                           }
-                        };
-                        (function () {
-                          var appName = encodeURIComponent(window.location.hostname);
-                          if (appName == "") {
-                            appName = "local";
-                          }
-                          var s = document.createElement("script");
-                          s.type = "text/javascript";
-                          s.async = true;
-                          var theUrl = baseUrl + 'serve/v1/coin/list?fsym=BLK&tsyms=USD,EUR';
-                          s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
-                          embedder.parentNode.appendChild(s);
-                        })();
-
-                        }
-                      }
-                    </script>
-                  </center>
-                </div>
-
-                <div class="textwidget">
-                  <center>
-                    <script>
-                    var x = window.matchMedia("(max-width: 700px)")
-                    cryptocompare3(x) // Call listener function at run time
-                    x.addListener(cryptocompare3) 
-                      function cryptocompare3(x) {
-                        if (x.matches) { // If media query matches
-                          return
-                        } else {
-
-                      baseUrl = "https://widgets.cryptocompare.com/";
-                      var scripts = document.getElementsByTagName("script");
-                      var embedder = scripts[scripts.length - 1];
-                      (function () {
-                        var appName = encodeURIComponent(window.location.hostname);
-                        if (appName == "") {
-                          appName = "local";
-                        }
-                        var s = document.createElement("script");
-                        s.type = "text/javascript";
-                        s.async = true;
-                        var theUrl = baseUrl + 'serve/v1/coin/list?fsym=BTC&tsyms=BTC,USD';
-                        s.src = theUrl + (theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
-                        embedder.parentNode.appendChild(s);
-                      })();
-                        }
-                      }
-                    </script>
-                  </center>
-                </div>
-              </div>
-
-
-              <div class="col-lg-4 mb-sm-20">
+                        </script>
+                      </center>
+                    </div>
+                    -->
+                  </div>
+    
+    
+                  <div class="col-lg-4 mb-sm-20">
                 <li class="dropdown-header">X</li>
                 <li role="separator" class="divider"></li>
 
