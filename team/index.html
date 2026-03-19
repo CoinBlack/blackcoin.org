@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Blackcoin - Blackcoin Team</title>
-  <meta name="description" content="">
+  <meta name="description" content="Blackcoin Team - Meet the developers, community leads, and contributors behind the Blackcoin project.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -14,15 +14,15 @@
   <!-- Bootstrap -->
   <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
   <!-- Fonts -->
-  <link rel="stylesheet" href="../assets/fonts/et-lineicons/css/style.css">
-  <link rel="stylesheet" href="../assets/fonts/linea-font/css/linea-font.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/v4-shims.min.css">
   <!-- Slider -->
   <link rel="stylesheet" href="../assets/styles/slick.css">
   <!-- Animate.css -->
   <link rel="stylesheet" href="../assets/styles/animate.css">
 
 
-  <link rel="stylesheet" href="../plugins/popup-maker/assets/css/site.min.css">
+
 
 
   <!-- Definity CSS -->
@@ -175,7 +175,7 @@
                         <script>
                           var x = window.matchMedia("(max-width: 700px)")
                           cryptocompare1(x) // Call listener function at run time
-                          x.addListener(cryptocompare1) // Attach listener function on state changes
+                          x.addEventListener('change', cryptocompare1) // Attach listener function on state changes
                             function cryptocompare1(x) {
                               if (x.matches) { // If media query matches
                                 return
@@ -244,7 +244,7 @@
     
                         var x = window.matchMedia("(max-width: 700px)")
                         cryptocompare2(x) // Call listener function at run time
-                        x.addListener(cryptocompare2) 
+                        x.addEventListener('change', cryptocompare2) 
                           function cryptocompare2(x) {
                             if (x.matches) { // If media query matches
                               return
@@ -325,7 +325,7 @@
                         <script>
                         var x = window.matchMedia("(max-width: 700px)")
                         cryptocompare3(x) // Call listener function at run time
-                        x.addListener(cryptocompare3) 
+                        x.addEventListener('change', cryptocompare3) 
                           function cryptocompare3(x) {
                             if (x.matches) { // If media query matches
                               return
@@ -363,31 +363,29 @@
                   <center>
                     <p style=" background-color: #171717;">
                       <a class="twitter-timeline" href="https://x.com/hashtag/Blackcoin"
-                        data-widget-id="746421924109164548"
                         data-chrome="noheader noborders nofooter transparent noscrollbar">#Blackcoin Tweets</a><br />
                       <a class="twitter-timeline" href="https://x.com/BlackcoinOrg">@BlackcoinOrg</a><br />
                       <a class="twitter-timeline" href="https://x.com/BlackcoinNL">@BlackcoinNL</a><br />
 
                     <script>
                     var x = window.matchMedia("(max-width: 700px)")
-                    twiterFeed(x) // Call listener function at run time
-                    x.addListener(twiterFeed)   
-                      function twiterFeed(x) {
-                        if (x.matches) { // If media query matches
-                          return 
-                        } else {
-                          ! function (d, s, id) {
-                            var js, fjs = d.getElementsByTagName(s)[0],
-                              p = /^http:/.test(d.location) ? 'http' : 'https';
-                            if (!d.getElementById(id)) {
-                              js = d.createElement(s);
-                              js.id = id;
-                              js.src = p + "://platform.twitter.com/widgets.js";
-                              fjs.parentNode.insertBefore(js, fjs);
-                            }
-                          }(document, "script", "twitter-wjs");
-                        }
+                    twitterFeed(x) // Call listener function at run time
+                    x.addEventListener('change', twitterFeed)
+                    function twitterFeed(x) {
+                      if (x.matches) { // If media query matches
+                        return
+                      } else {
+                        ! function (d, s, id) {
+                          var js, fjs = d.getElementsByTagName(s)[0];
+                          if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = "//platform.twitter.com/widgets.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                          }
+                        }(document, "script", "twitter-wjs");
                       }
+                    }
                     </script>
                   </center>
                 </div>
@@ -497,7 +495,7 @@
                   <p>
                     BBSXy2Aj8EwsxdUcCymdghD4KaPQUS7ugA
                   </p>
-                  <a href="https://blackcoin.org" class="link-btn">Blackcoin.org Website</a>
+                  <a href="../" class="link-btn">Blackcoin.org Website</a>
                 </div><!-- / .hover-content -->
               </li>
 
@@ -542,7 +540,7 @@
                   <p>
                     BBXBrYnrhbDyo44eRxeUPVjqPpNk9bBg8b
                   </p>
-                  <a href="https://blackcoin.org/#buy" class="link-btn">Current Listings</a>
+                  <a href="../#buy" class="link-btn">Current Listings</a>
                 </div><!-- / .hover-content -->
               </li>
             </ul>
@@ -555,7 +553,7 @@
             <center>
               <h4>DEVELOPMENT TEAM</h4>
             </center>
-            <Br>
+            <br>
 
             <ul>
               <!-- Item 1 -->
@@ -570,7 +568,7 @@
                     BDFgwjx8q9xrpeNzyY1Hz8x36Dmg39C4BU
                   </p>
                   <a href="https://blackcoinmore.org/" class="link-btn">Blackcoin More</a> |
-                  <a href="https://blackcoin.org" class="link-btn">Electrum-BLK</a>
+                  <a href="../" class="link-btn">Electrum-BLK</a>
                 </div><!-- / .hover-content -->
               </li>
 
@@ -600,7 +598,7 @@
                   <p>
                     B6sKk2SpDX8s7jrmfeMCTEjM26AnKe7Ukg
                   </p>
-                  <a href="https://blackcoin.org" class="link-btn">BlackcoinOrg Website</a><br>
+                  <a href="../" class="link-btn">BlackcoinOrg Website</a><br>
                   <a href="https://blackcoin.nl" class="link-btn" style="margin: 0;">BlackcoinNL</a> |
                   <a href="https://blackcoin.nl" class="link-btn" style="margin: 0;">Discord and Bots</a>
                 </div><!-- / .hover-content -->
@@ -635,7 +633,7 @@
             <center>
               <h4>MAIN COMMUNITY MEMBERS</h4>
             </center>
-            <Br>
+            <br>
 
             <ul>
 
@@ -748,7 +746,7 @@
         <div class="row">
 
           <div class="col-sm-6">
-            <small>&copy; 2014-2025 Blackcoin. All Rights Reserved.</small>
+            <small>&copy; 2014-2026 Blackcoin. All Rights Reserved.</small>
           </div>
 
           <div class="col-sm-6">
@@ -773,7 +771,7 @@
       });
       var f = d.getElementsByTagName(s)[0],
         j = d.createElement(s),
-        dl = l != "dataLayer" ? "&l=" + l : ";
+        dl = l != "dataLayer" ? "&l=" + l : "";
       j.async = true;
       j.src =
         "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
@@ -781,10 +779,7 @@
     })(window, document, "script", "dataLayer", "GTM-NT3KCBH");
   </script>
   <!-- JS -->
-  <script src="../assets/js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../plugins/jquery-updater/js/jquery-2.1.4.min.js"></script>
-
-  
+  <script src="../assets/js/jQuery.js"></script>
   <script src="../assets/js/bootstrap.min.js"></script>
 
 

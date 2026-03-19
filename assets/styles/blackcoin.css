@@ -1,7 +1,3 @@
-.pd-15px {
-    padding-top: 15px;
-}
-
 .slick-track img {
 	width: 100%;
 }
@@ -22,10 +18,6 @@
 .no-gap ul {
   display: flex;
   flex-flow: row wrap;
-}
-
-#donation-link {
-	font-size: 4rem;
 }
 
 .hero-content {
@@ -74,4 +66,22 @@
 	.hero-lead {
 		font-size: 2.3rem !important;
 	}
+}
+/* Mobile Overlap Fix */
+@media (max-width: 767px) {
+    .agency2-hero {
+        height: auto !important;
+        min-height: 100vh;
+        padding-bottom: 80px !important;
+    }
+    .hero-content {
+        top: 15vh !important;
+        position: relative;
+        padding-bottom: 40px !important;
+    }
+    .breakingNews {
+        margin-bottom: 30px !important;
+        position: relative;
+        z-index: 10;
+    }
 }
