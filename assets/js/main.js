@@ -71,29 +71,14 @@
 				}
 			}
 
-			// Remove dropdown open on hover for small screens
-				$('.dropdown-toggle').on('mouseover', function (e) {
-					e.preventDefault();
-
-					$('.dropdown').removeClass('open');
-
-					e.stopPropagation();
-				});
-
-			// Close mobile menu when clicked link
-			// var isNotDropdown = $('nav:not(.mobile-nav)');
-
-			if (!$('.nav a').hasClass('dropdown-toggle')) {
-
-				$('.nav a').on('click', function () {
-					if ($('.navbar-toggle').css('display') != 'none') {
-						$(".navbar-toggle").trigger("click");
-					}
-				});
-
-			}
-
 		}).resize();
+
+		// Close mobile menu when clicked link
+		$('.nav a:not(.dropdown-toggle)').on('click', function () {
+			if ($('.navbar-toggle').css('display') !== 'none') {
+				$(".navbar-toggle").trigger("click");
+			}
+		});
 
 		// Bugfix for iOS not scrolling on open menu
 		$(".navbar-collapse").css({

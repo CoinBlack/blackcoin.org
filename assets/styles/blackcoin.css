@@ -25,7 +25,17 @@
 	position: relative;
 }
 
-@media (max-width: 1260px){
+@media (min-width: 1259px) {
+	.navbar-nav .dropdown:hover .dropdown-menu {
+		display: block !important;
+	}
+	.navbar .navbar-nav .dropdown .dropdown-menu {
+		margin-top: 0 !important;
+		padding-top: 12px;
+	}
+}
+
+@media (max-width: 1259px){
 	.dropdown-menu {
 		position: relative;
 	}
