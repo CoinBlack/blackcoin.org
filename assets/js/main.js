@@ -9,6 +9,7 @@
 	$(document).ready(function () {
 
 		initNavbar();
+		initMobileHover();
 
 	});
 
@@ -149,5 +150,25 @@
 		});
 
 	} // initSliders
+
+
+	/* --------------------------------------------------
+		Mobile Hover (Tap to Expand)
+	-------------------------------------------------- */
+
+	function initMobileHover() {
+		$('.ft-boxed-hover ul li, .no-gap ul li').on('click', function (e) {
+			if ($(window).width() <= 991) {
+				// If clicking a link inside the box, let it through
+				if ($(e.target).closest('a').length) {
+					return;
+				}
+
+				$(this).toggleClass('is-tapped');
+				// Close others
+				$(this).siblings().removeClass('is-tapped');
+			}
+		});
+	}
 
 })(jQuery);

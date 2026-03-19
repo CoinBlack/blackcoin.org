@@ -2,8 +2,49 @@
 	width: 100%;
 }
 
-.ft-boxed-hover ul li {
-	width: 33% !important;
+/* Desktop: 3 columns */
+@media (min-width: 992px) {
+	.ft-boxed-hover ul li {
+		width: 33% !important;
+	}
+}
+
+/* Mobile: Stack columns and fix spacing */
+@media (max-width: 991px) {
+	.ft-boxed-hover ul li,
+	.no-gap ul li {
+		width: 100% !important;
+		float: none !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		margin-top: 0 !important;
+		margin-bottom: 20px !important;
+	}
+
+	.no-gap ul {
+		flex-direction: column !important;
+	}
+
+	/* Hide hover content by default on mobile, show only with .is-tapped class */
+	.ft-boxed-hover ul li .hover-content {
+		opacity: 0 !important;
+		visibility: hidden !important;
+		position: absolute !important;
+		display: block !important;
+		transition: all 0.3s ease;
+		background: rgba(0, 0, 0, 0.9) !important;
+		padding: 15px !important;
+		height: 100% !important;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 5;
+	}
+
+	.ft-boxed-hover ul li.is-tapped .hover-content {
+		opacity: 1 !important;
+		visibility: visible !important;
+	}
 }
 
 /*hide address overflow*/
