@@ -264,18 +264,14 @@
 ## Priority 6: Font Awesome (LOW RISK)
 
 ### Current State
-- **Version:** v7.0.1
-- **Latest:** v7.2.0
+- **Version:** v7.0.1 (cdnjs latest for v7.x)
+- **Latest:** v7.2.0 (fontawesome.com CDN only)
 - **Status:** Active
 - **Security:** ✅ No issues
 
 ### Recommended Action
 
-**Update to v7.2.0:**
-```html
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/v4-shims.min.css" rel="stylesheet">
-```
+**Keep v7.0.1** — cdnjs doesn't have v7.2.0. The fontawesome.com CDN requires a kit ID.
 
 ### Risk Assessment
 

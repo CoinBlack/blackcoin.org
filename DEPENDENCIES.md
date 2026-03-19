@@ -49,8 +49,8 @@
 
 | Library | Version | Status |
 |---------|---------|--------|
-| Font Awesome | v7.2.0 | ✅ Updated (was v6.5.1) |
-| Font Awesome v4-shims | v7.2.0 | ✅ Compatibility shim (was v6.5.1) |
+| Font Awesome | v7.0.1 | ✅ Current (7.2.0 not on cdnjs) |
+| Font Awesome v4-shims | v7.0.1 | ✅ Compatibility shim |
 
 ---
 
@@ -61,8 +61,8 @@
 ```html
 <!-- CSS -->
 <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/v4-shims.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/v4-shims.min.css">
 <link rel="stylesheet" href="plugins/breakingnewsticker/css/breakingNews.css">
 <link rel="stylesheet" href="assets/styles/main.css">
 <link rel="stylesheet" href="assets/styles/responsive.css">
@@ -226,7 +226,7 @@ Bootstrap CSS v3.3.5 was mismatched with JS v4.4.1. Both now use v3.x series.
 
 | Library | Current | Latest | CDN URL Change |
 |---------|---------|--------|----------------|
-| Font Awesome | 7.2.0 | **7.2.0** | ✅ Current |
+| Font Awesome | 7.0.1 | **7.2.0** (fa.com CDN only) | cdnjs capped at 7.0.1 |
 | GSAP | 3.12.5 | **3.14.2** | Update version in URL |
 | Slick | 1.9.0 | **1.9.0** | ✅ Current |
 
@@ -245,9 +245,8 @@ Bootstrap CSS v3.3.5 was mismatched with JS v4.4.1. Both now use v3.x series.
 - [x] Fix initParallax() call (was missing from window.load)
 - [x] Update DEPENDENCIES.md to reflect post-cleanup state
 - [x] Fix Bootstrap CSS/JS version mismatch (v3.4.1 / v3.3.7)
-- [x] Update Font Awesome CDN to v7.0.1
+- [x] Update Font Awesome CDN to v7.0.1 (cdnjs latest for v7.x)
 - [x] Update Slick Carousel to v1.9.0
-- [x] Update Font Awesome CDN to v7.2.0
 - [x] Upgrade jQuery from v2.2.4 to v3.7.1 + jQuery Migrate v3.4.1
 
 ### NOT Done (Vendor Files)
