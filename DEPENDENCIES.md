@@ -16,6 +16,7 @@
 | `assets/js/jquery-migrate-3.4.1.min.js` | v3.4.1 | ~14KB | ✅ Added for compatibility |
 | `assets/js/bootstrap.min.js` | v3.3.7 | ~23KB | ✅ Matches CSS (fixed from v4.4.1) |
 | `assets/js/slick.min.js` | v1.9.0 | ~44KB | ✅ Updated (was v1.8.x) |
+| `assets/js/gsap.min.js` | v3.14.2 | ~73KB | ✅ Updated (was v3.12.5 CDN) |
 | `assets/js/jquery.parallax.js` | Unknown | ~5KB | ✅ Used |
 | `assets/js/animDots.js` | Custom | ~4KB | ✅ Used (GSAP animation) |
 | `assets/js/main.js` | Custom | ~4KB | ✅ Cleaned (was 832 → 153 lines) |
@@ -24,7 +25,6 @@
 
 | Library | Version | CDN | Status |
 |---------|---------|-----|--------|
-| GSAP | v3.12.5 | cdnjs | ✅ Current (3.14.2 not on cdnjs) |
 | WOW.js | v1.1.2 | cdnjs | ⚠️ Unmaintained (2015) |
 
 ### External Widgets
@@ -74,7 +74,7 @@
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.parallax.js"></script>
 <script src="assets/js/slick.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="assets/js/gsap.min.js"></script>
 <script src="assets/js/animDots.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="plugins/breakingnewsticker/js/breakingNews.js"></script>
@@ -248,6 +248,7 @@ Bootstrap CSS v3.3.5 was mismatched with JS v4.4.1. Both now use v3.x series.
 - [x] Update Font Awesome CDN to v7.0.1 (cdnjs latest for v7.x)
 - [x] Update Slick Carousel to v1.9.0
 - [x] Upgrade jQuery from v2.2.4 to v3.7.1 + jQuery Migrate v3.4.1
+- [x] Download GSAP v3.14.2 locally (was CDN v3.12.5)
 
 ### NOT Done (Vendor Files)
 

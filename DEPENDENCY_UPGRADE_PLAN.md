@@ -30,14 +30,13 @@
 | Bootstrap JS | v3.3.7 | v5.3.3 | ❌ Yes | ⚠️ Low | **MEDIUM** |
 | Slick Carousel | v1.9.0 | v1.9.0 | ❌ Unmaintained | ✅ OK | **LOW** |
 | jQuery Parallax | Unknown | N/A | ❌ Abandoned | ✅ OK | **MEDIUM** |
-| GSAP | v3.12.5 | v3.12.5 | ✅ Active | ✅ OK | **LOW** |
+| GSAP | v3.14.2 | v3.14.2 | ✅ Active | ✅ OK | **LOW** |
 
 ### JavaScript Libraries (CDN)
 
 | Library | Current | Latest | EOL | Security | Risk |
 |---------|---------|--------|-----|----------|------|
 | WOW.js | v1.1.2 | N/A | ❌ Abandoned 2015 | ✅ OK | **MEDIUM** |
-| GSAP | v3.12.5 | v3.14.2 | ✅ Active | ✅ OK | **LOW** |
 
 ### CSS Libraries (Local)
 
@@ -290,14 +289,13 @@
 ## GSAP (LOW RISK)
 
 ### Current State
-- **Version:** v3.12.5
-- **Latest:** v3.14.2 (cdnjs has v3.12.5)
+- **Version:** v3.14.2 (local file)
 - **Status:** Active, commercial
 - **Security:** ✅ No issues
 
 ### Recommendation
 
-**Keep v3.12.5** — cdnjs doesn't have newer version. Only used for animDots.js background animation.
+**Updated to v3.14.2** — Downloaded locally from jsDelivr.
 
 ---
 
@@ -306,12 +304,12 @@
 | Phase | Library | Action | Risk | Effort | Schedule |
 |-------|---------|--------|------|--------|----------|
 | 1 | jQuery | Upgrade to v3.7.1 | High | 4-8 hrs | **DONE** |
-| 2 | Font Awesome | Update to v7.2.0 | Low | 1 hr | **DONE** |
+| 2 | Font Awesome | Update to v7.0.1 | Low | 1 hr | **DONE** |
 | 3 | Slick | Update to v1.9.0 | Low | 1-2 hrs | **DONE** |
-| 4 | Bootstrap | Keep v3.4.1 | None | 0 hrs | Deferred |
-| 5 | WOW.js | Keep v1.1.2 | Low | 0 hrs | Deferred |
-| 6 | jQuery Parallax | Keep | Low | 0 hrs | Deferred |
-| 7 | GSAP | Keep v3.12.5 | None | 0 hrs | N/A |
+| 4 | GSAP | Update to v3.14.2 | Low | 30 min | **DONE** |
+| 5 | Bootstrap | Keep v3.4.1 | None | 0 hrs | Deferred |
+| 6 | WOW.js | Keep v1.1.2 | Low | 0 hrs | Deferred |
+| 7 | jQuery Parallax | Keep | Low | 0 hrs | Deferred |
 
 ---
 
