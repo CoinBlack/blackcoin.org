@@ -12975,7 +12975,7 @@ form .input-error-2:focus {
 }
 
 .portfolio-item.hover-bottom figure figcaption a:focus {
-  otline: none;
+  outline: none;
 }
 
 .portfolio-item.hover-bottom figure figcaption .hover-heading {

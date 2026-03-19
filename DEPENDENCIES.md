@@ -17,7 +17,7 @@
 | `assets/js/slick.min.js` | v1.8.x | ~43KB | ⚠️ Unmaintained (1.8.2 last) |
 | `assets/js/jquery.parallax.js` | Unknown | ~5KB | ✅ Used |
 | `assets/js/animDots.js` | Custom | ~4KB | ✅ Used (GSAP animation) |
-| `assets/js/main.js` | Custom | ~8KB | ✅ Cleaned (was 832 → 250 lines) |
+| `assets/js/main.js` | Custom | ~4KB | ✅ Cleaned (was 832 → 153 lines) |
 
 ### JavaScript (CDN)
 
@@ -94,10 +94,9 @@
 | `initNavbar()` | 33-103 | jQuery | Always (nav element) |
 | `initParallax()` | 112-121 | jQuery Parallax | `.testimonials-parallax` |
 | `initSliders()` | 129-165 | Slick | `.clients-slider` |
-| Contact form validation | 176-250 | jQuery | `.form-ajax` |
 | AnimDots | external | GSAP | Background animation |
 
-**Note:** Dead code removed (original: 832 lines → cleaned: 250 lines, 70% reduction)
+**Note:** Dead code removed (original: 832 lines → cleaned: 153 lines, 82% reduction)
 
 ### REMOVED Functions (Dead Code - Deleted)
 
@@ -112,6 +111,7 @@ The following functions were REMOVED from main.js as they referenced libraries n
 - `initKenburns()` - Kenburns (not loaded)
 - `initCountdown()` - No element
 - `initRangeSlider()` - No element
+- Contact form validation - No `.form-ajax` element in HTML
 
 ### Libraries NOT Loaded (Removed from main.js)
 
@@ -193,13 +193,13 @@ class="wow fadeIn"                          <!-- USED -->
 
 ## Version Mismatches
 
-| Library | CSS Version | JS Version | Issue |
-|---------|-------------|------------|-------|
-| Bootstrap | v3.3.5 | v4.4.1 | 🔴 **CRITICAL MISMATCH** |
+| Library | CSS Version | JS Version | Status |
+|---------|-------------|------------|--------|
+| Bootstrap | v3.4.1 | v3.3.7 | ✅ **FIXED** (matched versions) |
 
-### Recommended Fix
+### Previous Issue (Resolved)
 
-Replace `bootstrap.min.css` (v3.3.5) with v4.4.1 to match the JavaScript version.
+Bootstrap CSS v3.3.5 was mismatched with JS v4.4.1. Both now use v3.x series.
 
 ---
 
@@ -235,16 +235,24 @@ Replace `bootstrap.min.css` (v3.3.5) with v4.4.1 to match the JavaScript version
 
 ### Completed ✅
 
-- [x] Remove dead code from main.js (832 → 250 lines, 70% reduction)
+- [x] Remove dead code from main.js (832 → 153 lines, 82% reduction)
+- [x] Remove contact form JavaScript (no `.form-ajax` in HTML)
 - [x] Consolidate Slick to single config (.clients-slider only)
 - [x] Verify functions match HTML elements
 - [x] Fix initParallax() call (was missing from window.load)
 - [x] Update DEPENDENCIES.md to reflect post-cleanup state
+- [x] Fix Bootstrap CSS/JS version mismatch (v3.4.1 / v3.3.7)
+- [x] Update Font Awesome CDN to v7.0.1
+
+### NOT Done (Vendor Files)
+
+- [ ] ~~Remove contact form CSS (main.css, responsive.css)~~ — **REVERTED**
+  - These are **Definity theme vendor files** — DO NOT EDIT
+  - Only custom code in `main.js` should be modified
+  - CSS overrides should go in `blackcoin.css`
 
 ### Deferred (Requires Testing)
 
-- [ ] Fix Bootstrap CSS/JS version mismatch (v3.3.5 vs v4.4.1)
-- [ ] Update Font Awesome CDN to v7.2.0 (may need icon class updates)
 - [ ] Update GSAP CDN to v3.14.2
 
 ---
@@ -253,14 +261,16 @@ Replace `bootstrap.min.css` (v3.3.5) with v4.4.1 to match the JavaScript version
 
 | File | Before | After | Change |
 |------|--------|-------|--------|
-| `assets/js/main.js` | 832 lines | 250 lines | -582 lines (70% reduction) |
+| `assets/js/main.js` | 832 lines | 153 lines | -679 lines (82% reduction) |
+| `assets/styles/main.css` | — | — | **NOT MODIFIED** (vendor file) |
+| `assets/styles/responsive.css` | — | — | **NOT MODIFIED** (vendor file) |
 | `DEPENDENCIES.md` | Created | Updated | Post-cleanup documentation |
 
 ---
 
 ## Line Number Reference (Post-Cleanup)
 
-### main.js Structure (250 lines)
+### main.js Structure (153 lines)
 
 | Lines | Content |
 |-------|---------|
@@ -270,6 +280,5 @@ Replace `bootstrap.min.css` (v3.3.5) with v4.4.1 to match the JavaScript version
 | 106-121 | `initParallax()` function |
 | 122-165 | `initSliders()` function (.clients-slider only) |
 | 166-169 | IIFE close |
-| 173-250 | Contact form validation |
 
 **No dead code remaining.**
