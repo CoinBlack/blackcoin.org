@@ -13,7 +13,7 @@
 	});
 
 	// Initialize functions after elements are loaded.
-	$(window).load(function () {
+	$(window).on('load', function () {
 
 		// Preloader
 		$('.preloader img').fadeOut(); // will first fade out the loading animation
