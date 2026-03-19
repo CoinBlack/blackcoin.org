@@ -14,7 +14,7 @@
 |------|---------|------|--------|
 | `assets/js/jQuery.js` | v2.2.4 | ~94KB | ⚠️ Outdated (latest: v4.0.0) |
 | `assets/js/bootstrap.min.js` | v3.3.7 | ~23KB | ✅ Matches CSS (fixed from v4.4.1) |
-| `assets/js/slick.min.js` | v1.8.x | ~43KB | ⚠️ Unmaintained (1.8.2 last) |
+| `assets/js/slick.min.js` | v1.9.0 | ~44KB | ✅ Updated (was v1.8.x) |
 | `assets/js/jquery.parallax.js` | Unknown | ~5KB | ✅ Used |
 | `assets/js/animDots.js` | Custom | ~4KB | ✅ Used (GSAP animation) |
 | `assets/js/main.js` | Custom | ~4KB | ✅ Cleaned (was 832 → 153 lines) |
@@ -41,15 +41,15 @@
 | `assets/styles/main.css` | Custom | ✅ Active |
 | `assets/styles/responsive.css` | Custom | ✅ Active |
 | `assets/styles/blackcoin.css` | Custom | ✅ Active (site-specific) |
-| `assets/styles/slick.css` | v1.8.x | ✅ Active |
+| `assets/styles/slick.css` | v1.9.0 | ✅ Active (updated) |
 | `assets/styles/animate.css` | Unknown | ✅ Active (WOW.js) |
 
 ### CSS (CDN)
 
 | Library | Version | Status |
 |---------|---------|--------|
-| Font Awesome | v7.0.1 | ✅ Updated (was v6.5.1) |
-| Font Awesome v4-shims | v7.0.1 | ✅ Compatibility shim (was v6.5.1) |
+| Font Awesome | v7.2.0 | ✅ Updated (was v6.5.1) |
+| Font Awesome v4-shims | v7.2.0 | ✅ Compatibility shim (was v6.5.1) |
 
 ---
 
@@ -60,8 +60,8 @@
 ```html
 <!-- CSS -->
 <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/v4-shims.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/v4-shims.min.css">
 <link rel="stylesheet" href="plugins/breakingnewsticker/css/breakingNews.css">
 <link rel="stylesheet" href="assets/styles/main.css">
 <link rel="stylesheet" href="assets/styles/responsive.css">
@@ -224,8 +224,9 @@ Bootstrap CSS v3.3.5 was mismatched with JS v4.4.1. Both now use v3.x series.
 
 | Library | Current | Latest | CDN URL Change |
 |---------|---------|--------|----------------|
-| Font Awesome | 6.5.1 | **7.2.0** | Update version in URL |
+| Font Awesome | 7.2.0 | **7.2.0** | ✅ Current |
 | GSAP | 3.12.5 | **3.14.2** | Update version in URL |
+| Slick | 1.9.0 | **1.9.0** | ✅ Current |
 
 **Note**: Font Awesome 7.x may have class prefix changes. Test all icons.
 
@@ -243,6 +244,8 @@ Bootstrap CSS v3.3.5 was mismatched with JS v4.4.1. Both now use v3.x series.
 - [x] Update DEPENDENCIES.md to reflect post-cleanup state
 - [x] Fix Bootstrap CSS/JS version mismatch (v3.4.1 / v3.3.7)
 - [x] Update Font Awesome CDN to v7.0.1
+- [x] Update Slick Carousel to v1.9.0
+- [x] Update Font Awesome CDN to v7.2.0
 
 ### NOT Done (Vendor Files)
 

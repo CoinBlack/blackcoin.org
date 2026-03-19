@@ -308,8 +308,8 @@
 | Phase | Library | Action | Risk | Effort | Schedule |
 |-------|---------|--------|------|--------|----------|
 | 1 | jQuery | Upgrade to v3.7.1 | High | 4-8 hrs | **Week 1** |
-| 2 | Font Awesome | Update to v7.2.0 | Low | 1 hr | Week 1 |
-| 3 | Slick | Update to v1.9.0 | Low | 1-2 hrs | Week 2 |
+| 2 | Font Awesome | Update to v7.2.0 | Low | 1 hr | ** DONE** |
+| 3 | Slick | Update to v1.9.0 | Low | 1-2 hrs | **DONE** |
 | 4 | Bootstrap | Keep v3.4.1 | None | 0 hrs | Deferred |
 | 5 | WOW.js | Keep v1.1.2 | Low | 0 hrs | Deferred |
 | 6 | jQuery Parallax | Keep | Low | 0 hrs | Deferred |
