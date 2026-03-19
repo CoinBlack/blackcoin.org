@@ -12,7 +12,8 @@
 
 | File | Version | Size | Status |
 |------|---------|------|--------|
-| `assets/js/jQuery.js` | v2.2.4 | ~94KB | ⚠️ Outdated (latest: v4.0.0) |
+| `assets/js/jquery-3.7.1.min.js` | v3.7.1 | ~88KB | ✅ Updated (was v2.2.4) |
+| `assets/js/jquery-migrate-3.4.1.min.js` | v3.4.1 | ~14KB | ✅ Added for compatibility |
 | `assets/js/bootstrap.min.js` | v3.3.7 | ~23KB | ✅ Matches CSS (fixed from v4.4.1) |
 | `assets/js/slick.min.js` | v1.9.0 | ~44KB | ✅ Updated (was v1.8.x) |
 | `assets/js/jquery.parallax.js` | Unknown | ~5KB | ✅ Used |
@@ -68,7 +69,8 @@
 <link rel="stylesheet" href="assets/styles/blackcoin.css">
 
 <!-- JS -->
-<script src="assets/js/jQuery.js"></script>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/jquery-migrate-3.4.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/jquery.parallax.js"></script>
 <script src="assets/js/slick.min.js"></script>
@@ -246,6 +248,7 @@ Bootstrap CSS v3.3.5 was mismatched with JS v4.4.1. Both now use v3.x series.
 - [x] Update Font Awesome CDN to v7.0.1
 - [x] Update Slick Carousel to v1.9.0
 - [x] Update Font Awesome CDN to v7.2.0
+- [x] Upgrade jQuery from v2.2.4 to v3.7.1 + jQuery Migrate v3.4.1
 
 ### NOT Done (Vendor Files)
 
