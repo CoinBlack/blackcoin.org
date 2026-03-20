@@ -1,4 +1,5 @@
-//Javascript codes
+// Breaking News Ticker Plugin
+// Cleaned version - RSS/YQL dead code removed (Yahoo YQL API shut down 2019)
 
 (function (jQuery) {
 
@@ -11,13 +12,8 @@
 			effect: 'fade',
 			fontstyle: 'normal',
 			autoplay: false,
-			timer: 4000,
-			feed: false,
-			feedlabels: false,
-			feedcount: 5
+			timer: 4000
 		};
-		var feeds = [];
-		var labels = [];
 		var params = $.extend(defaults, params);
 
 		return this.each(function () {
@@ -29,11 +25,7 @@
 			var count = params.modul.find("ul li").length;
 			var changestate = true;
 
-			if (params.feed != false) {
-				getRSS();
-			} else {
-				params.modul.find("ul li").eq(active).fadeIn();
-			}
+			params.modul.find("ul li").eq(active).fadeIn();
 			resizeEvent();
 
 			if (params.autoplay) {
@@ -183,43 +175,6 @@
 						});
 					}
 				}
-			}
-
-
-			function getRSSx(a, b, c) {
-				c = new XMLHttpRequest;
-				c.open('GET', a);
-				c.onload = b;
-				c.send()
-			}
-
-			function yql(a, b) {
-				return 'https://query.yahooapis.com/v1/public/yql?q=' + encodeURIComponent('select * from ' + b + ' where url=\"' + a + '\" limit ' + params.feedcount) + '&format=json';
-			};
-
-			function getRSS() {
-				feeds = params.feed.split(",");
-				labels = params.feedlabels.split(",");
-				count = 0;
-				params.modul.find("ul").html("");
-				xx = 0;
-				for (k = 0; k < feeds.length; k++) {
-					getRSSx(yql(feeds[k].trim(), 'rss'), function () {
-						var resultx = JSON.parse(this.response);
-						resultx = resultx.query.results.item;
-						$(resultx).each(function (index, element) {
-							count++;
-							dataLink = $('<a>').prop('href', resultx[index].link).prop('hostname');
-							params.modul.find("ul").append('<li><a target="_blank" href="' + resultx[index].link + '"><span>' + dataLink + '</span> - ' + resultx[index].title + '</a></li>');
-							if (xx == 0)
-								params.modul.find("ul li").eq(0).fadeIn();
-							xx++;
-
-						});
-
-					})
-				}
-
 			}
 
 		});
