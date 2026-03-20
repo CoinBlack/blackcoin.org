@@ -1,13 +1,50 @@
-.pd-15px {
-    padding-top: 15px;
-}
-
 .slick-track img {
 	width: 100%;
 }
 
-.ft-boxed-hover ul li {
-	width: 33% !important;
+/* Desktop: 3 columns */
+@media (min-width: 992px) {
+	.ft-boxed-hover ul li {
+		width: 33% !important;
+	}
+}
+
+/* Mobile: Stack columns and fix spacing */
+@media (max-width: 991px) {
+	.ft-boxed-hover ul li,
+	.no-gap ul li {
+		width: 100% !important;
+		float: none !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		margin-top: 0 !important;
+		margin-bottom: 20px !important;
+	}
+
+	.no-gap ul {
+		flex-direction: column !important;
+	}
+
+	/* Hide hover content by default on mobile, show only with .is-tapped class */
+	.ft-boxed-hover ul li .hover-content {
+		opacity: 0 !important;
+		visibility: hidden !important;
+		position: absolute !important;
+		display: block !important;
+		transition: all 0.3s ease;
+		background: rgba(0, 0, 0, 0.9) !important;
+		padding: 15px !important;
+		height: 100% !important;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 5;
+	}
+
+	.ft-boxed-hover ul li.is-tapped .hover-content {
+		opacity: 1 !important;
+		visibility: visible !important;
+	}
 }
 
 /*hide address overflow*/
@@ -24,16 +61,22 @@
   flex-flow: row wrap;
 }
 
-#donation-link {
-	font-size: 4rem;
-}
-
 .hero-content {
 	top: 25vh;
 	position: relative;
 }
 
-@media (max-width: 1260px){
+@media (min-width: 1259px) {
+	.navbar-nav .dropdown:hover .dropdown-menu {
+		display: block !important;
+	}
+	.navbar .navbar-nav .dropdown .dropdown-menu {
+		margin-top: 0 !important;
+		padding-top: 12px;
+	}
+}
+
+@media (max-width: 1259px){
 	.dropdown-menu {
 		position: relative;
 	}
@@ -74,4 +117,27 @@
 	.hero-lead {
 		font-size: 2.3rem !important;
 	}
+}
+/* Mobile Overlap Fix */
+@media (max-width: 767px) {
+    .agency2-hero {
+        height: auto !important;
+        min-height: 100vh;
+        padding-bottom: 80px !important;
+    }
+    .hero-content {
+        top: 15vh !important;
+        position: relative;
+        padding-bottom: 40px !important;
+    }
+    .breakingNews {
+        margin-bottom: 30px !important;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+/* News Dropdown Opacity Fix */
+.navbar-inverse .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.95) !important;
 }
