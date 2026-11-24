@@ -6,7 +6,7 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-		adapter: adapter({ precompress: true }),
+		adapter: adapter({ precompress: false }),
 		paths: {
 			base: process.env.BASE_PATH ?? ''
 		},
