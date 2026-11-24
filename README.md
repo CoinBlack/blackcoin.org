@@ -24,9 +24,9 @@ In [/src/lib/pages/home/exchange-list.ts](/src/lib/pages/home/exchange-list.ts)
 
 ```
 	{
-		name: 'XeggeX',
-		url: 'https://xeggex.com/asset/BLK',
-		image: '/images/exchanges/xeggex.png'
+		name: 'FreiExchange',
+		url: 'https://freiexchange.com/market/BLK/BTC',
+		image: '/images/exchanges/freiexchange.png'
 	},
 ```
 
@@ -131,11 +131,11 @@ Before you PR run `format`, `lint`, and `check`.
 
 ```
 # format
-npm run forma
+npm run format
 
 # lint
 npm run lint
 
 # check
-npm run checkt
+npm run check
 ```
